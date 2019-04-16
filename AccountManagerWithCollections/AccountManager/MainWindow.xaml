@@ -1,0 +1,25 @@
+﻿<Window x:Class="AccountManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <Label Content="Accounts" Margin="5" />
+            <DataGrid x:Name="AccountsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Height="100" Margin="5" MouseDoubleClick="AccountsDataGrid_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="#" Binding="{Binding Path=Number}" IsReadOnly="True" />
+                    <DataGridTextColumn Header="Account Details" Binding="{Binding Path=Account}" IsReadOnly="True" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Name" Margin="5" />
+                <TextBox x:Name="NameTextBox" Width="100" Margin="5" Padding="5" />
+                <Button Content="Add Account" Margin="5" Click="AddAccountButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
