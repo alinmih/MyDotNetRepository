@@ -1,0 +1,103 @@
+﻿@model IEnumerable<ProductionManagement.Models.ViewModels.Pages.PageVM>
+
+@{
+    ViewBag.Title = "Pages";
+}
+
+<h2>Pages List</h2>
+
+@if (TempData["SM"] != null)
+{
+    <h3 class="alert-success">@TempData["SM"]</h3>
+}
+
+<p>
+    @Html.ActionLink("Add Page", "AddPage")
+</p>
+
+@if (!Model.Any())
+{
+    <h3>There are no pages!</h3>
+}
+else
+{
+    <table class="table sorting" id="pages">
+        <tr class="home">
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slug)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Body)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasSideBar)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr id="id_@item.Id" class="@item.Slug">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slug)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Body)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasSideBar)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit Page", "EditPage", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "DetailsPage", new { id = item.Id }) |
+                    @if (item.Slug != "home")
+                    {
+                        @Html.ActionLink("Delete Page", "DeletePage", new { id = item.Id }, new { @class = "delete" });
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+@section Scripts {
+    @*jquery ui cdn *@
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    
+    <script>
+        $(function () {
+
+             /*
+             * Confirm page deletion
+             */
+            $("a.delete").click(function () {
+                if (!confirm("Confirm page deletion?")) return false;
+            })
+            //////////////////////////////////////////
+
+            /*
+             * reorder pages using Jquerry UI
+             */
+            $("table#pages tbody").sortable({
+                items: "tr:not(.home)",
+                placeholder: "ui-state-highlight",
+                update: function () {
+                    var ids = $("table#pages tbody").sortable("serialize");
+                    console.log(ids);
+                    var url = "/Admin/Pages/ReorderPages";
+
+                    $.post(url,ids, function(data){ })  
+                }
+            })
+        })
+    </script>
+
+}
+
