@@ -1,6 +1,6 @@
 # MyDotNetRepository
 
-Personal projects written in c# or vb using dot.net framework.
+Personal projects written in c# or vb using dot.net or asp.net
 
 1. AccountManagerWithCollections -	.NET Framework App with generic collections.
 
