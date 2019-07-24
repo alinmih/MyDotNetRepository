@@ -1,18 +1,18 @@
 # MyDotNetRepository
 
-Here are my personal projects written in C# or VB.
+Personal projects written in c# or vb using dot.net framework.
 
-AccountManagerWithCollections -	implemented using .NET Framework API with System.Collections.Generic
+1. AccountManagerWithCollections -	.NET Framework App with generic collections.
 
-AccountManagerWithStandardInterfaces -	implemented using .NET Framework API Interfaces
+2. AccountManagerWithStandardInterfaces - .NET Framework App using standard interfaces
 
-BackFilesUpApp - implemented using .NET Framework API with System.IO
+3. BackFilesUpApp - C# app for backing-up files
 
-OrderConf	VB - implemented using .NET Framework API using with SAP Scripting GUI
+4. OrderConf	VB - GUI in vb for SAP Scripting.
 
-SqlDataAccesUI - Data Acces using Dapper ORM
+5. SqlDataAccesUI - Data Acces using Dapper ORM
 
-StratificateQCFlow - ASP.NET app used in production written in VB.NET
+6. StratificateQCFlow - ASP.NET written in VB.NET
 
-TournamentTracker	- Multilayered architecture app with object-oriented design written in C#.
+7. TournamentTracker	- Multilayered architecture app with object-oriented design written in C#.
 
