@@ -184,5 +184,118 @@ namespace ProductionManagement.Areas.Admin.Controllers
 
             return RedirectToAction("AddMachine");
         }
+
+        //Get: /Admin/MachineShop/Machines
+        [HttpGet]
+        public ActionResult Machines(int? catId)
+        {
+            List<MachineVM> listOfMachines;
+            //connect to db
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                //get the list of machines from db
+                listOfMachines = productionDb.Machines.ToArray().
+                    Where(x=>x.MachineCategoryId == catId||catId==0||catId==null).
+                    Select(x => new MachineVM(x)).ToList();
+
+                //populate the machine categories select list in a ViewBag object
+                ViewBag.MachineCategories = new SelectList(productionDb.MachineCategories.ToList(), "Id", "Name");
+                
+                //get the selected category
+                ViewBag.SelectedCategory = catId.ToString();
+
+            }
+
+            return View(listOfMachines);
+        }
+
+        //Get: /Admin/MachineShop/EditMachine/id
+        [HttpGet]
+        public ActionResult EditMachine(int id)
+        {
+            //declare model reference
+            MachineVM model;
+
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                //get object from db
+                MachineDTO dto = productionDb.Machines.Find(id);
+
+                if (dto==null)
+                {
+                    return Content("That machine does not exists.");
+                }
+
+                model = new MachineVM(dto);
+
+                model.Categories = new SelectList(productionDb.MachineCategories.ToList(), "Id", "Name");
+
+
+            }
+            return View(model);
+        }
+
+        //Post: /Admin/MachineShop/EditMachine/id
+        [HttpPost]
+        public ActionResult EditMachine(MachineVM model)
+        {
+
+            //get the id
+            int id = model.Id;
+
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                model.Categories = new SelectList(productionDb.MachineCategories.ToList(), "Id", "Name");
+            }
+
+            //check model state
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            //check is name is unique
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                if (productionDb.Machines.Where(x=>x.Id !=id).Any(x=>x.Name ==model.Name))
+                {
+                    ModelState.AddModelError("", "That machine name is taken.");
+                    return View(model);
+                }
+            }
+
+            //post the data to db
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                MachineDTO dto = productionDb.Machines.Find(id);
+
+                dto.Name = model.Name;
+                dto.Slug = model.Name.Replace(" ", "-");
+                dto.HourRate = model.HourRate;
+                dto.MachineCategoryId = model.MachineCategoryId;
+
+                MachineCategoryDTO categoryDTO = productionDb.MachineCategories.FirstOrDefault(x => x.Id == model.MachineCategoryId);
+                dto.MachineCategoryName = categoryDTO.Name;
+
+                productionDb.SaveChanges();
+            }
+            TempData["SM"] = "Machine has been updated";
+
+            return View(model);
+        }
+
+        public ActionResult DeleteMachine(int id)
+        {
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                MachineDTO dto = productionDb.Machines.Find(id);
+                productionDb.Machines.Remove(dto);
+
+                productionDb.SaveChanges();
+            }
+
+            return RedirectToAction("Machines");
+        }
+
     }
 }

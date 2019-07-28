@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ProductionManagement.Models.ViewModels.MachineShop.MachineVM>
+
+@{
+    ViewBag.Title = "Machines";
+}
+
+<h2>Machines</h2>
+
+<select id="SelectedCategory" name="SelectedCategory">
+    <option value="0">All</option>
+    @foreach (var item in ViewBag.MachineCategories)
+    {
+        if (ViewBag.SelectedCategory == item.Value)
+        {
+            <option selected="selected" value="@item.Value">@item.Text</option>
+        }
+        else
+        {
+            <option value="@item.Value">@item.Text</option>
+        }
+    }
+</select>
+
+<p>
+    @Html.ActionLink("Add New Machine", "AddMachine")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineCategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HourRate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineCategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HourRate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditMachine", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "DeleteMachine", new { id = item.Id }, new { @class="delete"})
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts{
+@*jquery ui cdn *@
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+    $(function () {
+        /*
+         * Select Machines from specified categories
+         */
+
+        $("#SelectedCategory").on("change", function () {
+            var url = $(this).val();
+            if (url) {
+                window.location = "/Admin/MachineShop/Machines?catId=" + url;
+            }
+
+            return false;
+        })
+
+        $("a.delete").click(function () {
+            if (!confirm("Confirm machine deletion?")) return false;
+        })
+
+    })
+
+
+</script>
+    }
