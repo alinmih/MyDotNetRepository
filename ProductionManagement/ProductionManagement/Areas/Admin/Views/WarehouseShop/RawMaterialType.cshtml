@@ -1,0 +1,223 @@
+﻿@model IEnumerable<ProductionManagement.Models.ViewModels.WarehouseShop.RawMaterialTypeVM>
+
+@{
+    ViewBag.Title = "Raw Material Type";
+}
+
+<h2>Raw Material Type</h2>
+
+<p><a href="AddMachine">Add Raw Material</a></p>
+
+<div class="new-rawCat">
+    <input type="text" id="newRawCatName" />
+    <p>
+        <a href="#" id="newCatAdd">Add new type</a>
+        <span class="ajax-text">
+            <img src="~/Content/img/ajax-loader.gif" />
+        </span>
+    </p>
+</div>
+
+
+@if (!Model.Any())
+{
+    <h3>There are no categories inserted</h3>
+}
+
+<table class="table sorting categories" id="pages">
+    <tr class="home">
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="id_@item.Id">
+            <td>
+                <div class="ajaxdivtd"></div>
+                @Html.EditorFor(model => item.Name, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            </td>
+            <td>
+                @Html.ActionLink("Delete type", "DeleteType", new { id = item.Id }, new { @class = "delete" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts {
+    @*jquery ui cdn *@
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <script>
+        $(function () {
+
+            /*
+             * Delete raw type
+             * select element from body with a.delete selector
+             * if user click ok go to controller method to delete type
+             */
+            $("body").on("click", "a.delete", function () {
+                if (!confirm("Confirm raw type delete?")) {
+                    return false;
+                }
+            });
+
+            ///////////////////////////////////////////////////////
+
+            /*
+             * Reorder type
+             * drag and drop to reorder the sorting property and display accoring
+             */
+
+            $("table#pages tbody").sortable({
+                //set what items to include except class home
+                items: "tr:not(.home)",
+                //set placeholder to set the css property to highlight border
+                placeholder: "ui-state-highlight",
+                update: function () {
+                    var ids = $("table#pages tbody").sortable("serialize");
+                    var url = "/Admin/WarehouseShop/ReorderCategories";
+
+                    $.post(url, ids, function (data) { })
+                }
+            })
+
+            ///////////////////////////////////////////////////////
+
+            /*
+             * Insert a new type
+             */
+            //get value from user input
+            var newCatA = $("a#newCatAdd");
+            var newCatTextInput = $("#newRawCatName");
+            var ajaxText = $("span.ajax-text");
+            var table = $("table#pages tbody");
+
+            //if user press enter fire text input click event
+            newCatTextInput.keyup(function (e) {
+                if (e.keyCode == 13) {
+                    newCatA.click();
+                }
+            });
+
+            //verify if the text entered in textbox is greater than 2 char
+            //if text is good post it to controller
+            newCatA.click(function (e) {
+                e.preventDefault();
+                var typeName = newCatTextInput.val();
+                if (typeName.length < 2) {
+                    alert("Type name must be at least 2 char long");
+                    return false;
+                }
+                //show the loading icon
+                ajaxText.show();
+
+                var url = "/Admin/WarehouseShop/AddNewRawMaterialType";
+
+                //post data to controller
+                $.post(url, { typeName: typeName }, function (data) {
+
+                    var response = data.trim();
+                    if (response == "typeTaken") {
+                        //set ajaxtext
+                        ajaxText.html("<span class='alert alert-danger'>That type allready inserted!</span>");
+                        //fadeout the ajax loading icon
+                        setTimeout(function () {
+                            ajaxText.fadeOut("fast", function () {
+                                ajaxText.html("<img src='~/Content/img/ajax-loader.gif' />");
+                            })
+                        }, 2000);
+                        return false;
+                    } else {
+                        //check if allerady exists a table, if not reload the page
+                        if (!$("tagle#pages").length) {
+                            location.reload();
+                        } else {
+                            //set the alert text
+                            ajaxText.html("<span class='alert alert-danger'>New type inserted!</span>");
+                            //set timeout to fade the ajax icon
+                            setTimeout(function () {
+                                ajaxText.fadeOut("fast", function () {
+                                    ajaxText.html("<img src='~/Content/img/ajax-loader.gif' />")
+                                })
+                            }, 2000);
+                            //clear inserted value
+                            newCatTextInput.val("");
+                            //get the last row value and clone it in order to modify
+                            var toAppend = $("table#pages tbody tr:last").clone();
+                            //append attributes
+                            toAppend.attr("id", "id_" + data);
+                            toAppend.find("#item_Name").val(typeName);
+                            toAppend.find("a.delete").attr("href", "/admin/WarehouseShop/Deletetype/" + data);
+                            table.append(toAppend);
+                            table.sortable("refresh");
+                        }
+                    }
+                })
+            });
+            ///////////////////////////////////////////////////////
+
+            /*
+             * Rename machine
+             * 
+             */
+
+            var originalName;
+            //get the value by dblclick and set readonly to false
+            $("table#pages input.text-box").dblclick(function () {
+                //get the name in this variable;
+                originalName = $(this).val();
+                $(this).attr("readonly", false);
+            });
+            //make the to blur if pressed enter
+            $("table#pages input.text-box").keyup(function (e) {
+                if (e.keyCode == 13) {
+                    $(this).blur();
+                }
+            });
+
+            $("table#pages input.text-box").blur(function () {
+                var $this = $(this);
+                var ajaxdiv = $this.parent().find(".ajaxdivtd");
+                var newTypeName = $this.val();
+                var id = $this.parent().parent().attr("id").substring(3);
+                var url = "/Admin/WarehouseShop/RenameType";
+
+                //check if name is less than 2 char
+                if (newTypeName.length < 2) {
+                    alert("type must be at least 2 char long.");
+                    $this.val(originalName)
+                    $this.attr("readonly", true);
+                    return false;
+                }
+
+                //post newTypeName and id
+                $.post(url, { newTypeName: newTypeName, id: id }, function (data) {
+                    //check if response title is taken
+                    var response = data.trim();
+                    if (response == "typeTaken") {
+                        $this.val(originalName);
+                        ajaxdiv.html("<span class='alert alert-danger'>That title is taken</span>").show();
+                    } else {
+                        ajaxdiv.html("<span class='alert alert-success'>The type name has been changed.</span>").show();
+                    }
+                    //clear the fade if succes
+                    setTimeout(function () {
+                        ajaxdiv.fadeOut("fast", function () {
+                            ajaxdiv.html("");
+                        });
+                    }, 2000);
+                    //set readonly attr to true when done
+                }).done(function () {
+                    $this.attr("readonly", true);
+                });
+            });
+            ///////////////////////////////////////////////////////
+
+        });
+    </script>
+
+}

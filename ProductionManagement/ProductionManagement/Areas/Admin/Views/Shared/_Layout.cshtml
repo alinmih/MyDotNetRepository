@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - Production Admin Area </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-topcancel">
@@ -20,10 +21,33 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/admin/pages">Pages</a></li>
-                    <li><a href="/admin/pages/editsidebar">Edit Sidebar</a></li>
-                    <li><a href="/admin/machineshop/machines">Machines List</a></li>
-                    <li><a href="/admin/machineshop/MachineCategory">Machine Categories</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Layout<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/pages">Pages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/pages/editsidebar">Sidebar</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Machine Technology<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/machineshop/machines">Machines List</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/machineshop/MachineCategory">Machine Category</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Warehouse<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/machineshop/machines">Raw materials</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/Admin/warehouseShop/rawmaterialtype">Raw material type</a></li>
+                        </ul>
+                    </li>
 
                 </ul>
                 <ul class="navbar-right">
@@ -36,8 +60,14 @@
         @RenderBody()
         <hr />
     </div>
+
+
+
     @* Added 2 bundles in one *@
     @Scripts.Render("~/bundles/scripts")
     @RenderSection("scripts", required: false)
+    <script>
+
+    </script>
 </body>
 </html>

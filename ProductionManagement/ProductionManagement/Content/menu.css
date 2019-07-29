@@ -1,0 +1,19 @@
+﻿.bs-example {
+    margin: 20px;
+}
+
+.dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
+.dropdown-toggle {
+    margin-bottom: 2px;
+}
+
+.navbar .dropdown-toggle, .nav-tabs .dropdown-toggle {
+    margin-bottom: 0;
+}

@@ -130,6 +130,7 @@
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\MachineShopController.cs" />
     <Compile Include="Areas\Admin\Controllers\PagesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\WarehouseShopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,11 +139,16 @@
     <Compile Include="Models\Data\MachineDTO.cs" />
     <Compile Include="Models\Data\PagesDTO.cs" />
     <Compile Include="Models\Data\ProductionDb.cs" />
+    <Compile Include="Models\Data\RawMaterialDTO.cs" />
+    <Compile Include="Models\Data\RawMaterialTypeDTO.cs" />
     <Compile Include="Models\Data\SidebarDTO.cs" />
+    <Compile Include="Models\ViewModels\Dashboard\DashboardVM.cs" />
     <Compile Include="Models\ViewModels\MachineShop\MachineCategoryVM.cs" />
     <Compile Include="Models\ViewModels\MachineShop\MachineVM.cs" />
     <Compile Include="Models\ViewModels\Pages\PageVM.cs" />
     <Compile Include="Models\ViewModels\Pages\SidebarVM.cs" />
+    <Compile Include="Models\ViewModels\WarehouseShop\RawMaterialTypeVM.cs" />
+    <Compile Include="Models\ViewModels\WarehouseShop\RawMaterialVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +161,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\menu.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -164,7 +171,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\AddPage.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\EditPage.cshtml" />
@@ -174,6 +180,8 @@
     <Content Include="Areas\Admin\Views\MachineShop\AddMachine.cshtml" />
     <Content Include="Areas\Admin\Views\MachineShop\Machines.cshtml" />
     <Content Include="Areas\Admin\Views\MachineShop\EditMachine.cshtml" />
+    <Content Include="Areas\Admin\Views\WarehouseShop\RawMaterialType.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -184,6 +192,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\menu.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

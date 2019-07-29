@@ -189,6 +189,7 @@ else
                 //check if name is less than 2 char
                 if (newCatName.length < 2) {
                     alert("Category must be at least 2 char long.");
+                    $this.val(originalName)
                     $this.attr("readonly", true);
                     return false;
                 }

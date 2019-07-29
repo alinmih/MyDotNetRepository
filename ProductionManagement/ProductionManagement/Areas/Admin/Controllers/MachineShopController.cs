@@ -14,8 +14,6 @@ namespace ProductionManagement.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult MachineCategory()
         {
-            //TODO Implement MachineCategory View
-
             //set a list where to put machines categories
             List<MachineCategoryVM> machineCategories;
 
