@@ -33,11 +33,13 @@ namespace ProductionManagement.Models.ViewModels.WarehouseShop
         public string Name { get; set; }
         public string Slug { get; set; }
         [Required]
+        [Display(Name ="Raw Material Type")]
         public int RawTypeId { get; set; }
         public string RawTypeName { get; set; }
         public decimal Lenght { get; set; }
         public decimal Width { get; set; }
         public decimal Thickness { get; set; }
+        [Display(Name ="Measure Unit")]
         public string MeasureUnit { get; set; }
         public decimal Price { get; set; }
         public decimal Stock { get; set; }

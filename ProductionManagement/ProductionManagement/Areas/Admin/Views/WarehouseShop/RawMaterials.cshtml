@@ -4,19 +4,28 @@
     ViewBag.Title = "Raw Materials";
 }
 
-<h2>Raw Materials</h2>
+<h2>Raw Materials List</h2>
+
+<select id="SelectedCategory" name="SelectedCategory">
+    <option value="0">All</option>
+    @foreach (var item in ViewBag.RawMaterialsCategories)
+    {
+        if (ViewBag.SelectedCategory == item.Value)
+        {
+            <option selected="selected" value="@item.Value">@item.Text</option>
+        }
+        else
+        {
+            <option value="@item.Value">@item.Text</option>
+        }
+    }
+</select>
+
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Material", "AddRawMaterial")
 </p>
 
-@if (!Model.Any())
-{
-    <h3>There are no Raw Materials created</h3>
-    <p>TODO: Implement CRUD actions for Raw materials</p>
-}
-else
-{
     <table class="table">
         <tr>
             <th>
@@ -74,12 +83,39 @@ else
                     @Html.DisplayFor(modelItem => item.Stock)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Edit", "EditRawMaterial", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteRawMaterial", new { id = item.Id }, new { @class = "delete" })
                 </td>
             </tr>
         }
 
-    </table>    
+    </table>
+
+@section Scripts{
+    @*jquery ui cdn *@
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <script>
+        $(function () {
+            /*
+             * Select Raw materials from specified categories
+             */
+
+            $("#SelectedCategory").on("change", function () {
+                var url = $(this).val();
+                if (url) {
+                    window.location = "/Admin/WarehouseShop/RawMaterials?catId=" + url;
+                }
+
+                return false;
+            })
+
+            $("a.delete").click(function () {
+                if (!confirm("Confirm material deletion?")) return false;
+            })
+
+        })
+
+
+    </script>
 }

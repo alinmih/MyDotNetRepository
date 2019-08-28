@@ -183,6 +183,7 @@
     <Content Include="Areas\Admin\Views\WarehouseShop\RawMaterialType.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Areas\Admin\Views\WarehouseShop\RawMaterials.cshtml" />
+    <Content Include="Areas\Admin\Views\WarehouseShop\AddRawMaterial.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
