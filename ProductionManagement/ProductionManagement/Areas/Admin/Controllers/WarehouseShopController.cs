@@ -10,6 +10,16 @@ namespace ProductionManagement.Areas.Admin.Controllers
 {
     public class WarehouseShopController : Controller
     {
+        //GET: Admin/WarehouseShop/RawMaterials
+        [HttpGet]
+        public ActionResult RawMaterials()
+        {
+            //TODO implement controller
+            List<RawMaterialVM> rawMaterials = new List<RawMaterialVM>();
+            return View(rawMaterials);
+        }
+
+
         // GET: Admin/WarehouseShop/RawMaterialType
         [HttpGet]
         public ActionResult RawMaterialType()

@@ -4,18 +4,63 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1>Index</h1>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Machines.Count)
-        </th>
-        <th></th>
-    </tr>
-
-
-</table>
+<div class="row">
+    <div class="col-md-6">
+        <h3>@Html.DisplayNameFor(model => model.Machines)</h3>
+        <br />
+        <p>
+            @Html.ActionLink("Create New", "../MachineShop/AddMachine")
+        </p>
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Machine.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Machine.MachineCategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Machine.HourRate)
+                </th>
+            </tr>
+            @foreach (var machine in Model.Machines)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelmachine => machine.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelmachine => machine.MachineCategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelmachine => machine.HourRate)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-3">
+        <h3>@Html.DisplayNameFor(model => model.MachineCategory)</h3>
+        <br />
+        <p>
+            @Html.ActionLink("Create New", "../MachineShop/MachineCategory")
+        </p>
+        <table class="table table-condensed">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model=>model.MachineCat.Name)
+                </th>
+            </tr>
+            @foreach (var category in Model.MachineCategory)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(categoryName => category.Name)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

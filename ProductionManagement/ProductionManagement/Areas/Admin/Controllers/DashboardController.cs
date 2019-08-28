@@ -17,6 +17,7 @@ namespace ProductionManagement.Areas.Admin.Controllers
             DashboardVM model = new DashboardVM();
             
             List<MachineVM> machines;
+            
             using (ProductionDb productionDb = new ProductionDb())
             {
                 //find all the machines and sort them by sortin property
