@@ -14,6 +14,13 @@ namespace ProductionManagement.Models.ViewModels.Dashboard
         public MachineVM Machine { get; set; }
         public MachineCategoryVM MachineCat{ get; set; }
 
+        public List<RawMaterialVM> RawMaterials { get; set; }
+        public List<RawMaterialTypeVM> RawMaterialTypes { get; set; }
+        public RawMaterialVM RawMaterial { get; set; }
+        public RawMaterialTypeVM RawMaterialType { get; set; }
+
+
+
 
         //public IEnumerable<RawMaterialVM> RawMaterials { get; set; }
     }

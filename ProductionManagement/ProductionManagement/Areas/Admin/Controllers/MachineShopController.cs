@@ -196,8 +196,11 @@ namespace ProductionManagement.Areas.Admin.Controllers
                     Where(x=>x.MachineCategoryId == catId||catId==0||catId==null).
                     Select(x => new MachineVM(x)).ToList();
 
+                //get the material types from listOfMachines list
+                var machineTypes = listOfMachines.Select((id, matType) => new { id.MachineCategoryId, id.MachineCategoryName }).ToList();
+                
                 //populate the machine categories select list in a ViewBag object
-                ViewBag.MachineCategories = new SelectList(productionDb.MachineCategories.ToList(), "Id", "Name");
+                ViewBag.MachineCategories = new SelectList(machineTypes.ToList(), "MachineCategoryId", "MachineCategoryName");
                 
                 //get the selected category
                 ViewBag.SelectedCategory = catId.ToString();

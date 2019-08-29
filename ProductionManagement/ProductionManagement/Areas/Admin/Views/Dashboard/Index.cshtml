@@ -50,7 +50,7 @@
         <table class="table table-condensed">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model=>model.MachineCat.Name)
+                    @Html.DisplayNameFor(model => model.MachineCat.Name)
                 </th>
             </tr>
             @foreach (var category in Model.MachineCategory)
@@ -58,6 +58,74 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(categoryName => category.Name)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3>@Html.DisplayNameFor(model => model.RawMaterials)</h3>
+
+        <br />
+        <p>
+            @Html.ActionLink("Create new", "../warehouseshop/addrawmaterial")
+        </p>
+        <table class="table table-condensed">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.RawTypeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.Lenght)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.Width)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.Thickness)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.MeasureUnit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RawMaterial.Stock)
+                </th>
+            </tr>
+            @foreach (var item in Model.RawMaterials)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(raw => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.RawTypeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.Lenght)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.Width)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.Thickness)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.MeasureUnit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(raw => item.Stock)
                     </td>
                 </tr>
             }

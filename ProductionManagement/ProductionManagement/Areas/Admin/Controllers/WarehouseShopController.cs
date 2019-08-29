@@ -121,7 +121,7 @@ namespace ProductionManagement.Areas.Admin.Controllers
         {
             //TODO implement controller
             List<RawMaterialVM> rawMaterials;
-
+            
             using (ProductionDb productionDb = new ProductionDb())
             {
                 //get the list of rawMaterials from db
@@ -129,8 +129,12 @@ namespace ProductionManagement.Areas.Admin.Controllers
                     Where(x => x.RawTypeId == catId || catId == 0 || catId == null).
                     Select(x => new RawMaterialVM(x)).ToList();
 
+                //get the material types from rawMaterials list
+                var materialTypes = rawMaterials.Select((id, matType)=> new { id.RawTypeId, id.RawTypeName}).ToList();
+                
+
                 //populate the rawMaterials categories select list in a ViewBag object
-                ViewBag.RawMaterialsCategories = new SelectList(productionDb.RawMaterials.ToList(), "Id", "Name");
+                ViewBag.RawMaterialsCategories = new SelectList(materialTypes.ToList(), "RawTypeId", "RawTypeName");
 
                 //get the selected category
                 ViewBag.SelectedCategory = catId.ToString();
@@ -206,6 +210,102 @@ namespace ProductionManagement.Areas.Admin.Controllers
             TempData["SM"] = "You have added a material.";
 
             return RedirectToAction("AddRawMaterial");
+        }
+
+        //GET: Admin/WarehouseShop/EditRawMaterial/id
+        [HttpGet]
+        public ActionResult EditRawMaterial(int id)
+        {
+            RawMaterialVM model;
+
+            //connect to db
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                //GetHashCode the object from db
+                RawMaterialDTO dto = productionDb.RawMaterials.Find(id);
+
+                if (dto == null)
+                {
+                    return Content("That material does not exists");
+                }
+
+                model = new RawMaterialVM(dto);
+
+                model.RawTypes = new SelectList(productionDb.RawMaterialTypes.ToList(), "Id", "Name");
+            }
+
+            return View(model);
+        }
+
+        //GET: Admin/WarehouseShop/EditRawMaterial/id
+        [HttpPost]
+        public ActionResult EditRawMaterial(RawMaterialVM model)
+        {
+            int id = model.Id;
+
+            //populare dropdown list
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                model.RawTypes = new SelectList(productionDb.RawMaterialTypes.ToList(), "Id", "Name");
+            }
+
+            //check model state
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            //check if name is unique
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                if (productionDb.RawMaterials.Where(x=>x.Id != id).Any(x=>x.Name == model.Name))
+                {
+                    ModelState.AddModelError("", "That material allready exists");
+                    return View(model);
+                }
+            }
+
+            //post the data to db
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                RawMaterialDTO dto = productionDb.RawMaterials.Find(id);
+
+                dto.Name = model.Name;
+                dto.Slug = model.Name.Replace(" ", "-").ToLower();
+                dto.RawTypeId = model.RawTypeId;
+                //get the material type name from table RawMaterialTypes
+                RawMaterialTypeDTO materialTypeDTO = productionDb.RawMaterialTypes.FirstOrDefault(x => x.Id == model.RawTypeId);
+                dto.RawTypeName = materialTypeDTO.Name;
+
+                dto.Lenght = model.Lenght;
+                dto.Width = model.Width;
+                dto.Thickness = model.Thickness;
+                dto.MeasureUnit = model.MeasureUnit;
+                dto.Price = model.Price;
+                dto.Stock = model.Stock;
+
+                productionDb.SaveChanges();
+
+            }
+
+            TempData["SM"] = "Material has been updated";
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult DeleteRawMaterial(int id)
+        {
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                RawMaterialDTO dto = productionDb.RawMaterials.Find(id);
+
+                productionDb.RawMaterials.Remove(dto);
+
+                productionDb.SaveChanges();
+            }
+
+            return RedirectToAction("RawMaterials");
         }
     }
 }
