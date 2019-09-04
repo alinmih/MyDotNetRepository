@@ -70,5 +70,21 @@ namespace ProductionManagement.Controllers
 
             return PartialView(pageVMList);
         }
+
+        //render SideBar partial view
+        public ActionResult SideBarPartial()
+        {
+            SidebarVM model;
+
+            //get the sidebar from db
+            using (ProductionDb productionDb = new ProductionDb())
+            {
+                SidebarDTO dto = productionDb.Sidebar.Find(1);
+                model = new SidebarVM(dto);
+
+            }
+
+            return PartialView(model);
+        }
     }
 }

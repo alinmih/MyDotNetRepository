@@ -1,8 +1,23 @@
 ﻿@model IEnumerable<ProductionManagement.Models.ViewModels.Pages.PageVM>
 
-@foreach (var item in Model) {
- <li>
-     <a href="/@item.Slug">@item.Title</a>
- </li>
+@{
+    string currentPageTitle = (string)TempData["PageTitle"];
+}
+
+@foreach (var item in Model)
+{
+    if (item.Title == currentPageTitle)
+    {
+        <li class="active">
+            <a href="/@item.Slug">@item.Title</a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a href="/@item.Slug">@item.Title</a>
+        </li>
+    }
+
 }
 

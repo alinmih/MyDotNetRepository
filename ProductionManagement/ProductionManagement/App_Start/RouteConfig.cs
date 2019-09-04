@@ -23,6 +23,7 @@ namespace ProductionManagement
 
             //set the route for partial view
             routes.MapRoute("PagesMenuPartial", "Pages/PagesMenuPartial", new { controller = "Pages", action = "PagesMenuPartial" }, new[] { "ProductionManagement.Controllers" });
+            routes.MapRoute("SideBarPartial", "Pages/SideBarPartial", new { controller = "Pages", action = "SideBarPartial" }, new[] { "ProductionManagement.Controllers" });
 
 
             //routes.MapRoute(
