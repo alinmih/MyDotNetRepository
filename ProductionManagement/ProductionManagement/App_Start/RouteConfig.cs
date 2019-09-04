@@ -13,11 +13,23 @@ namespace ProductionManagement
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+
+            //set the routes
+            //default route
+            routes.MapRoute("Default", "", new { controller = "Pages", action = "Index" }, new[] { "ProductionManagement.Controllers" });
+
+            //specific route
+            routes.MapRoute("Pages", "{page}", new { controller = "Pages", action = "Index" }, new[] { "ProductionManagement.Controllers" });
+
+            //set the route for partial view
+            routes.MapRoute("PagesMenuPartial", "Pages/PagesMenuPartial", new { controller = "Pages", action = "PagesMenuPartial" }, new[] { "ProductionManagement.Controllers" });
+
+
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            //);
         }
     }
 }
