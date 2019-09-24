@@ -14,3 +14,4 @@ Personal projects written in c# or vb using dot.net or asp.net
 
 6. ProductionManagement - ASP.NET app for production environment used to manage the workflow from price offer to production planning.
 
+7. ProductionERP - N tier architecture app for managing business processes inside a company.
