@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4537059-9B23-418E-BDD6-72C363B6123B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProductionUI</RootNamespace>
+    <AssemblyName>ProductionUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FinishOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinishOrderForm.Designer.cs">
+      <DependentUpon>FinishOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\PartMoreDimensions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\PartMoreDimensions.Designer.cs">
+      <DependentUpon>PartMoreDimensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\SearchRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\SearchRawMaterial.Designer.cs">
+      <DependentUpon>SearchRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\SelectMachines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\SelectMachines.Designer.cs">
+      <DependentUpon>SelectMachines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%28sketch%29PriceAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%28sketch%29PriceAppForm.Designer.cs">
+      <DependentUpon>%28sketch%29PriceAppForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminMachines.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminMachines.Designer.cs">
+      <DependentUpon>UserAdminMachines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.Designer.cs">
+      <DependentUpon>UserSelectedTechnologyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\%28ex%29UC_Sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\%28ex%29UC_Sales.Designer.cs">
+      <DependentUpon>%28ex%29UC_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\%28ex%29UC_Sales_Option.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\%28ex%29UC_Sales_Option.Designer.cs">
+      <DependentUpon>%28ex%29UC_Sales_Option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlHome.Designer.cs">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserManufacturingCostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserManufacturingCostControl.Designer.cs">
+      <DependentUpon>UserManufacturingCostControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserOffersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserOffersControl.Designer.cs">
+      <DependentUpon>UserOffersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserProductionOrdersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserProductionOrdersControl.Designer.cs">
+      <DependentUpon>UserProductionOrdersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserProductsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserProductsControl.Designer.cs">
+      <DependentUpon>UserProductsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserSalesOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserSalesOrderControl.Designer.cs">
+      <DependentUpon>UserSalesOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserWarehouseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserWarehouseControl.Designer.cs">
+      <DependentUpon>UserWarehouseControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FinishOrderForm.resx">
+      <DependentUpon>FinishOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\PartMoreDimensions.resx">
+      <DependentUpon>PartMoreDimensions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\SearchRawMaterial.resx">
+      <DependentUpon>SearchRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\SelectMachines.resx">
+      <DependentUpon>SelectMachines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%28sketch%29PriceAppForm.resx">
+      <DependentUpon>%28sketch%29PriceAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminArea\UserAdminMachines.resx">
+      <DependentUpon>UserAdminMachines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.resx">
+      <DependentUpon>UserSelectedTechnologyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\%28ex%29UC_Sales.resx">
+      <DependentUpon>%28ex%29UC_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\%28ex%29UC_Sales_Option.resx">
+      <DependentUpon>%28ex%29UC_Sales_Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlHome.resx">
+      <DependentUpon>UserControlHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserManufacturingCostControl.resx">
+      <DependentUpon>UserManufacturingCostControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserOffersControl.resx">
+      <DependentUpon>UserOffersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserProductionOrdersControl.resx">
+      <DependentUpon>UserProductionOrdersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserProductsControl.resx">
+      <DependentUpon>UserProductsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserSalesOrderControl.resx">
+      <DependentUpon>UserSalesOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserWarehouseControl.resx">
+      <DependentUpon>UserWarehouseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
