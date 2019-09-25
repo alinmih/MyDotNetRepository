@@ -1,6 +1,6 @@
-﻿namespace ProductionUI.UserControls
+﻿namespace ProductionUI.UserControls.AdminArea
 {
-    partial class UserSalesOrderControl
+    partial class UserAdminUsers
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,46 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.salesPanel = new System.Windows.Forms.Panel();
             this.productionOverviewLabel = new System.Windows.Forms.Label();
-            this.salesPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // salesPanel
-            // 
-            this.salesPanel.Controls.Add(this.productionOverviewLabel);
-            this.salesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.salesPanel.Location = new System.Drawing.Point(0, 0);
-            this.salesPanel.Name = "salesPanel";
-            this.salesPanel.Size = new System.Drawing.Size(969, 521);
-            this.salesPanel.TabIndex = 8;
             // 
             // productionOverviewLabel
             // 
             this.productionOverviewLabel.AutoSize = true;
             this.productionOverviewLabel.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productionOverviewLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.productionOverviewLabel.Location = new System.Drawing.Point(71, 41);
+            this.productionOverviewLabel.Location = new System.Drawing.Point(377, 360);
             this.productionOverviewLabel.Name = "productionOverviewLabel";
             this.productionOverviewLabel.Size = new System.Drawing.Size(190, 25);
             this.productionOverviewLabel.TabIndex = 2;
             this.productionOverviewLabel.Text = "Work In Progress";
             // 
-            // UserSalesOrderControl
+            // UserAdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.salesPanel);
-            this.Name = "UserSalesOrderControl";
-            this.Size = new System.Drawing.Size(969, 521);
-            this.salesPanel.ResumeLayout(false);
-            this.salesPanel.PerformLayout();
+            this.Controls.Add(this.productionOverviewLabel);
+            this.Name = "UserAdminUsers";
+            this.Size = new System.Drawing.Size(945, 745);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel salesPanel;
+
         private System.Windows.Forms.Label productionOverviewLabel;
     }
 }

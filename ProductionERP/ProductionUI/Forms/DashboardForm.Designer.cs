@@ -41,36 +41,36 @@
             this.manufacturingCostButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.topLeftActivePanel = new System.Windows.Forms.Panel();
-            this.minimizeMenuButton = new System.Windows.Forms.Button();
+            this.iconPanel = new System.Windows.Forms.Panel();
+            this.productionIcon = new System.Windows.Forms.PictureBox();
+            this.iconApplicationLabel = new System.Windows.Forms.Label();
             this.iconManagementLabel = new System.Windows.Forms.Label();
             this.iconProductionLabel = new System.Windows.Forms.Label();
-            this.productionIcon = new System.Windows.Forms.PictureBox();
+            this.minimizeMenuButton = new System.Windows.Forms.Button();
             this.topWhitePanel = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Button();
             this.userLabel = new System.Windows.Forms.Label();
             this.logedInLabel = new System.Windows.Forms.Label();
             this.companyLabel = new System.Windows.Forms.Label();
             this.topActivePanel = new System.Windows.Forms.Panel();
+            this.adminPanel = new System.Windows.Forms.Panel();
+            this.adminAreaLabel = new System.Windows.Forms.Label();
+            this.machinesButton = new System.Windows.Forms.Button();
+            this.customersButton = new System.Windows.Forms.Button();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.usersButton = new System.Windows.Forms.Button();
+            this.rawMaterialsButton = new System.Windows.Forms.Button();
             this.clockLabel = new System.Windows.Forms.Label();
             this.timerForMinimizeBar = new System.Windows.Forms.Timer(this.components);
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.machinesButton = new System.Windows.Forms.Button();
-            this.rawMaterialsButton = new System.Windows.Forms.Button();
-            this.customersButton = new System.Windows.Forms.Button();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.usersButton = new System.Windows.Forms.Button();
-            this.adminAreaLabel = new System.Windows.Forms.Label();
-            this.adminPanel = new System.Windows.Forms.Panel();
-            this.iconPanel = new System.Windows.Forms.Panel();
-            this.iconApplicationLabel = new System.Windows.Forms.Label();
             this.leftActivePanel.SuspendLayout();
             this.topLeftActivePanel.SuspendLayout();
+            this.iconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productionIcon)).BeginInit();
             this.topWhitePanel.SuspendLayout();
             this.topActivePanel.SuspendLayout();
             this.adminPanel.SuspendLayout();
-            this.iconPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftActivePanel
@@ -244,21 +244,40 @@
             this.topLeftActivePanel.Size = new System.Drawing.Size(233, 140);
             this.topLeftActivePanel.TabIndex = 1;
             // 
-            // minimizeMenuButton
+            // iconPanel
             // 
-            this.minimizeMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeMenuButton.FlatAppearance.BorderSize = 0;
-            this.minimizeMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeMenuButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizeMenuButton.ForeColor = System.Drawing.Color.White;
-            this.minimizeMenuButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeMenuButton.Image")));
-            this.minimizeMenuButton.Location = new System.Drawing.Point(196, 0);
-            this.minimizeMenuButton.Name = "minimizeMenuButton";
-            this.minimizeMenuButton.Size = new System.Drawing.Size(32, 42);
-            this.minimizeMenuButton.TabIndex = 3;
-            this.minimizeMenuButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.minimizeMenuButton.UseVisualStyleBackColor = true;
-            this.minimizeMenuButton.Click += new System.EventHandler(this.MinimizeMenuButton_Click);
+            this.iconPanel.Controls.Add(this.productionIcon);
+            this.iconPanel.Controls.Add(this.iconApplicationLabel);
+            this.iconPanel.Controls.Add(this.iconManagementLabel);
+            this.iconPanel.Controls.Add(this.iconProductionLabel);
+            this.iconPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconPanel.Location = new System.Drawing.Point(0, 0);
+            this.iconPanel.Name = "iconPanel";
+            this.iconPanel.Size = new System.Drawing.Size(173, 140);
+            this.iconPanel.TabIndex = 0;
+            // 
+            // productionIcon
+            // 
+            this.productionIcon.Image = ((System.Drawing.Image)(resources.GetObject("productionIcon.Image")));
+            this.productionIcon.Location = new System.Drawing.Point(43, 0);
+            this.productionIcon.Name = "productionIcon";
+            this.productionIcon.Size = new System.Drawing.Size(117, 69);
+            this.productionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productionIcon.TabIndex = 3;
+            this.productionIcon.TabStop = false;
+            // 
+            // iconApplicationLabel
+            // 
+            this.iconApplicationLabel.AutoSize = true;
+            this.iconApplicationLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconApplicationLabel.ForeColor = System.Drawing.Color.White;
+            this.iconApplicationLabel.Location = new System.Drawing.Point(54, 109);
+            this.iconApplicationLabel.Name = "iconApplicationLabel";
+            this.iconApplicationLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.iconApplicationLabel.Size = new System.Drawing.Size(101, 19);
+            this.iconApplicationLabel.TabIndex = 4;
+            this.iconApplicationLabel.Text = "Application";
+            this.iconApplicationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // iconManagementLabel
             // 
@@ -286,15 +305,21 @@
             this.iconProductionLabel.Text = "Production";
             this.iconProductionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // productionIcon
+            // minimizeMenuButton
             // 
-            this.productionIcon.Image = ((System.Drawing.Image)(resources.GetObject("productionIcon.Image")));
-            this.productionIcon.Location = new System.Drawing.Point(43, 0);
-            this.productionIcon.Name = "productionIcon";
-            this.productionIcon.Size = new System.Drawing.Size(117, 69);
-            this.productionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.productionIcon.TabIndex = 3;
-            this.productionIcon.TabStop = false;
+            this.minimizeMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeMenuButton.FlatAppearance.BorderSize = 0;
+            this.minimizeMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeMenuButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeMenuButton.ForeColor = System.Drawing.Color.White;
+            this.minimizeMenuButton.Image = ((System.Drawing.Image)(resources.GetObject("minimizeMenuButton.Image")));
+            this.minimizeMenuButton.Location = new System.Drawing.Point(196, 0);
+            this.minimizeMenuButton.Name = "minimizeMenuButton";
+            this.minimizeMenuButton.Size = new System.Drawing.Size(32, 42);
+            this.minimizeMenuButton.TabIndex = 3;
+            this.minimizeMenuButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.minimizeMenuButton.UseVisualStyleBackColor = true;
+            this.minimizeMenuButton.Click += new System.EventHandler(this.MinimizeMenuButton_Click);
             // 
             // topWhitePanel
             // 
@@ -377,35 +402,32 @@
             this.topActivePanel.Size = new System.Drawing.Size(951, 95);
             this.topActivePanel.TabIndex = 2;
             // 
-            // clockLabel
+            // adminPanel
             // 
-            this.clockLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clockLabel.AutoSize = true;
-            this.clockLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clockLabel.ForeColor = System.Drawing.Color.White;
-            this.clockLabel.Location = new System.Drawing.Point(858, 35);
-            this.clockLabel.Name = "clockLabel";
-            this.clockLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.clockLabel.Size = new System.Drawing.Size(89, 19);
-            this.clockLabel.TabIndex = 3;
-            this.clockLabel.Text = "hh:mm:ss";
-            this.clockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminPanel.Controls.Add(this.adminAreaLabel);
+            this.adminPanel.Controls.Add(this.machinesButton);
+            this.adminPanel.Controls.Add(this.customersButton);
+            this.adminPanel.Controls.Add(this.panelTop);
+            this.adminPanel.Controls.Add(this.usersButton);
+            this.adminPanel.Controls.Add(this.rawMaterialsButton);
+            this.adminPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.adminPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminPanel.Name = "adminPanel";
+            this.adminPanel.Size = new System.Drawing.Size(716, 95);
+            this.adminPanel.TabIndex = 4;
             // 
-            // timerForMinimizeBar
+            // adminAreaLabel
             // 
-            this.timerForMinimizeBar.Tick += new System.EventHandler(this.TimerForMinimizeBar_Tick);
-            // 
-            // clockTimer
-            // 
-            this.clockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(233, 140);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(951, 521);
-            this.mainPanel.TabIndex = 3;
+            this.adminAreaLabel.AutoSize = true;
+            this.adminAreaLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminAreaLabel.ForeColor = System.Drawing.Color.White;
+            this.adminAreaLabel.Location = new System.Drawing.Point(35, 2);
+            this.adminAreaLabel.Name = "adminAreaLabel";
+            this.adminAreaLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.adminAreaLabel.Size = new System.Drawing.Size(102, 19);
+            this.adminAreaLabel.TabIndex = 5;
+            this.adminAreaLabel.Text = "Admin Area";
+            this.adminAreaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // machinesButton
             // 
@@ -423,23 +445,6 @@
             this.machinesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.machinesButton.UseVisualStyleBackColor = true;
             this.machinesButton.Click += new System.EventHandler(this.MachinesButton_Click);
-            // 
-            // rawMaterialsButton
-            // 
-            this.rawMaterialsButton.FlatAppearance.BorderSize = 0;
-            this.rawMaterialsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rawMaterialsButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rawMaterialsButton.ForeColor = System.Drawing.Color.White;
-            this.rawMaterialsButton.Image = ((System.Drawing.Image)(resources.GetObject("rawMaterialsButton.Image")));
-            this.rawMaterialsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rawMaterialsButton.Location = new System.Drawing.Point(209, 24);
-            this.rawMaterialsButton.Name = "rawMaterialsButton";
-            this.rawMaterialsButton.Size = new System.Drawing.Size(200, 60);
-            this.rawMaterialsButton.TabIndex = 4;
-            this.rawMaterialsButton.Text = "  Raw Materials";
-            this.rawMaterialsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rawMaterialsButton.UseVisualStyleBackColor = true;
-            this.rawMaterialsButton.Click += new System.EventHandler(this.RawMaterialsButton_Click);
             // 
             // customersButton
             // 
@@ -483,57 +488,52 @@
             this.usersButton.UseVisualStyleBackColor = true;
             this.usersButton.Click += new System.EventHandler(this.UsersButton_Click);
             // 
-            // adminAreaLabel
+            // rawMaterialsButton
             // 
-            this.adminAreaLabel.AutoSize = true;
-            this.adminAreaLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminAreaLabel.ForeColor = System.Drawing.Color.White;
-            this.adminAreaLabel.Location = new System.Drawing.Point(35, 2);
-            this.adminAreaLabel.Name = "adminAreaLabel";
-            this.adminAreaLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.adminAreaLabel.Size = new System.Drawing.Size(102, 19);
-            this.adminAreaLabel.TabIndex = 5;
-            this.adminAreaLabel.Text = "Admin Area";
-            this.adminAreaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rawMaterialsButton.FlatAppearance.BorderSize = 0;
+            this.rawMaterialsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rawMaterialsButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rawMaterialsButton.ForeColor = System.Drawing.Color.White;
+            this.rawMaterialsButton.Image = ((System.Drawing.Image)(resources.GetObject("rawMaterialsButton.Image")));
+            this.rawMaterialsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rawMaterialsButton.Location = new System.Drawing.Point(209, 24);
+            this.rawMaterialsButton.Name = "rawMaterialsButton";
+            this.rawMaterialsButton.Size = new System.Drawing.Size(200, 60);
+            this.rawMaterialsButton.TabIndex = 4;
+            this.rawMaterialsButton.Text = "  Raw Materials";
+            this.rawMaterialsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rawMaterialsButton.UseVisualStyleBackColor = true;
+            this.rawMaterialsButton.Click += new System.EventHandler(this.RawMaterialsButton_Click);
             // 
-            // adminPanel
+            // clockLabel
             // 
-            this.adminPanel.Controls.Add(this.adminAreaLabel);
-            this.adminPanel.Controls.Add(this.machinesButton);
-            this.adminPanel.Controls.Add(this.customersButton);
-            this.adminPanel.Controls.Add(this.panelTop);
-            this.adminPanel.Controls.Add(this.usersButton);
-            this.adminPanel.Controls.Add(this.rawMaterialsButton);
-            this.adminPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.adminPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(716, 95);
-            this.adminPanel.TabIndex = 4;
+            this.clockLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clockLabel.AutoSize = true;
+            this.clockLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clockLabel.ForeColor = System.Drawing.Color.White;
+            this.clockLabel.Location = new System.Drawing.Point(858, 35);
+            this.clockLabel.Name = "clockLabel";
+            this.clockLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.clockLabel.Size = new System.Drawing.Size(89, 19);
+            this.clockLabel.TabIndex = 3;
+            this.clockLabel.Text = "hh:mm:ss";
+            this.clockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // iconPanel
+            // timerForMinimizeBar
             // 
-            this.iconPanel.Controls.Add(this.productionIcon);
-            this.iconPanel.Controls.Add(this.iconApplicationLabel);
-            this.iconPanel.Controls.Add(this.iconManagementLabel);
-            this.iconPanel.Controls.Add(this.iconProductionLabel);
-            this.iconPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconPanel.Location = new System.Drawing.Point(0, 0);
-            this.iconPanel.Name = "iconPanel";
-            this.iconPanel.Size = new System.Drawing.Size(173, 140);
-            this.iconPanel.TabIndex = 0;
+            this.timerForMinimizeBar.Tick += new System.EventHandler(this.TimerForMinimizeBar_Tick);
             // 
-            // iconApplicationLabel
+            // clockTimer
             // 
-            this.iconApplicationLabel.AutoSize = true;
-            this.iconApplicationLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconApplicationLabel.ForeColor = System.Drawing.Color.White;
-            this.iconApplicationLabel.Location = new System.Drawing.Point(54, 109);
-            this.iconApplicationLabel.Name = "iconApplicationLabel";
-            this.iconApplicationLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconApplicationLabel.Size = new System.Drawing.Size(101, 19);
-            this.iconApplicationLabel.TabIndex = 4;
-            this.iconApplicationLabel.Text = "Application";
-            this.iconApplicationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(233, 140);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(951, 521);
+            this.mainPanel.TabIndex = 3;
             // 
             // DashboardForm
             // 
@@ -545,7 +545,6 @@
             this.Controls.Add(this.topWhitePanel);
             this.Controls.Add(this.leftActivePanel);
             this.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(910, 700);
             this.Name = "DashboardForm";
@@ -554,6 +553,8 @@
             this.leftActivePanel.ResumeLayout(false);
             this.leftActivePanel.PerformLayout();
             this.topLeftActivePanel.ResumeLayout(false);
+            this.iconPanel.ResumeLayout(false);
+            this.iconPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productionIcon)).EndInit();
             this.topWhitePanel.ResumeLayout(false);
             this.topWhitePanel.PerformLayout();
@@ -561,8 +562,6 @@
             this.topActivePanel.PerformLayout();
             this.adminPanel.ResumeLayout(false);
             this.adminPanel.PerformLayout();
-            this.iconPanel.ResumeLayout(false);
-            this.iconPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

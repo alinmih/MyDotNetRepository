@@ -28,18 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.productionOverviewLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // productionOverviewLabel
+            // 
+            this.productionOverviewLabel.AutoSize = true;
+            this.productionOverviewLabel.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productionOverviewLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.productionOverviewLabel.Location = new System.Drawing.Point(58, 57);
+            this.productionOverviewLabel.Name = "productionOverviewLabel";
+            this.productionOverviewLabel.Size = new System.Drawing.Size(190, 25);
+            this.productionOverviewLabel.TabIndex = 1;
+            this.productionOverviewLabel.Text = "Work In Progress";
             // 
             // UserOffersControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.productionOverviewLabel);
             this.Name = "UserOffersControl";
             this.Size = new System.Drawing.Size(969, 521);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label productionOverviewLabel;
     }
 }

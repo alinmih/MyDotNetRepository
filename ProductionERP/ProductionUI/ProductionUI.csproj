@@ -110,11 +110,35 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AdminArea\UCContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UCContainer.Designer.cs">
+      <DependentUpon>UCContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminCustomers.Designer.cs">
+      <DependentUpon>UserAdminCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AdminArea\UserAdminMachines.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\AdminArea\UserAdminMachines.Designer.cs">
       <DependentUpon>UserAdminMachines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminMaterials.Designer.cs">
+      <DependentUpon>UserAdminMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminArea\UserAdminUsers.Designer.cs">
+      <DependentUpon>UserAdminUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.cs">
       <SubType>UserControl</SubType>
@@ -209,8 +233,20 @@
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminArea\UCContainer.resx">
+      <DependentUpon>UCContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminArea\UserAdminCustomers.resx">
+      <DependentUpon>UserAdminCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminArea\UserAdminMachines.resx">
       <DependentUpon>UserAdminMachines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminArea\UserAdminMaterials.resx">
+      <DependentUpon>UserAdminMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminArea\UserAdminUsers.resx">
+      <DependentUpon>UserAdminUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.resx">
       <DependentUpon>UserSelectedTechnologyControl.cs</DependentUpon>

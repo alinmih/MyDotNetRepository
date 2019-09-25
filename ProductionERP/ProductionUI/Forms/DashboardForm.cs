@@ -105,6 +105,7 @@ namespace ProductionUI.Forms
             AddControlsToPanel(userControlHome);
         }
 
+        //TODO - Implement this on future
         private void ProductsButon_Click(object sender, EventArgs e)
         {
             MovePanelSide(productsButon);
@@ -168,16 +169,22 @@ namespace ProductionUI.Forms
         private void RawMaterialsButton_Click(object sender, EventArgs e)
         {
             MovePanelTop(rawMaterialsButton);
+            UserAdminMaterials adminMaterials = new UserAdminMaterials();
+            AddControlsToPanel(adminMaterials);
         }
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
             MovePanelTop(customersButton);
+            UserAdminCustomers adminCustomers = new UserAdminCustomers();
+            AddControlsToPanel(adminCustomers);
         }
 
         private void UsersButton_Click(object sender, EventArgs e)
         {
             MovePanelTop(usersButton);
+            UserAdminUsers adminUsers = new UserAdminUsers();
+            AddControlsToPanel(adminUsers);
         }
     }
 }
