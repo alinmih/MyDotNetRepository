@@ -60,6 +60,72 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminArea\CreateMachineCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMachineCategoryForm.Designer.cs">
+      <DependentUpon>CreateMachineCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMachineForm.Designer.cs">
+      <DependentUpon>CreateMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMaterialCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMaterialCategoryForm.Designer.cs">
+      <DependentUpon>CreateMaterialCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMaterialForm.Designer.cs">
+      <DependentUpon>CreateMaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMaterialMeasureUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateMaterialMeasureUnitForm.Designer.cs">
+      <DependentUpon>CreateMaterialMeasureUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateWarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\CreateWarehouseForm.Designer.cs">
+      <DependentUpon>CreateWarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMachineCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMachineCategoryForm.Designer.cs">
+      <DependentUpon>UpdateMachineCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMachineForm.Designer.cs">
+      <DependentUpon>UpdateMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMaterialCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMaterialCategoryForm.Designer.cs">
+      <DependentUpon>UpdateMaterialCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateMaterialForm.Designer.cs">
+      <DependentUpon>UpdateMaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateWarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\UpdateWarehouseForm.Designer.cs">
+      <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,23 +144,23 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManufacturingCosts\PartMoreDimensions.cs">
+    <Compile Include="Forms\ManufacturingCosts\PartMoreDimensionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManufacturingCosts\PartMoreDimensions.Designer.cs">
-      <DependentUpon>PartMoreDimensions.cs</DependentUpon>
+    <Compile Include="Forms\ManufacturingCosts\PartMoreDimensionsForm.Designer.cs">
+      <DependentUpon>PartMoreDimensionsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManufacturingCosts\SearchRawMaterial.cs">
+    <Compile Include="Forms\ManufacturingCosts\SearchRawMaterialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManufacturingCosts\SearchRawMaterial.Designer.cs">
-      <DependentUpon>SearchRawMaterial.cs</DependentUpon>
+    <Compile Include="Forms\ManufacturingCosts\SearchRawMaterialForm.Designer.cs">
+      <DependentUpon>SearchRawMaterialForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManufacturingCosts\SelectMachines.cs">
+    <Compile Include="Forms\ManufacturingCosts\SelectMachinesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManufacturingCosts\SelectMachines.Designer.cs">
-      <DependentUpon>SelectMachines.cs</DependentUpon>
+    <Compile Include="Forms\ManufacturingCosts\SelectMachinesForm.Designer.cs">
+      <DependentUpon>SelectMachinesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="%28sketch%29PriceAppForm.cs">
       <SubType>Form</SubType>
@@ -104,12 +170,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\AdminArea\UCContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -200,6 +260,39 @@
     <Compile Include="UserControls\UserWarehouseControl.Designer.cs">
       <DependentUpon>UserWarehouseControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AdminArea\CreateMachineCategoryForm.resx">
+      <DependentUpon>CreateMachineCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\CreateMachineForm.resx">
+      <DependentUpon>CreateMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\CreateMaterialCategoryForm.resx">
+      <DependentUpon>CreateMaterialCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\CreateMaterialForm.resx">
+      <DependentUpon>CreateMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\CreateMaterialMeasureUnitForm.resx">
+      <DependentUpon>CreateMaterialMeasureUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\CreateWarehouseForm.resx">
+      <DependentUpon>CreateWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\UpdateMachineCategoryForm.resx">
+      <DependentUpon>UpdateMachineCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\UpdateMachineForm.resx">
+      <DependentUpon>UpdateMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\UpdateMaterialCategoryForm.resx">
+      <DependentUpon>UpdateMaterialCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\UpdateMaterialForm.resx">
+      <DependentUpon>UpdateMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\UpdateWarehouseForm.resx">
+      <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,14 +302,14 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManufacturingCosts\PartMoreDimensions.resx">
-      <DependentUpon>PartMoreDimensions.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\PartMoreDimensionsForm.resx">
+      <DependentUpon>PartMoreDimensionsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManufacturingCosts\SearchRawMaterial.resx">
-      <DependentUpon>SearchRawMaterial.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\SearchRawMaterialForm.resx">
+      <DependentUpon>SearchRawMaterialForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManufacturingCosts\SelectMachines.resx">
-      <DependentUpon>SelectMachines.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\SelectMachinesForm.resx">
+      <DependentUpon>SelectMachinesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="%28sketch%29PriceAppForm.resx">
       <DependentUpon>%28sketch%29PriceAppForm.cs</DependentUpon>
@@ -230,9 +323,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminArea\UCContainer.resx">
       <DependentUpon>UCContainer.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,5 +382,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -61,6 +61,17 @@
             this.partMarginLabelPanel = new System.Windows.Forms.Panel();
             this.priceMarginLabel = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
+            this.technology010Panel = new System.Windows.Forms.Panel();
+            this.machineTime010TextBox = new System.Windows.Forms.TextBox();
+            this.setupTime010TextBox = new System.Windows.Forms.TextBox();
+            this.operation010Label = new System.Windows.Forms.Label();
+            this.operationNum010Label = new System.Windows.Forms.Label();
+            this.operation010SetupTimeLabel = new System.Windows.Forms.Label();
+            this.operation010Machine = new System.Windows.Forms.Label();
+            this.operation010MachTimeLabel = new System.Windows.Forms.Label();
+            this.operation010MachineLabel = new System.Windows.Forms.Label();
+            this.manufTechLabelPanel = new System.Windows.Forms.Panel();
+            this.manufacTechnologyLabel = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rawMatPrincPalel = new System.Windows.Forms.Panel();
             this.partConsPrincPalel = new System.Windows.Forms.Panel();
@@ -72,16 +83,22 @@
             this.consLabelPanel = new System.Windows.Forms.Panel();
             this.rawMatConsLabel = new System.Windows.Forms.Label();
             this.rowMatPanel = new System.Windows.Forms.Panel();
+            this.rawUnitLabel = new System.Windows.Forms.Label();
             this.rawPriceLabel = new System.Windows.Forms.Label();
+            this.rawUnitTextBox = new System.Windows.Forms.TextBox();
             this.rawPriceTextBox = new System.Windows.Forms.TextBox();
             this.rawLenghtLabel = new System.Windows.Forms.Label();
             this.rawWidthLabel = new System.Windows.Forms.Label();
+            this.rawMaterialTypeLabel = new System.Windows.Forms.Label();
+            this.rawMaterialNameLabel = new System.Windows.Forms.Label();
             this.rawMaterialNumberLabel = new System.Windows.Forms.Label();
             this.rawThickLabel = new System.Windows.Forms.Label();
             this.rawLengthTextBox = new System.Windows.Forms.TextBox();
             this.rawThickTextBox = new System.Windows.Forms.TextBox();
             this.rawWidthTextBox = new System.Windows.Forms.TextBox();
-            this.rawMaterialTextBox = new System.Windows.Forms.TextBox();
+            this.rawMaterialTypeTextBox = new System.Windows.Forms.TextBox();
+            this.rawMaterialNameTextBox = new System.Windows.Forms.TextBox();
+            this.rawMaterialNumberTextBox = new System.Windows.Forms.TextBox();
             this.rawMatLabelPanel = new System.Windows.Forms.Panel();
             this.rawMaterialLabel = new System.Windows.Forms.Label();
             this.rawSearchButton = new System.Windows.Forms.Button();
@@ -110,18 +127,10 @@
             this.dwgNoLabel = new System.Windows.Forms.Label();
             this.partDescLabelPanel = new System.Windows.Forms.Panel();
             this.partDescLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.manufacTechnologyLabel = new System.Windows.Forms.Label();
-            this.technology010Panel = new System.Windows.Forms.Panel();
-            this.machineTime010TextBox = new System.Windows.Forms.TextBox();
-            this.setupTime010TextBox = new System.Windows.Forms.TextBox();
-            this.operation010Label = new System.Windows.Forms.Label();
-            this.operationNum010Label = new System.Windows.Forms.Label();
-            this.operation010SetupTimeLabel = new System.Windows.Forms.Label();
-            this.operation010Machine = new System.Windows.Forms.Label();
-            this.operation010MachTimeLabel = new System.Windows.Forms.Label();
-            this.operation010MachineLabel = new System.Windows.Forms.Label();
+            this.manufacturingCostNoPanel = new System.Windows.Forms.Panel();
+            this.saveManufacturingCost = new System.Windows.Forms.Button();
+            this.manufacturingCostNoLabel = new System.Windows.Forms.Label();
+            this.manufacturingCostNo = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -133,6 +142,8 @@
             this.partMarginPanel.SuspendLayout();
             this.partMarginLabelPanel.SuspendLayout();
             this.centerPanel.SuspendLayout();
+            this.technology010Panel.SuspendLayout();
+            this.manufTechLabelPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.rawMatPrincPalel.SuspendLayout();
             this.partConsPrincPalel.SuspendLayout();
@@ -146,8 +157,7 @@
             this.partDescPrincPalel.SuspendLayout();
             this.partDescPanel.SuspendLayout();
             this.partDescLabelPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.technology010Panel.SuspendLayout();
+            this.manufacturingCostNoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // manufacturingCostLabel
@@ -163,11 +173,13 @@
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.saveManufacturingCost);
+            this.topPanel.Controls.Add(this.manufacturingCostNoPanel);
             this.topPanel.Controls.Add(this.manufacturingCostLabel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(969, 47);
+            this.topPanel.Size = new System.Drawing.Size(969, 83);
             this.topPanel.TabIndex = 0;
             // 
             // mainPanel
@@ -177,9 +189,9 @@
             this.mainPanel.Controls.Add(this.centerPanel);
             this.mainPanel.Controls.Add(this.leftPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 47);
+            this.mainPanel.Location = new System.Drawing.Point(0, 83);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(969, 630);
+            this.mainPanel.Size = new System.Drawing.Size(969, 772);
             this.mainPanel.TabIndex = 13;
             // 
             // panelLeft
@@ -187,9 +199,9 @@
             this.panelLeft.AutoScroll = true;
             this.panelLeft.Controls.Add(this.rightPanel);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(709, 0);
+            this.panelLeft.Location = new System.Drawing.Point(675, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(257, 630);
+            this.panelLeft.Size = new System.Drawing.Size(257, 772);
             this.panelLeft.TabIndex = 15;
             // 
             // rightPanel
@@ -199,7 +211,7 @@
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.rightPanel.Location = new System.Drawing.Point(0, 0);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(257, 630);
+            this.rightPanel.Size = new System.Drawing.Size(257, 772);
             this.rightPanel.TabIndex = 12;
             // 
             // partPricePrincPalel
@@ -496,12 +508,130 @@
             // 
             this.centerPanel.AutoScroll = true;
             this.centerPanel.Controls.Add(this.technology010Panel);
-            this.centerPanel.Controls.Add(this.panel1);
+            this.centerPanel.Controls.Add(this.manufTechLabelPanel);
             this.centerPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.centerPanel.Location = new System.Drawing.Point(347, 0);
+            this.centerPanel.Location = new System.Drawing.Point(313, 0);
             this.centerPanel.Name = "centerPanel";
-            this.centerPanel.Size = new System.Drawing.Size(362, 630);
+            this.centerPanel.Size = new System.Drawing.Size(362, 772);
             this.centerPanel.TabIndex = 14;
+            // 
+            // technology010Panel
+            // 
+            this.technology010Panel.Controls.Add(this.machineTime010TextBox);
+            this.technology010Panel.Controls.Add(this.setupTime010TextBox);
+            this.technology010Panel.Controls.Add(this.operation010Label);
+            this.technology010Panel.Controls.Add(this.operationNum010Label);
+            this.technology010Panel.Controls.Add(this.operation010SetupTimeLabel);
+            this.technology010Panel.Controls.Add(this.operation010Machine);
+            this.technology010Panel.Controls.Add(this.operation010MachTimeLabel);
+            this.technology010Panel.Controls.Add(this.operation010MachineLabel);
+            this.technology010Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.technology010Panel.Location = new System.Drawing.Point(0, 30);
+            this.technology010Panel.Name = "technology010Panel";
+            this.technology010Panel.Size = new System.Drawing.Size(362, 100);
+            this.technology010Panel.TabIndex = 14;
+            // 
+            // machineTime010TextBox
+            // 
+            this.machineTime010TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.machineTime010TextBox.Location = new System.Drawing.Point(282, 66);
+            this.machineTime010TextBox.Name = "machineTime010TextBox";
+            this.machineTime010TextBox.Size = new System.Drawing.Size(46, 26);
+            this.machineTime010TextBox.TabIndex = 20;
+            // 
+            // setupTime010TextBox
+            // 
+            this.setupTime010TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setupTime010TextBox.Location = new System.Drawing.Point(108, 66);
+            this.setupTime010TextBox.Name = "setupTime010TextBox";
+            this.setupTime010TextBox.Size = new System.Drawing.Size(48, 26);
+            this.setupTime010TextBox.TabIndex = 21;
+            // 
+            // operation010Label
+            // 
+            this.operation010Label.AutoSize = true;
+            this.operation010Label.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operation010Label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.operation010Label.Location = new System.Drawing.Point(6, 7);
+            this.operation010Label.Name = "operation010Label";
+            this.operation010Label.Size = new System.Drawing.Size(99, 19);
+            this.operation010Label.TabIndex = 14;
+            this.operation010Label.Text = "Operation: ";
+            // 
+            // operationNum010Label
+            // 
+            this.operationNum010Label.AutoSize = true;
+            this.operationNum010Label.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operationNum010Label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.operationNum010Label.Location = new System.Drawing.Point(110, 7);
+            this.operationNum010Label.Name = "operationNum010Label";
+            this.operationNum010Label.Size = new System.Drawing.Size(58, 19);
+            this.operationNum010Label.TabIndex = 17;
+            this.operationNum010Label.Text = "<010>";
+            // 
+            // operation010SetupTimeLabel
+            // 
+            this.operation010SetupTimeLabel.AutoSize = true;
+            this.operation010SetupTimeLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operation010SetupTimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.operation010SetupTimeLabel.Location = new System.Drawing.Point(6, 69);
+            this.operation010SetupTimeLabel.Name = "operation010SetupTimeLabel";
+            this.operation010SetupTimeLabel.Size = new System.Drawing.Size(96, 19);
+            this.operation010SetupTimeLabel.TabIndex = 15;
+            this.operation010SetupTimeLabel.Text = "Setup Time:";
+            // 
+            // operation010Machine
+            // 
+            this.operation010Machine.AutoSize = true;
+            this.operation010Machine.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operation010Machine.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.operation010Machine.Location = new System.Drawing.Point(136, 38);
+            this.operation010Machine.Name = "operation010Machine";
+            this.operation010Machine.Size = new System.Drawing.Size(71, 19);
+            this.operation010Machine.TabIndex = 18;
+            this.operation010Machine.Text = "<Lathe>";
+            // 
+            // operation010MachTimeLabel
+            // 
+            this.operation010MachTimeLabel.AutoSize = true;
+            this.operation010MachTimeLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operation010MachTimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.operation010MachTimeLabel.Location = new System.Drawing.Point(162, 69);
+            this.operation010MachTimeLabel.Name = "operation010MachTimeLabel";
+            this.operation010MachTimeLabel.Size = new System.Drawing.Size(116, 19);
+            this.operation010MachTimeLabel.TabIndex = 16;
+            this.operation010MachTimeLabel.Text = "Machine Time:";
+            // 
+            // operation010MachineLabel
+            // 
+            this.operation010MachineLabel.AutoSize = true;
+            this.operation010MachineLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operation010MachineLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.operation010MachineLabel.Location = new System.Drawing.Point(6, 38);
+            this.operation010MachineLabel.Name = "operation010MachineLabel";
+            this.operation010MachineLabel.Size = new System.Drawing.Size(124, 19);
+            this.operation010MachineLabel.TabIndex = 19;
+            this.operation010MachineLabel.Text = "Machine Name:";
+            // 
+            // manufTechLabelPanel
+            // 
+            this.manufTechLabelPanel.Controls.Add(this.manufacTechnologyLabel);
+            this.manufTechLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.manufTechLabelPanel.Location = new System.Drawing.Point(0, 0);
+            this.manufTechLabelPanel.Name = "manufTechLabelPanel";
+            this.manufTechLabelPanel.Size = new System.Drawing.Size(362, 30);
+            this.manufTechLabelPanel.TabIndex = 13;
+            // 
+            // manufacTechnologyLabel
+            // 
+            this.manufacTechnologyLabel.AutoSize = true;
+            this.manufacTechnologyLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manufacTechnologyLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.manufacTechnologyLabel.Location = new System.Drawing.Point(6, 4);
+            this.manufacTechnologyLabel.Name = "manufacTechnologyLabel";
+            this.manufacTechnologyLabel.Size = new System.Drawing.Size(225, 19);
+            this.manufacTechnologyLabel.TabIndex = 5;
+            this.manufacTechnologyLabel.Text = "Manufacturing Technology";
             // 
             // leftPanel
             // 
@@ -512,7 +642,7 @@
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(347, 630);
+            this.leftPanel.Size = new System.Drawing.Size(313, 772);
             this.leftPanel.TabIndex = 13;
             // 
             // rawMatPrincPalel
@@ -523,7 +653,7 @@
             this.rawMatPrincPalel.Dock = System.Windows.Forms.DockStyle.Top;
             this.rawMatPrincPalel.Location = new System.Drawing.Point(0, 287);
             this.rawMatPrincPalel.Name = "rawMatPrincPalel";
-            this.rawMatPrincPalel.Size = new System.Drawing.Size(330, 351);
+            this.rawMatPrincPalel.Size = new System.Drawing.Size(313, 464);
             this.rawMatPrincPalel.TabIndex = 12;
             // 
             // partConsPrincPalel
@@ -531,9 +661,9 @@
             this.partConsPrincPalel.Controls.Add(this.consPanel);
             this.partConsPrincPalel.Controls.Add(this.consLabelPanel);
             this.partConsPrincPalel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.partConsPrincPalel.Location = new System.Drawing.Point(0, 231);
+            this.partConsPrincPalel.Location = new System.Drawing.Point(0, 326);
             this.partConsPrincPalel.Name = "partConsPrincPalel";
-            this.partConsPrincPalel.Size = new System.Drawing.Size(330, 136);
+            this.partConsPrincPalel.Size = new System.Drawing.Size(313, 192);
             this.partConsPrincPalel.TabIndex = 2;
             // 
             // consPanel
@@ -545,7 +675,7 @@
             this.consPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.consPanel.Location = new System.Drawing.Point(0, 39);
             this.consPanel.Name = "consPanel";
-            this.consPanel.Size = new System.Drawing.Size(330, 95);
+            this.consPanel.Size = new System.Drawing.Size(313, 110);
             this.consPanel.TabIndex = 13;
             // 
             // partTotalRawLabel
@@ -592,7 +722,7 @@
             this.consLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.consLabelPanel.Location = new System.Drawing.Point(0, 0);
             this.consLabelPanel.Name = "consLabelPanel";
-            this.consLabelPanel.Size = new System.Drawing.Size(330, 39);
+            this.consLabelPanel.Size = new System.Drawing.Size(313, 39);
             this.consLabelPanel.TabIndex = 12;
             // 
             // rawMatConsLabel
@@ -608,40 +738,66 @@
             // 
             // rowMatPanel
             // 
+            this.rowMatPanel.Controls.Add(this.rawUnitLabel);
             this.rowMatPanel.Controls.Add(this.rawPriceLabel);
+            this.rowMatPanel.Controls.Add(this.rawUnitTextBox);
             this.rowMatPanel.Controls.Add(this.rawPriceTextBox);
             this.rowMatPanel.Controls.Add(this.rawLenghtLabel);
             this.rowMatPanel.Controls.Add(this.rawWidthLabel);
+            this.rowMatPanel.Controls.Add(this.rawMaterialTypeLabel);
+            this.rowMatPanel.Controls.Add(this.rawMaterialNameLabel);
             this.rowMatPanel.Controls.Add(this.rawMaterialNumberLabel);
             this.rowMatPanel.Controls.Add(this.rawThickLabel);
             this.rowMatPanel.Controls.Add(this.rawLengthTextBox);
             this.rowMatPanel.Controls.Add(this.rawThickTextBox);
             this.rowMatPanel.Controls.Add(this.rawWidthTextBox);
-            this.rowMatPanel.Controls.Add(this.rawMaterialTextBox);
+            this.rowMatPanel.Controls.Add(this.rawMaterialTypeTextBox);
+            this.rowMatPanel.Controls.Add(this.rawMaterialNameTextBox);
+            this.rowMatPanel.Controls.Add(this.rawMaterialNumberTextBox);
             this.rowMatPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.rowMatPanel.Location = new System.Drawing.Point(0, 39);
             this.rowMatPanel.Name = "rowMatPanel";
-            this.rowMatPanel.Size = new System.Drawing.Size(330, 192);
+            this.rowMatPanel.Size = new System.Drawing.Size(313, 287);
             this.rowMatPanel.TabIndex = 1;
+            // 
+            // rawUnitLabel
+            // 
+            this.rawUnitLabel.AutoSize = true;
+            this.rawUnitLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rawUnitLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rawUnitLabel.Location = new System.Drawing.Point(184, 251);
+            this.rawUnitLabel.Name = "rawUnitLabel";
+            this.rawUnitLabel.Size = new System.Drawing.Size(43, 19);
+            this.rawUnitLabel.TabIndex = 18;
+            this.rawUnitLabel.Text = "Unit:";
             // 
             // rawPriceLabel
             // 
             this.rawPriceLabel.AutoSize = true;
             this.rawPriceLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rawPriceLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rawPriceLabel.Location = new System.Drawing.Point(61, 159);
+            this.rawPriceLabel.Location = new System.Drawing.Point(10, 251);
             this.rawPriceLabel.Name = "rawPriceLabel";
             this.rawPriceLabel.Size = new System.Drawing.Size(51, 19);
             this.rawPriceLabel.TabIndex = 18;
             this.rawPriceLabel.Text = "Price:";
             // 
+            // rawUnitTextBox
+            // 
+            this.rawUnitTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rawUnitTextBox.Location = new System.Drawing.Point(234, 248);
+            this.rawUnitTextBox.Name = "rawUnitTextBox";
+            this.rawUnitTextBox.ReadOnly = true;
+            this.rawUnitTextBox.Size = new System.Drawing.Size(55, 26);
+            this.rawUnitTextBox.TabIndex = 19;
+            // 
             // rawPriceTextBox
             // 
             this.rawPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rawPriceTextBox.Location = new System.Drawing.Point(121, 157);
+            this.rawPriceTextBox.Location = new System.Drawing.Point(77, 249);
             this.rawPriceTextBox.Name = "rawPriceTextBox";
             this.rawPriceTextBox.ReadOnly = true;
-            this.rawPriceTextBox.Size = new System.Drawing.Size(76, 26);
+            this.rawPriceTextBox.Size = new System.Drawing.Size(83, 26);
             this.rawPriceTextBox.TabIndex = 19;
             // 
             // rawLenghtLabel
@@ -649,7 +805,7 @@
             this.rawLenghtLabel.AutoSize = true;
             this.rawLenghtLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rawLenghtLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rawLenghtLabel.Location = new System.Drawing.Point(55, 59);
+            this.rawLenghtLabel.Location = new System.Drawing.Point(10, 146);
             this.rawLenghtLabel.Name = "rawLenghtLabel";
             this.rawLenghtLabel.Size = new System.Drawing.Size(64, 19);
             this.rawLenghtLabel.TabIndex = 8;
@@ -660,18 +816,40 @@
             this.rawWidthLabel.AutoSize = true;
             this.rawWidthLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rawWidthLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rawWidthLabel.Location = new System.Drawing.Point(61, 96);
+            this.rawWidthLabel.Location = new System.Drawing.Point(10, 183);
             this.rawWidthLabel.Name = "rawWidthLabel";
             this.rawWidthLabel.Size = new System.Drawing.Size(58, 19);
             this.rawWidthLabel.TabIndex = 9;
             this.rawWidthLabel.Text = "Width:";
+            // 
+            // rawMaterialTypeLabel
+            // 
+            this.rawMaterialTypeLabel.AutoSize = true;
+            this.rawMaterialTypeLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rawMaterialTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rawMaterialTypeLabel.Location = new System.Drawing.Point(10, 106);
+            this.rawMaterialTypeLabel.Name = "rawMaterialTypeLabel";
+            this.rawMaterialTypeLabel.Size = new System.Drawing.Size(51, 19);
+            this.rawMaterialTypeLabel.TabIndex = 15;
+            this.rawMaterialTypeLabel.Text = "Type:";
+            // 
+            // rawMaterialNameLabel
+            // 
+            this.rawMaterialNameLabel.AutoSize = true;
+            this.rawMaterialNameLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rawMaterialNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rawMaterialNameLabel.Location = new System.Drawing.Point(9, 46);
+            this.rawMaterialNameLabel.Name = "rawMaterialNameLabel";
+            this.rawMaterialNameLabel.Size = new System.Drawing.Size(58, 19);
+            this.rawMaterialNameLabel.TabIndex = 15;
+            this.rawMaterialNameLabel.Text = "Name:";
             // 
             // rawMaterialNumberLabel
             // 
             this.rawMaterialNumberLabel.AutoSize = true;
             this.rawMaterialNumberLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rawMaterialNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rawMaterialNumberLabel.Location = new System.Drawing.Point(19, 17);
+            this.rawMaterialNumberLabel.Location = new System.Drawing.Point(6, 18);
             this.rawMaterialNumberLabel.Name = "rawMaterialNumberLabel";
             this.rawMaterialNumberLabel.Size = new System.Drawing.Size(100, 19);
             this.rawMaterialNumberLabel.TabIndex = 15;
@@ -682,7 +860,7 @@
             this.rawThickLabel.AutoSize = true;
             this.rawThickLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rawThickLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rawThickLabel.Location = new System.Drawing.Point(66, 126);
+            this.rawThickLabel.Location = new System.Drawing.Point(10, 218);
             this.rawThickLabel.Name = "rawThickLabel";
             this.rawThickLabel.Size = new System.Drawing.Size(53, 19);
             this.rawThickLabel.TabIndex = 10;
@@ -691,38 +869,55 @@
             // rawLengthTextBox
             // 
             this.rawLengthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rawLengthTextBox.Location = new System.Drawing.Point(121, 52);
+            this.rawLengthTextBox.Location = new System.Drawing.Point(77, 144);
             this.rawLengthTextBox.Name = "rawLengthTextBox";
             this.rawLengthTextBox.ReadOnly = true;
-            this.rawLengthTextBox.Size = new System.Drawing.Size(168, 26);
+            this.rawLengthTextBox.Size = new System.Drawing.Size(212, 26);
             this.rawLengthTextBox.TabIndex = 11;
             // 
             // rawThickTextBox
             // 
             this.rawThickTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rawThickTextBox.Location = new System.Drawing.Point(121, 124);
+            this.rawThickTextBox.Location = new System.Drawing.Point(77, 216);
             this.rawThickTextBox.Name = "rawThickTextBox";
             this.rawThickTextBox.ReadOnly = true;
-            this.rawThickTextBox.Size = new System.Drawing.Size(168, 26);
+            this.rawThickTextBox.Size = new System.Drawing.Size(212, 26);
             this.rawThickTextBox.TabIndex = 12;
             // 
             // rawWidthTextBox
             // 
             this.rawWidthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rawWidthTextBox.Location = new System.Drawing.Point(121, 89);
+            this.rawWidthTextBox.Location = new System.Drawing.Point(77, 181);
             this.rawWidthTextBox.Name = "rawWidthTextBox";
             this.rawWidthTextBox.ReadOnly = true;
-            this.rawWidthTextBox.Size = new System.Drawing.Size(168, 26);
+            this.rawWidthTextBox.Size = new System.Drawing.Size(212, 26);
             this.rawWidthTextBox.TabIndex = 13;
             // 
-            // rawMaterialTextBox
+            // rawMaterialTypeTextBox
             // 
-            this.rawMaterialTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rawMaterialTextBox.Location = new System.Drawing.Point(121, 15);
-            this.rawMaterialTextBox.Name = "rawMaterialTextBox";
-            this.rawMaterialTextBox.ReadOnly = true;
-            this.rawMaterialTextBox.Size = new System.Drawing.Size(168, 26);
-            this.rawMaterialTextBox.TabIndex = 14;
+            this.rawMaterialTypeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rawMaterialTypeTextBox.Location = new System.Drawing.Point(77, 104);
+            this.rawMaterialTypeTextBox.Name = "rawMaterialTypeTextBox";
+            this.rawMaterialTypeTextBox.ReadOnly = true;
+            this.rawMaterialTypeTextBox.Size = new System.Drawing.Size(212, 26);
+            this.rawMaterialTypeTextBox.TabIndex = 14;
+            // 
+            // rawMaterialNameTextBox
+            // 
+            this.rawMaterialNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rawMaterialNameTextBox.Location = new System.Drawing.Point(10, 68);
+            this.rawMaterialNameTextBox.Name = "rawMaterialNameTextBox";
+            this.rawMaterialNameTextBox.ReadOnly = true;
+            this.rawMaterialNameTextBox.Size = new System.Drawing.Size(279, 26);
+            this.rawMaterialNameTextBox.TabIndex = 14;
+            // 
+            // rawMaterialNumberTextBox
+            // 
+            this.rawMaterialNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rawMaterialNumberTextBox.Location = new System.Drawing.Point(108, 16);
+            this.rawMaterialNumberTextBox.Name = "rawMaterialNumberTextBox";
+            this.rawMaterialNumberTextBox.Size = new System.Drawing.Size(181, 26);
+            this.rawMaterialNumberTextBox.TabIndex = 14;
             // 
             // rawMatLabelPanel
             // 
@@ -731,7 +926,7 @@
             this.rawMatLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.rawMatLabelPanel.Location = new System.Drawing.Point(0, 0);
             this.rawMatLabelPanel.Name = "rawMatLabelPanel";
-            this.rawMatLabelPanel.Size = new System.Drawing.Size(330, 39);
+            this.rawMatLabelPanel.Size = new System.Drawing.Size(313, 39);
             this.rawMatLabelPanel.TabIndex = 0;
             // 
             // rawMaterialLabel
@@ -765,7 +960,7 @@
             this.partDimPrincPalel.Dock = System.Windows.Forms.DockStyle.Top;
             this.partDimPrincPalel.Location = new System.Drawing.Point(0, 185);
             this.partDimPrincPalel.Name = "partDimPrincPalel";
-            this.partDimPrincPalel.Size = new System.Drawing.Size(330, 102);
+            this.partDimPrincPalel.Size = new System.Drawing.Size(313, 102);
             this.partDimPrincPalel.TabIndex = 11;
             // 
             // partDimPanel
@@ -779,7 +974,7 @@
             this.partDimPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.partDimPanel.Location = new System.Drawing.Point(0, 33);
             this.partDimPanel.Name = "partDimPanel";
-            this.partDimPanel.Size = new System.Drawing.Size(330, 69);
+            this.partDimPanel.Size = new System.Drawing.Size(313, 69);
             this.partDimPanel.TabIndex = 1;
             // 
             // partLenghtLabel
@@ -846,7 +1041,7 @@
             this.partDimLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.partDimLabelPanel.Location = new System.Drawing.Point(0, 0);
             this.partDimLabelPanel.Name = "partDimLabelPanel";
-            this.partDimLabelPanel.Size = new System.Drawing.Size(330, 33);
+            this.partDimLabelPanel.Size = new System.Drawing.Size(313, 33);
             this.partDimLabelPanel.TabIndex = 0;
             // 
             // partMoreDimButton
@@ -880,7 +1075,7 @@
             this.partDescPrincPalel.Dock = System.Windows.Forms.DockStyle.Top;
             this.partDescPrincPalel.Location = new System.Drawing.Point(0, 0);
             this.partDescPrincPalel.Name = "partDescPrincPalel";
-            this.partDescPrincPalel.Size = new System.Drawing.Size(330, 185);
+            this.partDescPrincPalel.Size = new System.Drawing.Size(313, 185);
             this.partDescPrincPalel.TabIndex = 10;
             // 
             // partDescPanel
@@ -898,7 +1093,7 @@
             this.partDescPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.partDescPanel.Location = new System.Drawing.Point(0, 30);
             this.partDescPanel.Name = "partDescPanel";
-            this.partDescPanel.Size = new System.Drawing.Size(330, 155);
+            this.partDescPanel.Size = new System.Drawing.Size(313, 155);
             this.partDescPanel.TabIndex = 1;
             // 
             // partNameTextBox
@@ -1002,7 +1197,7 @@
             this.partDescLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.partDescLabelPanel.Location = new System.Drawing.Point(0, 0);
             this.partDescLabelPanel.Name = "partDescLabelPanel";
-            this.partDescLabelPanel.Size = new System.Drawing.Size(330, 30);
+            this.partDescLabelPanel.Size = new System.Drawing.Size(313, 30);
             this.partDescLabelPanel.TabIndex = 0;
             // 
             // partDescLabel
@@ -1016,131 +1211,49 @@
             this.partDescLabel.TabIndex = 4;
             this.partDescLabel.Text = "Part Description";
             // 
-            // panel1
+            // manufacturingCostNoPanel
             // 
-            this.panel1.Controls.Add(this.manufacTechnologyLabel);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(362, 30);
-            this.panel1.TabIndex = 13;
+            this.manufacturingCostNoPanel.Controls.Add(this.manufacturingCostNo);
+            this.manufacturingCostNoPanel.Controls.Add(this.manufacturingCostNoLabel);
+            this.manufacturingCostNoPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.manufacturingCostNoPanel.Location = new System.Drawing.Point(0, 37);
+            this.manufacturingCostNoPanel.Name = "manufacturingCostNoPanel";
+            this.manufacturingCostNoPanel.Size = new System.Drawing.Size(969, 46);
+            this.manufacturingCostNoPanel.TabIndex = 3;
             // 
-            // flowLayoutPanel1
+            // saveManufacturingCost
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(181, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.saveManufacturingCost.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.saveManufacturingCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveManufacturingCost.ForeColor = System.Drawing.Color.White;
+            this.saveManufacturingCost.Location = new System.Drawing.Point(839, 2);
+            this.saveManufacturingCost.Name = "saveManufacturingCost";
+            this.saveManufacturingCost.Size = new System.Drawing.Size(127, 32);
+            this.saveManufacturingCost.TabIndex = 43;
+            this.saveManufacturingCost.Text = "Save";
+            this.saveManufacturingCost.UseVisualStyleBackColor = false;
             // 
-            // manufacTechnologyLabel
+            // manufacturingCostNoLabel
             // 
-            this.manufacTechnologyLabel.AutoSize = true;
-            this.manufacTechnologyLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manufacTechnologyLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.manufacTechnologyLabel.Location = new System.Drawing.Point(6, 4);
-            this.manufacTechnologyLabel.Name = "manufacTechnologyLabel";
-            this.manufacTechnologyLabel.Size = new System.Drawing.Size(225, 19);
-            this.manufacTechnologyLabel.TabIndex = 5;
-            this.manufacTechnologyLabel.Text = "Manufacturing Technology";
+            this.manufacturingCostNoLabel.AutoSize = true;
+            this.manufacturingCostNoLabel.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manufacturingCostNoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.manufacturingCostNoLabel.Location = new System.Drawing.Point(9, 10);
+            this.manufacturingCostNoLabel.Name = "manufacturingCostNoLabel";
+            this.manufacturingCostNoLabel.Size = new System.Drawing.Size(239, 23);
+            this.manufacturingCostNoLabel.TabIndex = 2;
+            this.manufacturingCostNoLabel.Text = "Manufacturing Cost No:";
             // 
-            // technology010Panel
+            // manufacturingCostNo
             // 
-            this.technology010Panel.Controls.Add(this.machineTime010TextBox);
-            this.technology010Panel.Controls.Add(this.setupTime010TextBox);
-            this.technology010Panel.Controls.Add(this.operation010Label);
-            this.technology010Panel.Controls.Add(this.operationNum010Label);
-            this.technology010Panel.Controls.Add(this.operation010SetupTimeLabel);
-            this.technology010Panel.Controls.Add(this.operation010Machine);
-            this.technology010Panel.Controls.Add(this.operation010MachTimeLabel);
-            this.technology010Panel.Controls.Add(this.operation010MachineLabel);
-            this.technology010Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.technology010Panel.Location = new System.Drawing.Point(0, 30);
-            this.technology010Panel.Name = "technology010Panel";
-            this.technology010Panel.Size = new System.Drawing.Size(362, 100);
-            this.technology010Panel.TabIndex = 14;
-            // 
-            // machineTime010TextBox
-            // 
-            this.machineTime010TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.machineTime010TextBox.Location = new System.Drawing.Point(282, 66);
-            this.machineTime010TextBox.Name = "machineTime010TextBox";
-            this.machineTime010TextBox.Size = new System.Drawing.Size(46, 26);
-            this.machineTime010TextBox.TabIndex = 20;
-            // 
-            // setupTime010TextBox
-            // 
-            this.setupTime010TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setupTime010TextBox.Location = new System.Drawing.Point(108, 66);
-            this.setupTime010TextBox.Name = "setupTime010TextBox";
-            this.setupTime010TextBox.Size = new System.Drawing.Size(48, 26);
-            this.setupTime010TextBox.TabIndex = 21;
-            // 
-            // operation010Label
-            // 
-            this.operation010Label.AutoSize = true;
-            this.operation010Label.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation010Label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.operation010Label.Location = new System.Drawing.Point(6, 7);
-            this.operation010Label.Name = "operation010Label";
-            this.operation010Label.Size = new System.Drawing.Size(99, 19);
-            this.operation010Label.TabIndex = 14;
-            this.operation010Label.Text = "Operation: ";
-            // 
-            // operationNum010Label
-            // 
-            this.operationNum010Label.AutoSize = true;
-            this.operationNum010Label.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operationNum010Label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.operationNum010Label.Location = new System.Drawing.Point(110, 7);
-            this.operationNum010Label.Name = "operationNum010Label";
-            this.operationNum010Label.Size = new System.Drawing.Size(58, 19);
-            this.operationNum010Label.TabIndex = 17;
-            this.operationNum010Label.Text = "<010>";
-            // 
-            // operation010SetupTimeLabel
-            // 
-            this.operation010SetupTimeLabel.AutoSize = true;
-            this.operation010SetupTimeLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation010SetupTimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.operation010SetupTimeLabel.Location = new System.Drawing.Point(6, 69);
-            this.operation010SetupTimeLabel.Name = "operation010SetupTimeLabel";
-            this.operation010SetupTimeLabel.Size = new System.Drawing.Size(96, 19);
-            this.operation010SetupTimeLabel.TabIndex = 15;
-            this.operation010SetupTimeLabel.Text = "Setup Time:";
-            // 
-            // operation010Machine
-            // 
-            this.operation010Machine.AutoSize = true;
-            this.operation010Machine.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation010Machine.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.operation010Machine.Location = new System.Drawing.Point(136, 38);
-            this.operation010Machine.Name = "operation010Machine";
-            this.operation010Machine.Size = new System.Drawing.Size(71, 19);
-            this.operation010Machine.TabIndex = 18;
-            this.operation010Machine.Text = "<Lathe>";
-            // 
-            // operation010MachTimeLabel
-            // 
-            this.operation010MachTimeLabel.AutoSize = true;
-            this.operation010MachTimeLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation010MachTimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.operation010MachTimeLabel.Location = new System.Drawing.Point(162, 69);
-            this.operation010MachTimeLabel.Name = "operation010MachTimeLabel";
-            this.operation010MachTimeLabel.Size = new System.Drawing.Size(116, 19);
-            this.operation010MachTimeLabel.TabIndex = 16;
-            this.operation010MachTimeLabel.Text = "Machine Time:";
-            // 
-            // operation010MachineLabel
-            // 
-            this.operation010MachineLabel.AutoSize = true;
-            this.operation010MachineLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation010MachineLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.operation010MachineLabel.Location = new System.Drawing.Point(6, 38);
-            this.operation010MachineLabel.Name = "operation010MachineLabel";
-            this.operation010MachineLabel.Size = new System.Drawing.Size(124, 19);
-            this.operation010MachineLabel.TabIndex = 19;
-            this.operation010MachineLabel.Text = "Machine Name:";
+            this.manufacturingCostNo.AutoSize = true;
+            this.manufacturingCostNo.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manufacturingCostNo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.manufacturingCostNo.Location = new System.Drawing.Point(263, 10);
+            this.manufacturingCostNo.Name = "manufacturingCostNo";
+            this.manufacturingCostNo.Size = new System.Drawing.Size(96, 23);
+            this.manufacturingCostNo.TabIndex = 2;
+            this.manufacturingCostNo.Text = "<100000>";
             // 
             // UserSelectedTechnologyControl
             // 
@@ -1152,7 +1265,7 @@
             this.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserSelectedTechnologyControl";
-            this.Size = new System.Drawing.Size(969, 677);
+            this.Size = new System.Drawing.Size(969, 855);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
@@ -1169,6 +1282,10 @@
             this.partMarginLabelPanel.ResumeLayout(false);
             this.partMarginLabelPanel.PerformLayout();
             this.centerPanel.ResumeLayout(false);
+            this.technology010Panel.ResumeLayout(false);
+            this.technology010Panel.PerformLayout();
+            this.manufTechLabelPanel.ResumeLayout(false);
+            this.manufTechLabelPanel.PerformLayout();
             this.leftPanel.ResumeLayout(false);
             this.rawMatPrincPalel.ResumeLayout(false);
             this.partConsPrincPalel.ResumeLayout(false);
@@ -1190,10 +1307,8 @@
             this.partDescPanel.PerformLayout();
             this.partDescLabelPanel.ResumeLayout(false);
             this.partDescLabelPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.technology010Panel.ResumeLayout(false);
-            this.technology010Panel.PerformLayout();
+            this.manufacturingCostNoPanel.ResumeLayout(false);
+            this.manufacturingCostNoPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1223,7 +1338,7 @@
         private System.Windows.Forms.TextBox rawLengthTextBox;
         private System.Windows.Forms.TextBox rawThickTextBox;
         private System.Windows.Forms.TextBox rawWidthTextBox;
-        private System.Windows.Forms.TextBox rawMaterialTextBox;
+        private System.Windows.Forms.TextBox rawMaterialNumberTextBox;
         private System.Windows.Forms.Panel rawMatLabelPanel;
         private System.Windows.Forms.Label rawMaterialLabel;
         private System.Windows.Forms.Button rawSearchButton;
@@ -1290,8 +1405,17 @@
         private System.Windows.Forms.Label operation010Machine;
         private System.Windows.Forms.Label operation010MachTimeLabel;
         private System.Windows.Forms.Label operation010MachineLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel manufTechLabelPanel;
         private System.Windows.Forms.Label manufacTechnologyLabel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label rawMaterialNameLabel;
+        private System.Windows.Forms.TextBox rawMaterialNameTextBox;
+        private System.Windows.Forms.Label rawUnitLabel;
+        private System.Windows.Forms.TextBox rawUnitTextBox;
+        private System.Windows.Forms.Label rawMaterialTypeLabel;
+        private System.Windows.Forms.TextBox rawMaterialTypeTextBox;
+        private System.Windows.Forms.Panel manufacturingCostNoPanel;
+        private System.Windows.Forms.Button saveManufacturingCost;
+        private System.Windows.Forms.Label manufacturingCostNo;
+        private System.Windows.Forms.Label manufacturingCostNoLabel;
     }
 }

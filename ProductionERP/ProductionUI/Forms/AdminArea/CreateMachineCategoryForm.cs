@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProductionUI
+namespace ProductionUI.Forms.AdminArea
 {
-    public partial class Test : Form
+    public partial class CreateMachineCategoryForm : Form
     {
-        public Test()
+        public CreateMachineCategoryForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace ProductionUI.Forms.ManufacturingCosts
 {
-    partial class SelectMachines
+    partial class SelectMachinesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectMachines));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectMachinesForm));
             this.selectMachinesBottomPanel = new System.Windows.Forms.Panel();
             this.selectMachinesRigthPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.selectMachinesTopPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -38,7 +38,6 @@
             this.selectedMachinesListbox = new System.Windows.Forms.ListBox();
             this.selectedMachinesLabel = new System.Windows.Forms.Label();
             this.createButton = new System.Windows.Forms.Button();
-            this.removeSelectedButtton = new System.Windows.Forms.Button();
             this.moveUpButton = new System.Windows.Forms.Button();
             this.moveDownButton = new System.Windows.Forms.Button();
             this.selectMachinesLabel = new System.Windows.Forms.Label();
@@ -141,24 +140,6 @@
             this.createButton.UseVisualStyleBackColor = false;
             this.createButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
-            // removeSelectedButtton
-            // 
-            this.removeSelectedButtton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.removeSelectedButtton.FlatAppearance.BorderSize = 0;
-            this.removeSelectedButtton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removeSelectedButtton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeSelectedButtton.ForeColor = System.Drawing.Color.White;
-            this.removeSelectedButtton.Image = ((System.Drawing.Image)(resources.GetObject("removeSelectedButtton.Image")));
-            this.removeSelectedButtton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.removeSelectedButtton.Location = new System.Drawing.Point(350, 469);
-            this.removeSelectedButtton.Name = "removeSelectedButtton";
-            this.removeSelectedButtton.Size = new System.Drawing.Size(181, 36);
-            this.removeSelectedButtton.TabIndex = 4;
-            this.removeSelectedButtton.Text = "Remove Selected";
-            this.removeSelectedButtton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.removeSelectedButtton.UseVisualStyleBackColor = false;
-            this.removeSelectedButtton.Click += new System.EventHandler(this.RemoveSelectedButtton_Click);
-            // 
             // moveUpButton
             // 
             this.moveUpButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -229,7 +210,7 @@
             this.moveRightButton.UseVisualStyleBackColor = false;
             this.moveRightButton.Click += new System.EventHandler(this.MoveRightButton_Click);
             // 
-            // SelectMachines
+            // SelectMachinesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(596, 606);
@@ -238,7 +219,6 @@
             this.Controls.Add(this.moveRightButton);
             this.Controls.Add(this.moveLeftButton);
             this.Controls.Add(this.moveUpButton);
-            this.Controls.Add(this.removeSelectedButtton);
             this.Controls.Add(this.selectedMachinesListbox);
             this.Controls.Add(this.availableMachinesListbox);
             this.Controls.Add(this.selectedMachinesLabel);
@@ -251,7 +231,7 @@
             this.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "SelectMachines";
+            this.Name = "SelectMachinesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Machines";
             this.ResumeLayout(false);
@@ -270,7 +250,6 @@
         private System.Windows.Forms.ListBox selectedMachinesListbox;
         private System.Windows.Forms.Label selectedMachinesLabel;
         private System.Windows.Forms.Button createButton;
-        private System.Windows.Forms.Button removeSelectedButtton;
         private System.Windows.Forms.Button moveUpButton;
         private System.Windows.Forms.Button moveDownButton;
         private System.Windows.Forms.Label selectMachinesLabel;

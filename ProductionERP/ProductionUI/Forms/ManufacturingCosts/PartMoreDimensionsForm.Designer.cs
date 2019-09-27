@@ -1,6 +1,6 @@
 ﻿namespace ProductionUI.Forms.ManufacturingCosts
 {
-    partial class PartMoreDimensions
+    partial class PartMoreDimensionsForm
     {
         /// <summary>
         /// Required designer variable.

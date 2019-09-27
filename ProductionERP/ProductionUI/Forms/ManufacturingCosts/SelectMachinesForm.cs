@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace ProductionUI.Forms.ManufacturingCosts
 {
-    public partial class SelectMachines : Form
+    public partial class SelectMachinesForm : Form
     {
         private readonly UserManufacturingCostControl UserManufacturing;
 
         List<string> availableMachines = new List<string>();
         List<string> selectedMachines = new List<string>();
-        public SelectMachines(UserManufacturingCostControl userManufacturing)
+        public SelectMachinesForm(UserManufacturingCostControl userManufacturing)
         {
             InitializeComponent();
             UserManufacturing = userManufacturing;
@@ -88,11 +88,6 @@ namespace ProductionUI.Forms.ManufacturingCosts
                 selectedMachinesListbox.ClearSelected();
                 WireUpLists(); 
             }
-        }
-
-        private void RemoveSelectedButtton_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void MoveUpButton_Click(object sender, EventArgs e)

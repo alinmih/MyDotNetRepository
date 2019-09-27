@@ -41,15 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\MachineCategoryModel.cs" />
-    <Compile Include="Models\MachineModel.cs" />
-    <Compile Include="Models\OperationModel.cs" />
-    <Compile Include="Models\OrderModel.cs" />
-    <Compile Include="Models\PartsModel.cs" />
-    <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="Models\RawMaterialModel.cs" />
-    <Compile Include="Models\TechnologyModel.cs" />
+    <Compile Include="Models%28to be defined%29\OperationModel.cs" />
+    <Compile Include="Models%28to be defined%29\OrderModel.cs" />
+    <Compile Include="Models%28to be defined%29\PartsModel.cs" />
+    <Compile Include="Models%28to be defined%29\ProductModel.cs" />
+    <Compile Include="Models%28to be defined%29\RawMaterialModel.cs" />
+    <Compile Include="Models%28to be defined%29\TechnologyModel.cs" />
+    <Compile Include="Models\Machine\MachineCategoryModel.cs" />
+    <Compile Include="Models\Machine\MachineModel.cs" />
+    <Compile Include="Models\Material\MaterialCategoryModel.cs" />
+    <Compile Include="Models\Material\MaterialMeasureUnit.cs" />
+    <Compile Include="Models\Material\RawMaterialModel.cs" />
+    <Compile Include="Models\Material\WarehouseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\ManufacturingTechnology\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

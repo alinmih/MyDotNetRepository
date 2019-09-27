@@ -1,6 +1,6 @@
 ﻿namespace ProductionUI.Forms.ManufacturingCosts
 {
-    partial class SearchRawMaterial
+    partial class SearchRawMaterialForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchRawMaterial));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchRawMaterialForm));
             this.topPanel = new System.Windows.Forms.Panel();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.addStockButton = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchByComboBox = new System.Windows.Forms.ComboBox();
             this.searchByLabel = new System.Windows.Forms.Label();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.rawMaterialDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridColMaterialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridColMaterialName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridColLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addStockButton = new System.Windows.Forms.Button();
             this.headerPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rawMaterialDataGridView)).BeginInit();
@@ -97,49 +97,13 @@
             this.headerPanel.Size = new System.Drawing.Size(933, 74);
             this.headerPanel.TabIndex = 6;
             // 
-            // mainPanel
+            // searchTextBox
             // 
-            this.mainPanel.Controls.Add(this.rawMaterialDataGridView);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(10, 84);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(933, 544);
-            this.mainPanel.TabIndex = 7;
-            // 
-            // searchButton
-            // 
-            this.searchButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.searchButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.searchButton.FlatAppearance.BorderSize = 0;
-            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Image = ((System.Drawing.Image)(resources.GetObject("searchButton.Image")));
-            this.searchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.searchButton.Location = new System.Drawing.Point(792, 0);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(141, 74);
-            this.searchButton.TabIndex = 17;
-            this.searchButton.Text = "Search";
-            this.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.searchButton.UseVisualStyleBackColor = false;
-            // 
-            // addStockButton
-            // 
-            this.addStockButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addStockButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.addStockButton.FlatAppearance.BorderSize = 0;
-            this.addStockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addStockButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addStockButton.ForeColor = System.Drawing.Color.White;
-            this.addStockButton.Image = ((System.Drawing.Image)(resources.GetObject("addStockButton.Image")));
-            this.addStockButton.Location = new System.Drawing.Point(0, 0);
-            this.addStockButton.Name = "addStockButton";
-            this.addStockButton.Size = new System.Drawing.Size(150, 74);
-            this.addStockButton.TabIndex = 18;
-            this.addStockButton.Text = "Add Stock";
-            this.addStockButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.addStockButton.UseVisualStyleBackColor = false;
+            this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchTextBox.Location = new System.Drawing.Point(596, 25);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(190, 26);
+            this.searchTextBox.TabIndex = 21;
             // 
             // searchByComboBox
             // 
@@ -161,13 +125,32 @@
             this.searchByLabel.TabIndex = 19;
             this.searchByLabel.Text = "Search By:";
             // 
-            // searchTextBox
+            // searchButton
             // 
-            this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchTextBox.Location = new System.Drawing.Point(596, 25);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(190, 26);
-            this.searchTextBox.TabIndex = 21;
+            this.searchButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.searchButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.searchButton.FlatAppearance.BorderSize = 0;
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.White;
+            this.searchButton.Image = ((System.Drawing.Image)(resources.GetObject("searchButton.Image")));
+            this.searchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchButton.Location = new System.Drawing.Point(792, 0);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(141, 74);
+            this.searchButton.TabIndex = 17;
+            this.searchButton.Text = "Search";
+            this.searchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.searchButton.UseVisualStyleBackColor = false;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.rawMaterialDataGridView);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(10, 84);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(933, 544);
+            this.mainPanel.TabIndex = 7;
             // 
             // rawMaterialDataGridView
             // 
@@ -220,6 +203,23 @@
             this.dataGridColValue.ReadOnly = true;
             this.dataGridColValue.Width = 200;
             // 
+            // addStockButton
+            // 
+            this.addStockButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addStockButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.addStockButton.FlatAppearance.BorderSize = 0;
+            this.addStockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addStockButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addStockButton.ForeColor = System.Drawing.Color.White;
+            this.addStockButton.Image = ((System.Drawing.Image)(resources.GetObject("addStockButton.Image")));
+            this.addStockButton.Location = new System.Drawing.Point(0, 0);
+            this.addStockButton.Name = "addStockButton";
+            this.addStockButton.Size = new System.Drawing.Size(150, 74);
+            this.addStockButton.TabIndex = 18;
+            this.addStockButton.Text = "Add";
+            this.addStockButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.addStockButton.UseVisualStyleBackColor = false;
+            // 
             // SearchRawMaterial
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -234,7 +234,7 @@
             this.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchRawMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Raw Material";
@@ -254,7 +254,6 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Button addStockButton;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.ComboBox searchByComboBox;
         private System.Windows.Forms.Label searchByLabel;
@@ -265,5 +264,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridColLoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridColStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridColValue;
+        private System.Windows.Forms.Button addStockButton;
     }
 }

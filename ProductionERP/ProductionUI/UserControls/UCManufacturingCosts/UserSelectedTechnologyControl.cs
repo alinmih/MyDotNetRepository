@@ -20,13 +20,13 @@ namespace ProductionUI.UserControls.UCManufacturingCosts
 
         private void PartMoreDimButton_Click(object sender, EventArgs e)
         {
-            PartMoreDimensions partMoreDimensions = new PartMoreDimensions();
+            PartMoreDimensionsForm partMoreDimensions = new PartMoreDimensionsForm();
             partMoreDimensions.Show();
         }
 
         private void RawSearchButton_Click(object sender, EventArgs e)
         {
-            SearchRawMaterial searchRaw = new SearchRawMaterial();
+            SearchRawMaterialForm searchRaw = new SearchRawMaterialForm();
             searchRaw.Show();
         }
     }

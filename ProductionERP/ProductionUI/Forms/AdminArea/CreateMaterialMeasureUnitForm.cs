@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProductionUI.Forms.ManufacturingCosts
+namespace ProductionUI.Forms.AdminArea
 {
-    public partial class PartMoreDimensions : Form
+    public partial class CreateMaterialMeasureUnitForm : Form
     {
-        public PartMoreDimensions()
+        public CreateMaterialMeasureUnitForm()
         {
             InitializeComponent();
-        }
-
-        private void PartMoreDimButton_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
         }
     }
 }

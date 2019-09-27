@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProductionUI.Forms.ManufacturingCosts
+namespace ProductionUI.Forms.AdminArea
 {
-    public partial class SearchRawMaterial : Form
+    public partial class UpdateWarehouseForm : Form
     {
-        public SearchRawMaterial()
+        public UpdateWarehouseForm()
         {
             InitializeComponent();
         }

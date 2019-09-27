@@ -29,7 +29,7 @@ namespace ProductionUI.UserControls
 
         private void ManufacturingCostCreateButton_Click(object sender, EventArgs e)
         {
-            using (SelectMachines sm = new SelectMachines(this))
+            using (SelectMachinesForm sm = new SelectMachinesForm(this))
             {
                 sm.ShowDialog();
             }
