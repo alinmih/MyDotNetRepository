@@ -55,7 +55,7 @@ namespace ProductionLibrary.Models.Material
         public decimal Stock { get; set; }
         
         /// <summary>
-        /// Raw Material Stock value, only get based on Price and current Stock
+        /// Raw Material Stock value based on Price and current Stock
         /// </summary>
         public decimal Value {
             get
