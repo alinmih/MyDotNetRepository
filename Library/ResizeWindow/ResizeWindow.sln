@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResizeWindow", "ResizeWindow\ResizeWindow.csproj", "{390C9AB7-EE62-434E-A50A-241A5688D9EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{390C9AB7-EE62-434E-A50A-241A5688D9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390C9AB7-EE62-434E-A50A-241A5688D9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390C9AB7-EE62-434E-A50A-241A5688D9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390C9AB7-EE62-434E-A50A-241A5688D9EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA88C9C6-069E-4F06-B6A9-386637D9CA19}
+	EndGlobalSection
+EndGlobal
