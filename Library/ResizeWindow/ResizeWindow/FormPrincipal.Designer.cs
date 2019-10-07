@@ -30,30 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.principalPanel = new System.Windows.Forms.Panel();
-            this.menuVertical = new System.Windows.Forms.Panel();
-            this.titlePanel = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.titlePanel = new System.Windows.Forms.Panel();
+            this.menuMinButton = new System.Windows.Forms.PictureBox();
+            this.maximizeButton = new System.Windows.Forms.PictureBox();
+            this.minimizeButton = new System.Windows.Forms.PictureBox();
+            this.normalViewButton = new System.Windows.Forms.PictureBox();
+            this.exitButton = new System.Windows.Forms.PictureBox();
+            this.menuVertical = new System.Windows.Forms.Panel();
+            this.labelAbout = new System.Windows.Forms.Label();
             this.etcButton = new System.Windows.Forms.Button();
             this.purchasingButton = new System.Windows.Forms.Button();
             this.shippingButton = new System.Windows.Forms.Button();
             this.customersButton = new System.Windows.Forms.Button();
             this.salesButton = new System.Windows.Forms.Button();
+            this.dashboardButton = new System.Windows.Forms.Button();
             this.productsButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.minimizeButton = new System.Windows.Forms.PictureBox();
-            this.normalViewButton = new System.Windows.Forms.PictureBox();
-            this.exitButton = new System.Windows.Forms.PictureBox();
-            this.maximizeButton = new System.Windows.Forms.PictureBox();
-            this.menuMinButton = new System.Windows.Forms.PictureBox();
             this.principalPanel.SuspendLayout();
-            this.menuVertical.SuspendLayout();
             this.titlePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuMinButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.normalViewButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuMinButton)).BeginInit();
+            this.menuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // principalPanel
@@ -68,21 +70,14 @@
             this.principalPanel.Size = new System.Drawing.Size(1100, 600);
             this.principalPanel.TabIndex = 0;
             // 
-            // menuVertical
+            // panelContent
             // 
-            this.menuVertical.BackColor = System.Drawing.Color.Turquoise;
-            this.menuVertical.Controls.Add(this.etcButton);
-            this.menuVertical.Controls.Add(this.purchasingButton);
-            this.menuVertical.Controls.Add(this.shippingButton);
-            this.menuVertical.Controls.Add(this.customersButton);
-            this.menuVertical.Controls.Add(this.salesButton);
-            this.menuVertical.Controls.Add(this.productsButton);
-            this.menuVertical.Controls.Add(this.pictureBox1);
-            this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuVertical.Location = new System.Drawing.Point(0, 0);
-            this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(250, 600);
-            this.menuVertical.TabIndex = 0;
+            this.panelContent.BackColor = System.Drawing.Color.Honeydew;
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(250, 50);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(850, 550);
+            this.panelContent.TabIndex = 2;
             // 
             // titlePanel
             // 
@@ -99,115 +94,30 @@
             this.titlePanel.TabIndex = 1;
             this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titlePanel_MouseDown);
             // 
-            // panelContent
+            // menuMinButton
             // 
-            this.panelContent.BackColor = System.Drawing.Color.Honeydew;
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(250, 50);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(850, 550);
-            this.panelContent.TabIndex = 2;
+            this.menuMinButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuMinButton.Image = ((System.Drawing.Image)(resources.GetObject("menuMinButton.Image")));
+            this.menuMinButton.Location = new System.Drawing.Point(6, 11);
+            this.menuMinButton.Name = "menuMinButton";
+            this.menuMinButton.Size = new System.Drawing.Size(30, 29);
+            this.menuMinButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.menuMinButton.TabIndex = 5;
+            this.menuMinButton.TabStop = false;
+            this.menuMinButton.Click += new System.EventHandler(this.menuMinButton_Click);
             // 
-            // etcButton
+            // maximizeButton
             // 
-            this.etcButton.FlatAppearance.BorderSize = 0;
-            this.etcButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.etcButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.etcButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etcButton.Image = ((System.Drawing.Image)(resources.GetObject("etcButton.Image")));
-            this.etcButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.etcButton.Location = new System.Drawing.Point(0, 274);
-            this.etcButton.Name = "etcButton";
-            this.etcButton.Size = new System.Drawing.Size(250, 30);
-            this.etcButton.TabIndex = 3;
-            this.etcButton.Text = "       Etc";
-            this.etcButton.UseVisualStyleBackColor = true;
-            // 
-            // purchasingButton
-            // 
-            this.purchasingButton.FlatAppearance.BorderSize = 0;
-            this.purchasingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.purchasingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.purchasingButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purchasingButton.Image = ((System.Drawing.Image)(resources.GetObject("purchasingButton.Image")));
-            this.purchasingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.purchasingButton.Location = new System.Drawing.Point(0, 238);
-            this.purchasingButton.Name = "purchasingButton";
-            this.purchasingButton.Size = new System.Drawing.Size(250, 30);
-            this.purchasingButton.TabIndex = 4;
-            this.purchasingButton.Text = "       Purchasing";
-            this.purchasingButton.UseVisualStyleBackColor = true;
-            // 
-            // shippingButton
-            // 
-            this.shippingButton.FlatAppearance.BorderSize = 0;
-            this.shippingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.shippingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shippingButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shippingButton.Image = ((System.Drawing.Image)(resources.GetObject("shippingButton.Image")));
-            this.shippingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.shippingButton.Location = new System.Drawing.Point(0, 202);
-            this.shippingButton.Name = "shippingButton";
-            this.shippingButton.Size = new System.Drawing.Size(250, 30);
-            this.shippingButton.TabIndex = 5;
-            this.shippingButton.Text = "       Shipping";
-            this.shippingButton.UseVisualStyleBackColor = true;
-            // 
-            // customersButton
-            // 
-            this.customersButton.FlatAppearance.BorderSize = 0;
-            this.customersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.customersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customersButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customersButton.Image = ((System.Drawing.Image)(resources.GetObject("customersButton.Image")));
-            this.customersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customersButton.Location = new System.Drawing.Point(0, 166);
-            this.customersButton.Name = "customersButton";
-            this.customersButton.Size = new System.Drawing.Size(250, 30);
-            this.customersButton.TabIndex = 6;
-            this.customersButton.Text = "       Customers";
-            this.customersButton.UseVisualStyleBackColor = true;
-            // 
-            // salesButton
-            // 
-            this.salesButton.FlatAppearance.BorderSize = 0;
-            this.salesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.salesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesButton.Image = ((System.Drawing.Image)(resources.GetObject("salesButton.Image")));
-            this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesButton.Location = new System.Drawing.Point(0, 130);
-            this.salesButton.Name = "salesButton";
-            this.salesButton.Size = new System.Drawing.Size(250, 30);
-            this.salesButton.TabIndex = 7;
-            this.salesButton.Text = "       Sales";
-            this.salesButton.UseVisualStyleBackColor = true;
-            // 
-            // productsButton
-            // 
-            this.productsButton.FlatAppearance.BorderSize = 0;
-            this.productsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.productsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productsButton.Image = ((System.Drawing.Image)(resources.GetObject("productsButton.Image")));
-            this.productsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productsButton.Location = new System.Drawing.Point(0, 94);
-            this.productsButton.Name = "productsButton";
-            this.productsButton.Size = new System.Drawing.Size(250, 30);
-            this.productsButton.TabIndex = 8;
-            this.productsButton.Text = "       Products";
-            this.productsButton.UseVisualStyleBackColor = true;
-            this.productsButton.Click += new System.EventHandler(this.productsButton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.maximizeButton.Image = ((System.Drawing.Image)(resources.GetObject("maximizeButton.Image")));
+            this.maximizeButton.Location = new System.Drawing.Point(700, 12);
+            this.maximizeButton.Name = "maximizeButton";
+            this.maximizeButton.Size = new System.Drawing.Size(30, 29);
+            this.maximizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.maximizeButton.TabIndex = 4;
+            this.maximizeButton.TabStop = false;
+            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
             // 
             // minimizeButton
             // 
@@ -249,29 +159,161 @@
             this.exitButton.TabStop = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // maximizeButton
+            // menuVertical
             // 
-            this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizeButton.Image = ((System.Drawing.Image)(resources.GetObject("maximizeButton.Image")));
-            this.maximizeButton.Location = new System.Drawing.Point(772, 11);
-            this.maximizeButton.Name = "maximizeButton";
-            this.maximizeButton.Size = new System.Drawing.Size(30, 29);
-            this.maximizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.maximizeButton.TabIndex = 4;
-            this.maximizeButton.TabStop = false;
-            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
+            this.menuVertical.BackColor = System.Drawing.Color.Turquoise;
+            this.menuVertical.Controls.Add(this.labelAbout);
+            this.menuVertical.Controls.Add(this.etcButton);
+            this.menuVertical.Controls.Add(this.purchasingButton);
+            this.menuVertical.Controls.Add(this.shippingButton);
+            this.menuVertical.Controls.Add(this.customersButton);
+            this.menuVertical.Controls.Add(this.salesButton);
+            this.menuVertical.Controls.Add(this.dashboardButton);
+            this.menuVertical.Controls.Add(this.productsButton);
+            this.menuVertical.Controls.Add(this.pictureBox1);
+            this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuVertical.Location = new System.Drawing.Point(0, 0);
+            this.menuVertical.Name = "menuVertical";
+            this.menuVertical.Size = new System.Drawing.Size(250, 600);
+            this.menuVertical.TabIndex = 0;
             // 
-            // menuMinButton
+            // labelAbout
             // 
-            this.menuMinButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuMinButton.Image = ((System.Drawing.Image)(resources.GetObject("menuMinButton.Image")));
-            this.menuMinButton.Location = new System.Drawing.Point(6, 11);
-            this.menuMinButton.Name = "menuMinButton";
-            this.menuMinButton.Size = new System.Drawing.Size(30, 29);
-            this.menuMinButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.menuMinButton.TabIndex = 5;
-            this.menuMinButton.TabStop = false;
-            this.menuMinButton.Click += new System.EventHandler(this.menuMinButton_Click);
+            this.labelAbout.AutoSize = true;
+            this.labelAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAbout.Location = new System.Drawing.Point(8, 567);
+            this.labelAbout.Name = "labelAbout";
+            this.labelAbout.Size = new System.Drawing.Size(20, 24);
+            this.labelAbout.TabIndex = 6;
+            this.labelAbout.Text = "?";
+            this.labelAbout.Click += new System.EventHandler(this.aboutBox_Click);
+            // 
+            // etcButton
+            // 
+            this.etcButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.etcButton.FlatAppearance.BorderSize = 0;
+            this.etcButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.etcButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.etcButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etcButton.Image = ((System.Drawing.Image)(resources.GetObject("etcButton.Image")));
+            this.etcButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.etcButton.Location = new System.Drawing.Point(0, 313);
+            this.etcButton.Name = "etcButton";
+            this.etcButton.Size = new System.Drawing.Size(250, 30);
+            this.etcButton.TabIndex = 3;
+            this.etcButton.Text = "       Etc";
+            this.etcButton.UseVisualStyleBackColor = true;
+            // 
+            // purchasingButton
+            // 
+            this.purchasingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.purchasingButton.FlatAppearance.BorderSize = 0;
+            this.purchasingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.purchasingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.purchasingButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchasingButton.Image = ((System.Drawing.Image)(resources.GetObject("purchasingButton.Image")));
+            this.purchasingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.purchasingButton.Location = new System.Drawing.Point(0, 277);
+            this.purchasingButton.Name = "purchasingButton";
+            this.purchasingButton.Size = new System.Drawing.Size(250, 30);
+            this.purchasingButton.TabIndex = 4;
+            this.purchasingButton.Text = "       Purchasing";
+            this.purchasingButton.UseVisualStyleBackColor = true;
+            // 
+            // shippingButton
+            // 
+            this.shippingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shippingButton.FlatAppearance.BorderSize = 0;
+            this.shippingButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.shippingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shippingButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingButton.Image = ((System.Drawing.Image)(resources.GetObject("shippingButton.Image")));
+            this.shippingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.shippingButton.Location = new System.Drawing.Point(0, 241);
+            this.shippingButton.Name = "shippingButton";
+            this.shippingButton.Size = new System.Drawing.Size(250, 30);
+            this.shippingButton.TabIndex = 5;
+            this.shippingButton.Text = "       Shipping";
+            this.shippingButton.UseVisualStyleBackColor = true;
+            // 
+            // customersButton
+            // 
+            this.customersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customersButton.FlatAppearance.BorderSize = 0;
+            this.customersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.customersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customersButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersButton.Image = ((System.Drawing.Image)(resources.GetObject("customersButton.Image")));
+            this.customersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customersButton.Location = new System.Drawing.Point(0, 205);
+            this.customersButton.Name = "customersButton";
+            this.customersButton.Size = new System.Drawing.Size(250, 30);
+            this.customersButton.TabIndex = 6;
+            this.customersButton.Text = "       Customers";
+            this.customersButton.UseVisualStyleBackColor = true;
+            // 
+            // salesButton
+            // 
+            this.salesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salesButton.FlatAppearance.BorderSize = 0;
+            this.salesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.salesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesButton.Image = ((System.Drawing.Image)(resources.GetObject("salesButton.Image")));
+            this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salesButton.Location = new System.Drawing.Point(0, 169);
+            this.salesButton.Name = "salesButton";
+            this.salesButton.Size = new System.Drawing.Size(250, 30);
+            this.salesButton.TabIndex = 7;
+            this.salesButton.Text = "       Sales";
+            this.salesButton.UseVisualStyleBackColor = true;
+            this.salesButton.Click += new System.EventHandler(this.salesButton_Click);
+            // 
+            // dashboardButton
+            // 
+            this.dashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboardButton.FlatAppearance.BorderSize = 0;
+            this.dashboardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboardButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.ForeColor = System.Drawing.Color.MediumBlue;
+            this.dashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("dashboardButton.Image")));
+            this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardButton.Location = new System.Drawing.Point(0, 97);
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.Size = new System.Drawing.Size(250, 30);
+            this.dashboardButton.TabIndex = 8;
+            this.dashboardButton.Text = "       Dashboard";
+            this.dashboardButton.UseVisualStyleBackColor = true;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
+            // 
+            // productsButton
+            // 
+            this.productsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productsButton.FlatAppearance.BorderSize = 0;
+            this.productsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.productsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productsButton.Image = ((System.Drawing.Image)(resources.GetObject("productsButton.Image")));
+            this.productsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productsButton.Location = new System.Drawing.Point(0, 133);
+            this.productsButton.Name = "productsButton";
+            this.productsButton.Size = new System.Drawing.Size(250, 30);
+            this.productsButton.TabIndex = 8;
+            this.productsButton.Text = "       Products";
+            this.productsButton.UseVisualStyleBackColor = true;
+            this.productsButton.Click += new System.EventHandler(this.productsButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // FormPrincipal
             // 
@@ -283,15 +325,17 @@
             this.MinimumSize = new System.Drawing.Size(680, 500);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.principalPanel.ResumeLayout(false);
-            this.menuVertical.ResumeLayout(false);
             this.titlePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuMinButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.normalViewButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuMinButton)).EndInit();
+            this.menuVertical.ResumeLayout(false);
+            this.menuVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,6 +358,8 @@
         private System.Windows.Forms.Button salesButton;
         private System.Windows.Forms.Button productsButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button dashboardButton;
+        private System.Windows.Forms.Label labelAbout;
     }
 }
 

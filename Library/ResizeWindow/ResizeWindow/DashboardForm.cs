@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ResizeWindow
 {
-    public partial class Products : Form
+    public partial class DashboardForm : Form
     {
-        public Products()
+        public DashboardForm()
         {
             InitializeComponent();
-        }
-
-        private void closeLabel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
