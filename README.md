@@ -6,7 +6,9 @@ Personal projects written in c# or vb using dot.net or asp.net
 
 2. OrderConf	VB - GUI in vb for SAP Scripting.
 
-3. SqlDataAccesUI - Data Acces using Dapper ORM
+3. Library for sample code
+3.1 Sample code for GUI windows to be resized and draggable
+3.2 Sample Connection to Dapper ORM
 
 4. StratificateQCFlow - ASP.NET written in VB.NET
 
