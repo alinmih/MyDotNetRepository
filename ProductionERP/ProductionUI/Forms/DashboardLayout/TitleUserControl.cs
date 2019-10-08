@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ResizeWindow
+namespace ProductionUI.Forms.DashboardLayout
 {
-    public partial class Products : Form
+    public partial class TitleUserControl : UserControl
     {
-        public Products()
+        public TitleUserControl()
         {
             InitializeComponent();
-        }
-
-        private void closeLabel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

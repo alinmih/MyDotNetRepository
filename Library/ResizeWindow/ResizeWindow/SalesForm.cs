@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ResizeWindow
 {
-    public partial class Products : Form
+    public partial class SalesForm : Form
     {
-        public Products()
+        public SalesForm()
         {
             InitializeComponent();
         }

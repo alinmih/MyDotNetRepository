@@ -9,22 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace ResizeWindow
+namespace ProductionUI.Forms
 {
-    public partial class FormPrincipal : Form
+    public partial class MainForm : Form
     {
-        public FormPrincipal()
+
+
+        public MainForm()
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+
+
+            clockTimer.Start();
         }
+
+        #region Resize window
 
         private int tolerance = 15;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
-
 
         protected override void WndProc(ref Message m)
         {
@@ -49,7 +55,7 @@ namespace ResizeWindow
             var region = new Region(new Rectangle(0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height));
             sizeGripRectangle = new Rectangle(this.ClientRectangle.Width - tolerance, this.ClientRectangle.Height - tolerance, tolerance, tolerance);
             region.Exclude(sizeGripRectangle);
-            this.principalPanel.Region = region;
+            this.panelContainer.Region = region;
             this.Invalidate();
         }
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
@@ -61,26 +67,25 @@ namespace ResizeWindow
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
 
+        #endregion
+
+        #region Drag Window
+
         //get the user32dll for dragging the form
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-
-
-
-        private void menuMinButton_Click(object sender, EventArgs e)
+        private void panelTopBar_MouseDown(object sender, MouseEventArgs e)
         {
-            if (menuVertical.Width == 250)
-            {
-                menuVertical.Width = 100;
-            }
-            else
-            {
-                menuVertical.Width = 250;
-            }
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        #endregion
+
+        #region Window control
 
         private void exitButton_Click(object sender, EventArgs e)
         {
@@ -131,66 +136,26 @@ namespace ResizeWindow
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void titlePanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        #endregion
 
-        private void aboutBox_Click(object sender, EventArgs e)
-        {
-            AboutBox1 aboutBox = new AboutBox1();
-            aboutBox.ShowDialog();
-        }
+
+
+        
+
+
         private void OpenFormInPanel(object form)
         {
-            if (this.panelContent.Controls.Count > 0)
+            if (this.panelMain.Controls.Count > 0)
             {
-                this.panelContent.Controls.RemoveAt(0);
+                this.panelMain.Controls.RemoveAt(0);
             }
             Form frm = form as Form;
             frm.TopLevel = false;
             frm.Dock = DockStyle.Fill;
-            this.panelContent.Controls.Add(frm);
-            this.panelContent.Tag = frm;
+            this.panelMain.Controls.Add(frm);
+            this.panelMain.Tag = frm;
             frm.Show();
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-            LoadDashboard();
-        }
-
-        private void LoadDashboard()
-        {
-            OpenFormInPanel(new DashboardForm());
-        }
-
-        private void dashboardButton_Click(object sender, EventArgs e)
-        {
-            LoadDashboard();
-        }
-
-        
-        //open form in panel
-        private void productsButton_Click(object sender, EventArgs e)
-        {
-            OpenFormInPanel(new Products());
-        }
-
-
-        //method for loading the dashboard form after current form is close
-        private void LoadDashboardWhenFormClosed(object sender, FormClosedEventArgs e)
-        {
-            LoadDashboard();
-        }
-
-        //event for loading sales form and open dashboard form when closed
-        private void salesButton_Click(object sender, EventArgs e)
-        {
-            SalesForm sales = new SalesForm();
-            sales.FormClosed += new FormClosedEventHandler(LoadDashboardWhenFormClosed);
-            OpenFormInPanel(sales);
-        }
     }
 }
