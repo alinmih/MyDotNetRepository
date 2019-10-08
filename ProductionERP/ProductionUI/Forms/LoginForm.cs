@@ -24,10 +24,7 @@ namespace ProductionUI.Forms
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            using (DashboardForm dashboard = new DashboardForm())
-            {
-                dashboard.ShowDialog();
-            }
+            
         }
     }
 }

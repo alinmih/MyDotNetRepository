@@ -60,71 +60,95 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AdminArea\CreateMachineCategoryForm.cs">
+    <Compile Include="Forms\AdminArea\Machines\CreateMachineCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMachineCategoryForm.Designer.cs">
+    <Compile Include="Forms\AdminArea\Machines\CreateMachineCategoryForm.Designer.cs">
       <DependentUpon>CreateMachineCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMachineForm.cs">
+    <Compile Include="Forms\AdminArea\Machines\CreateMachineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMachineForm.Designer.cs">
+    <Compile Include="Forms\AdminArea\Machines\CreateMachineForm.Designer.cs">
       <DependentUpon>CreateMachineForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMaterialCategoryForm.cs">
+    <Compile Include="Forms\AdminArea\Machines\MachinesDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMaterialCategoryForm.Designer.cs">
-      <DependentUpon>CreateMaterialCategoryForm.cs</DependentUpon>
+    <Compile Include="Forms\AdminArea\Machines\MachinesDashboard.Designer.cs">
+      <DependentUpon>MachinesDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMaterialForm.cs">
+    <Compile Include="Forms\AdminArea\Machines\UpdateMachineCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\CreateMaterialForm.Designer.cs">
-      <DependentUpon>CreateMaterialForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminArea\CreateMaterialMeasureUnitForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminArea\CreateMaterialMeasureUnitForm.Designer.cs">
-      <DependentUpon>CreateMaterialMeasureUnitForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminArea\CreateWarehouseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminArea\CreateWarehouseForm.Designer.cs">
-      <DependentUpon>CreateWarehouseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMachineCategoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMachineCategoryForm.Designer.cs">
+    <Compile Include="Forms\AdminArea\Machines\UpdateMachineCategoryForm.Designer.cs">
       <DependentUpon>UpdateMachineCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMachineForm.cs">
+    <Compile Include="Forms\AdminArea\Machines\UpdateMachineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMachineForm.Designer.cs">
+    <Compile Include="Forms\AdminArea\Machines\UpdateMachineForm.Designer.cs">
       <DependentUpon>UpdateMachineForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMaterialCategoryForm.cs">
+    <Compile Include="Forms\AdminArea\Materials\CreateMaterialCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMaterialCategoryForm.Designer.cs">
-      <DependentUpon>UpdateMaterialCategoryForm.cs</DependentUpon>
+    <Compile Include="Forms\AdminArea\Materials\CreateMaterialCategoryForm.Designer.cs">
+      <DependentUpon>CreateMaterialCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMaterialForm.cs">
+    <Compile Include="Forms\AdminArea\Materials\CreateMaterialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateMaterialForm.Designer.cs">
+    <Compile Include="Forms\AdminArea\Materials\CreateMaterialForm.Designer.cs">
+      <DependentUpon>CreateMaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\CreateMaterialMeasureUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\CreateMaterialMeasureUnitForm.Designer.cs">
+      <DependentUpon>CreateMaterialMeasureUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\CreateWarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\CreateWarehouseForm.Designer.cs">
+      <DependentUpon>CreateWarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\MaterialsDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\MaterialsDashboard.Designer.cs">
+      <DependentUpon>MaterialsDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\UpdateMachineCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\UpdateMachineCategoryForm.Designer.cs">
+      <DependentUpon>UpdateMachineCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\UpdateMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Materials\UpdateMaterialForm.Designer.cs">
       <DependentUpon>UpdateMaterialForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateWarehouseForm.cs">
+    <Compile Include="Forms\AdminArea\Materials\UpdateWarehouseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminArea\UpdateWarehouseForm.Designer.cs">
+    <Compile Include="Forms\AdminArea\Materials\UpdateWarehouseForm.Designer.cs">
       <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Users\CreateMachineCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Users\CreateMachineCategoryForm.Designer.cs">
+      <DependentUpon>CreateMachineCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Users\CreateMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminArea\Users\CreateMachineForm.Designer.cs">
+      <DependentUpon>CreateMachineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home\HomeForm.cs">
       <SubType>Form</SubType>
@@ -137,12 +161,6 @@
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashboardForm%28old%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DashboardForm%28old%29.Designer.cs">
-      <DependentUpon>DashboardForm%28old%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DashboardLayout\AdminItemsUserControl.cs">
       <SubType>UserControl</SubType>
@@ -230,36 +248,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\AdminArea\UCContainer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UCContainer.Designer.cs">
-      <DependentUpon>UCContainer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminCustomers.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminCustomers.Designer.cs">
-      <DependentUpon>UserAdminCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminMachines.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminMachines.Designer.cs">
-      <DependentUpon>UserAdminMachines.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminMaterials.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminMaterials.Designer.cs">
-      <DependentUpon>UserAdminMaterials.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminUsers.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\AdminArea\UserAdminUsers.Designer.cs">
-      <DependentUpon>UserAdminUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,89 +266,56 @@
     <Compile Include="UserControls\%28ex%29UC_Sales_Option.Designer.cs">
       <DependentUpon>%28ex%29UC_Sales_Option.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserControlHome.Designer.cs">
-      <DependentUpon>UserControlHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserManufacturingCostControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserManufacturingCostControl.Designer.cs">
-      <DependentUpon>UserManufacturingCostControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserOffersControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserOffersControl.Designer.cs">
-      <DependentUpon>UserOffersControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserProductionOrdersControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserProductionOrdersControl.Designer.cs">
-      <DependentUpon>UserProductionOrdersControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserProductsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserProductsControl.Designer.cs">
-      <DependentUpon>UserProductsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserSalesOrderControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserSalesOrderControl.Designer.cs">
-      <DependentUpon>UserSalesOrderControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserWarehouseControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserWarehouseControl.Designer.cs">
-      <DependentUpon>UserWarehouseControl.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Forms\AdminArea\CreateMachineCategoryForm.resx">
+    <EmbeddedResource Include="Forms\AdminArea\Machines\CreateMachineCategoryForm.resx">
       <DependentUpon>CreateMachineCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\CreateMachineForm.resx">
+    <EmbeddedResource Include="Forms\AdminArea\Machines\CreateMachineForm.resx">
       <DependentUpon>CreateMachineForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\CreateMaterialCategoryForm.resx">
-      <DependentUpon>CreateMaterialCategoryForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminArea\Machines\MachinesDashboard.resx">
+      <DependentUpon>MachinesDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\CreateMaterialForm.resx">
-      <DependentUpon>CreateMaterialForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\CreateMaterialMeasureUnitForm.resx">
-      <DependentUpon>CreateMaterialMeasureUnitForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\CreateWarehouseForm.resx">
-      <DependentUpon>CreateWarehouseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\UpdateMachineCategoryForm.resx">
+    <EmbeddedResource Include="Forms\AdminArea\Machines\UpdateMachineCategoryForm.resx">
       <DependentUpon>UpdateMachineCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\UpdateMachineForm.resx">
+    <EmbeddedResource Include="Forms\AdminArea\Machines\UpdateMachineForm.resx">
       <DependentUpon>UpdateMachineForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\UpdateMaterialCategoryForm.resx">
-      <DependentUpon>UpdateMaterialCategoryForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminArea\Materials\CreateMaterialCategoryForm.resx">
+      <DependentUpon>CreateMaterialCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\UpdateMaterialForm.resx">
+    <EmbeddedResource Include="Forms\AdminArea\Materials\CreateMaterialForm.resx">
+      <DependentUpon>CreateMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Materials\CreateMaterialMeasureUnitForm.resx">
+      <DependentUpon>CreateMaterialMeasureUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Materials\CreateWarehouseForm.resx">
+      <DependentUpon>CreateWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Materials\MaterialsDashboard.resx">
+      <DependentUpon>MaterialsDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Materials\UpdateMachineCategoryForm.resx">
+      <DependentUpon>UpdateMachineCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Materials\UpdateMaterialForm.resx">
       <DependentUpon>UpdateMaterialForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminArea\UpdateWarehouseForm.resx">
+    <EmbeddedResource Include="Forms\AdminArea\Materials\UpdateWarehouseForm.resx">
       <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Users\CreateMachineCategoryForm.resx">
+      <DependentUpon>CreateMachineCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminArea\Users\CreateMachineForm.resx">
+      <DependentUpon>CreateMachineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardForm%28old%29.resx">
-      <DependentUpon>DashboardForm%28old%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardLayout\AdminItemsUserControl.resx">
       <DependentUpon>AdminItemsUserControl.cs</DependentUpon>
@@ -413,21 +368,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\AdminArea\UCContainer.resx">
-      <DependentUpon>UCContainer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\AdminArea\UserAdminCustomers.resx">
-      <DependentUpon>UserAdminCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\AdminArea\UserAdminMachines.resx">
-      <DependentUpon>UserAdminMachines.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\AdminArea\UserAdminMaterials.resx">
-      <DependentUpon>UserAdminMaterials.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\AdminArea\UserAdminUsers.resx">
-      <DependentUpon>UserAdminUsers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCManufacturingCosts\UserSelectedTechnologyControl.resx">
       <DependentUpon>UserSelectedTechnologyControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,27 +376,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\%28ex%29UC_Sales_Option.resx">
       <DependentUpon>%28ex%29UC_Sales_Option.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlHome.resx">
-      <DependentUpon>UserControlHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserManufacturingCostControl.resx">
-      <DependentUpon>UserManufacturingCostControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserOffersControl.resx">
-      <DependentUpon>UserOffersControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserProductionOrdersControl.resx">
-      <DependentUpon>UserProductionOrdersControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserProductsControl.resx">
-      <DependentUpon>UserProductsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserSalesOrderControl.resx">
-      <DependentUpon>UserSalesOrderControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserWarehouseControl.resx">
-      <DependentUpon>UserWarehouseControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

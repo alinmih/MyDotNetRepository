@@ -15,6 +15,8 @@ using ProductionUI.Forms.SalesOrders;
 using ProductionUI.Forms.Offers;
 using ProductionUI.Forms.WarehouseManagement;
 using ProductionUI.Forms.ManufacturingCosts;
+using ProductionUI.Forms.AdminArea.Materials;
+using ProductionUI.Forms.AdminArea.Machines;
 
 namespace ProductionUI.Forms
 {
@@ -50,7 +52,7 @@ namespace ProductionUI.Forms
             if (isColapsed)
             {
                 //iconPanel.Hide();
-                panelMenuItems.Width = panelMenuItems.Width + 10;
+                panelMenuItems.Width = panelMenuItems.Width + 20;
                 if (panelMenuItems.Width >= panelWidth)
                 {
                     timerForMinimizeBar.Stop();
@@ -61,8 +63,8 @@ namespace ProductionUI.Forms
             }
             else
             {
-                panelMenuItems.Width = panelMenuItems.Width - 10;
-                if (panelMenuItems.Width <= 56)
+                panelMenuItems.Width = panelMenuItems.Width - 20;
+                if (panelMenuItems.Width <= 60)
                 {
                     timerForMinimizeBar.Stop();
                     isColapsed = true;
@@ -194,6 +196,12 @@ namespace ProductionUI.Forms
             panelSide.Height = btn.Height;
         }
 
+        private void MovePanelTop(Control btn)
+        {
+            panelTop.Top = btn.Bottom;
+            panelTop.Width = btn.Width;
+        }
+
         private void OpenFormInPanel<MyForm>() where MyForm : Form, new()
         {
             Form currentForm;
@@ -210,22 +218,22 @@ namespace ProductionUI.Forms
                 currentForm.BringToFront();
                 currentForm.FormClosed += new FormClosedEventHandler(CloseForms);
             }
+            else
+            {
+                currentForm.BringToFront();
 
-            //if (this.panelMain.Controls.Count > 0)
-            //{
-            //    this.panelMain.Controls.RemoveAt(0);
-            //}
-            //Form frm = form as Form;
-            //frm.TopLevel = false;
-            //frm.Dock = DockStyle.Fill;
-            //this.panelMain.Controls.Add(frm);
-            //this.panelMain.Tag = frm;
-            //frm.Show();
+            }
         }
 
 
 
         #region Button Events
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            MovePanelSide(homeButton);
+            OpenFormInPanel<HomeForm>();
+            homeButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
 
         private void homeButton_Click(object sender, EventArgs e)
         {
@@ -262,9 +270,18 @@ namespace ProductionUI.Forms
             offersButton.BackColor = Color.FromArgb(229, 229, 229);
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void buttonRawMaterials_Click(object sender, EventArgs e)
         {
-            OpenFormInPanel<HomeForm>();
+            MovePanelTop(buttonRawMaterials);
+            OpenFormInPanel<MaterialsDashboard>();
+            buttonRawMaterials.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void buttonMachines_Click(object sender, EventArgs e)
+        {
+            MovePanelTop(buttonMachines);
+            OpenFormInPanel<MachinesDashboard>();
+            buttonMachines.BackColor = Color.FromArgb(229, 229, 229);
         }
 
         private void warehouseManagementButton_Click(object sender, EventArgs e)

@@ -35,6 +35,7 @@
             this.panelMenuItems = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.productsButon = new System.Windows.Forms.Button();
             this.warehouseManagementButton = new System.Windows.Forms.Button();
             this.offersButton = new System.Windows.Forms.Button();
@@ -44,8 +45,14 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.panelMenuMinimize = new System.Windows.Forms.Panel();
             this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelAdmin = new System.Windows.Forms.Panel();
-            this.adminItemsUserControl = new ProductionUI.Forms.DashboardLayout.AdminItemsUserControl();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.buttonUsers = new System.Windows.Forms.Button();
+            this.buttonMachines = new System.Windows.Forms.Button();
+            this.buttonRawMaterials = new System.Windows.Forms.Button();
+            this.adminAreaLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.titleUserControl = new ProductionUI.Forms.DashboardLayout.TitleUserControl();
@@ -97,7 +104,6 @@
             // 
             // panelMenuItems
             // 
-            this.panelMenuItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMenuItems.Controls.Add(this.panelMenu);
             this.panelMenuItems.Controls.Add(this.panelMenuMinimize);
             this.panelMenuItems.Dock = System.Windows.Forms.DockStyle.Left;
@@ -109,6 +115,7 @@
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.panelSide);
+            this.panelMenu.Controls.Add(this.panel3);
             this.panelMenu.Controls.Add(this.productsButon);
             this.panelMenu.Controls.Add(this.warehouseManagementButton);
             this.panelMenu.Controls.Add(this.offersButton);
@@ -119,16 +126,25 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 33);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(198, 556);
+            this.panelMenu.Size = new System.Drawing.Size(200, 558);
             this.panelMenu.TabIndex = 1;
             // 
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.DimGray;
-            this.panelSide.Location = new System.Drawing.Point(2, 3);
+            this.panelSide.Location = new System.Drawing.Point(4, 6);
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(6, 60);
-            this.panelSide.TabIndex = 12;
+            this.panelSide.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DimGray;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(199, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 558);
+            this.panel3.TabIndex = 0;
             // 
             // productsButon
             // 
@@ -141,10 +157,10 @@
             this.productsButon.ForeColor = System.Drawing.Color.DimGray;
             this.productsButon.Image = ((System.Drawing.Image)(resources.GetObject("productsButon.Image")));
             this.productsButon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productsButon.Location = new System.Drawing.Point(10, 63);
+            this.productsButon.Location = new System.Drawing.Point(12, 66);
             this.productsButon.Name = "productsButon";
             this.productsButon.Size = new System.Drawing.Size(185, 60);
-            this.productsButon.TabIndex = 13;
+            this.productsButon.TabIndex = 21;
             this.productsButon.Text = "  Products";
             this.productsButon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.productsButon.UseVisualStyleBackColor = false;
@@ -160,10 +176,10 @@
             this.warehouseManagementButton.ForeColor = System.Drawing.Color.DimGray;
             this.warehouseManagementButton.Image = ((System.Drawing.Image)(resources.GetObject("warehouseManagementButton.Image")));
             this.warehouseManagementButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.warehouseManagementButton.Location = new System.Drawing.Point(10, 303);
+            this.warehouseManagementButton.Location = new System.Drawing.Point(12, 306);
             this.warehouseManagementButton.Name = "warehouseManagementButton";
             this.warehouseManagementButton.Size = new System.Drawing.Size(185, 60);
-            this.warehouseManagementButton.TabIndex = 14;
+            this.warehouseManagementButton.TabIndex = 22;
             this.warehouseManagementButton.Text = "  Warehouse         Management";
             this.warehouseManagementButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.warehouseManagementButton.UseVisualStyleBackColor = false;
@@ -179,10 +195,10 @@
             this.offersButton.ForeColor = System.Drawing.Color.DimGray;
             this.offersButton.Image = ((System.Drawing.Image)(resources.GetObject("offersButton.Image")));
             this.offersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.offersButton.Location = new System.Drawing.Point(10, 243);
+            this.offersButton.Location = new System.Drawing.Point(12, 246);
             this.offersButton.Name = "offersButton";
             this.offersButton.Size = new System.Drawing.Size(185, 60);
-            this.offersButton.TabIndex = 15;
+            this.offersButton.TabIndex = 23;
             this.offersButton.Text = "  Offers";
             this.offersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.offersButton.UseVisualStyleBackColor = false;
@@ -198,10 +214,10 @@
             this.salesOrdersButton.ForeColor = System.Drawing.Color.DimGray;
             this.salesOrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("salesOrdersButton.Image")));
             this.salesOrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesOrdersButton.Location = new System.Drawing.Point(10, 183);
+            this.salesOrdersButton.Location = new System.Drawing.Point(12, 186);
             this.salesOrdersButton.Name = "salesOrdersButton";
             this.salesOrdersButton.Size = new System.Drawing.Size(185, 60);
-            this.salesOrdersButton.TabIndex = 16;
+            this.salesOrdersButton.TabIndex = 24;
             this.salesOrdersButton.Text = "  Sales Orders";
             this.salesOrdersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.salesOrdersButton.UseVisualStyleBackColor = false;
@@ -217,10 +233,10 @@
             this.productionOrdersButton.ForeColor = System.Drawing.Color.DimGray;
             this.productionOrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("productionOrdersButton.Image")));
             this.productionOrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productionOrdersButton.Location = new System.Drawing.Point(10, 123);
+            this.productionOrdersButton.Location = new System.Drawing.Point(12, 126);
             this.productionOrdersButton.Name = "productionOrdersButton";
             this.productionOrdersButton.Size = new System.Drawing.Size(185, 60);
-            this.productionOrdersButton.TabIndex = 17;
+            this.productionOrdersButton.TabIndex = 25;
             this.productionOrdersButton.Text = "  Production Orders";
             this.productionOrdersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.productionOrdersButton.UseVisualStyleBackColor = false;
@@ -236,10 +252,10 @@
             this.manufacturingCostButton.ForeColor = System.Drawing.Color.DimGray;
             this.manufacturingCostButton.Image = ((System.Drawing.Image)(resources.GetObject("manufacturingCostButton.Image")));
             this.manufacturingCostButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.manufacturingCostButton.Location = new System.Drawing.Point(10, 363);
+            this.manufacturingCostButton.Location = new System.Drawing.Point(12, 366);
             this.manufacturingCostButton.Name = "manufacturingCostButton";
             this.manufacturingCostButton.Size = new System.Drawing.Size(185, 60);
-            this.manufacturingCostButton.TabIndex = 18;
+            this.manufacturingCostButton.TabIndex = 26;
             this.manufacturingCostButton.Text = "  Manufacturing Cost";
             this.manufacturingCostButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.manufacturingCostButton.UseVisualStyleBackColor = false;
@@ -255,10 +271,10 @@
             this.homeButton.ForeColor = System.Drawing.Color.DimGray;
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
             this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(10, 3);
+            this.homeButton.Location = new System.Drawing.Point(12, 6);
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(185, 60);
-            this.homeButton.TabIndex = 19;
+            this.homeButton.TabIndex = 27;
             this.homeButton.Text = "  Home";
             this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.homeButton.UseVisualStyleBackColor = false;
@@ -267,10 +283,11 @@
             // panelMenuMinimize
             // 
             this.panelMenuMinimize.Controls.Add(this.pictureBoxMinimize);
+            this.panelMenuMinimize.Controls.Add(this.panel2);
             this.panelMenuMinimize.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenuMinimize.Location = new System.Drawing.Point(0, 0);
             this.panelMenuMinimize.Name = "panelMenuMinimize";
-            this.panelMenuMinimize.Size = new System.Drawing.Size(198, 33);
+            this.panelMenuMinimize.Size = new System.Drawing.Size(200, 33);
             this.panelMenuMinimize.TabIndex = 0;
             // 
             // pictureBoxMinimize
@@ -280,31 +297,131 @@
             this.pictureBoxMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBoxMinimize.InitialImage = null;
-            this.pictureBoxMinimize.Location = new System.Drawing.Point(149, 0);
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(150, 0);
             this.pictureBoxMinimize.Name = "pictureBoxMinimize";
             this.pictureBoxMinimize.Size = new System.Drawing.Size(49, 33);
-            this.pictureBoxMinimize.TabIndex = 0;
+            this.pictureBoxMinimize.TabIndex = 1;
             this.pictureBoxMinimize.TabStop = false;
             this.pictureBoxMinimize.Click += new System.EventHandler(this.pictureBoxMinimize_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(199, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 33);
+            this.panel2.TabIndex = 0;
+            // 
             // panelAdmin
             // 
-            this.panelAdmin.Controls.Add(this.adminItemsUserControl);
+            this.panelAdmin.Controls.Add(this.panelTop);
+            this.panelAdmin.Controls.Add(this.buttonUsers);
+            this.panelAdmin.Controls.Add(this.buttonMachines);
+            this.panelAdmin.Controls.Add(this.buttonRawMaterials);
+            this.panelAdmin.Controls.Add(this.adminAreaLabel);
+            this.panelAdmin.Controls.Add(this.panel1);
             this.panelAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdmin.Location = new System.Drawing.Point(0, 49);
             this.panelAdmin.Name = "panelAdmin";
             this.panelAdmin.Size = new System.Drawing.Size(1198, 58);
             this.panelAdmin.TabIndex = 4;
             // 
-            // adminItemsUserControl
+            // panelTop
             // 
-            this.adminItemsUserControl.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.adminItemsUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminItemsUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminItemsUserControl.Location = new System.Drawing.Point(0, 0);
-            this.adminItemsUserControl.Name = "adminItemsUserControl";
-            this.adminItemsUserControl.Size = new System.Drawing.Size(1198, 58);
-            this.adminItemsUserControl.TabIndex = 0;
+            this.panelTop.BackColor = System.Drawing.Color.DimGray;
+            this.panelTop.Location = new System.Drawing.Point(302, 48);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(200, 7);
+            this.panelTop.TabIndex = 51;
+            // 
+            // buttonUsers
+            // 
+            this.buttonUsers.BackColor = System.Drawing.Color.White;
+            this.buttonUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUsers.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonUsers.FlatAppearance.BorderSize = 0;
+            this.buttonUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUsers.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUsers.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonUsers.Image = ((System.Drawing.Image)(resources.GetObject("buttonUsers.Image")));
+            this.buttonUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUsers.Location = new System.Drawing.Point(702, 0);
+            this.buttonUsers.Name = "buttonUsers";
+            this.buttonUsers.Size = new System.Drawing.Size(200, 57);
+            this.buttonUsers.TabIndex = 54;
+            this.buttonUsers.Text = "    Users";
+            this.buttonUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonUsers.UseVisualStyleBackColor = false;
+            // 
+            // buttonMachines
+            // 
+            this.buttonMachines.BackColor = System.Drawing.Color.White;
+            this.buttonMachines.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMachines.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMachines.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMachines.FlatAppearance.BorderSize = 0;
+            this.buttonMachines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMachines.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMachines.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonMachines.Image = ((System.Drawing.Image)(resources.GetObject("buttonMachines.Image")));
+            this.buttonMachines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMachines.Location = new System.Drawing.Point(502, 0);
+            this.buttonMachines.Name = "buttonMachines";
+            this.buttonMachines.Size = new System.Drawing.Size(200, 57);
+            this.buttonMachines.TabIndex = 52;
+            this.buttonMachines.Text = "    Machines";
+            this.buttonMachines.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonMachines.UseVisualStyleBackColor = false;
+            this.buttonMachines.Click += new System.EventHandler(this.buttonMachines_Click);
+            // 
+            // buttonRawMaterials
+            // 
+            this.buttonRawMaterials.BackColor = System.Drawing.Color.White;
+            this.buttonRawMaterials.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRawMaterials.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonRawMaterials.FlatAppearance.BorderSize = 0;
+            this.buttonRawMaterials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRawMaterials.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRawMaterials.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonRawMaterials.Image = ((System.Drawing.Image)(resources.GetObject("buttonRawMaterials.Image")));
+            this.buttonRawMaterials.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRawMaterials.Location = new System.Drawing.Point(302, 0);
+            this.buttonRawMaterials.Name = "buttonRawMaterials";
+            this.buttonRawMaterials.Size = new System.Drawing.Size(200, 57);
+            this.buttonRawMaterials.TabIndex = 53;
+            this.buttonRawMaterials.Text = "  Raw Materials";
+            this.buttonRawMaterials.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRawMaterials.UseVisualStyleBackColor = false;
+            this.buttonRawMaterials.Click += new System.EventHandler(this.buttonRawMaterials_Click);
+            // 
+            // adminAreaLabel
+            // 
+            this.adminAreaLabel.AutoSize = true;
+            this.adminAreaLabel.BackColor = System.Drawing.Color.White;
+            this.adminAreaLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.adminAreaLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminAreaLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.adminAreaLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminAreaLabel.Location = new System.Drawing.Point(0, 0);
+            this.adminAreaLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminAreaLabel.Name = "adminAreaLabel";
+            this.adminAreaLabel.Padding = new System.Windows.Forms.Padding(200, 20, 0, 0);
+            this.adminAreaLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.adminAreaLabel.Size = new System.Drawing.Size(302, 39);
+            this.adminAreaLabel.TabIndex = 50;
+            this.adminAreaLabel.Text = "Admin Area";
+            this.adminAreaLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 57);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1198, 1);
+            this.panel1.TabIndex = 0;
             // 
             // panelHeader
             // 
@@ -434,6 +551,7 @@
             this.panelMenuMinimize.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).EndInit();
             this.panelAdmin.ResumeLayout(false);
+            this.panelAdmin.PerformLayout();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader2.ResumeLayout(false);
             this.panelTopBar.ResumeLayout(false);
@@ -452,7 +570,6 @@
         private System.Windows.Forms.Panel panelTopBar;
         private System.Windows.Forms.Panel panelHeader2;
         private System.Windows.Forms.Panel panelAdmin;
-        private DashboardLayout.AdminItemsUserControl adminItemsUserControl;
         private System.Windows.Forms.PictureBox maximizeButton;
         private System.Windows.Forms.PictureBox minimizeButton;
         private System.Windows.Forms.PictureBox normalViewButton;
@@ -463,10 +580,18 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelMenuItems;
-        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelMenuMinimize;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Button buttonUsers;
+        private System.Windows.Forms.Button buttonMachines;
+        private System.Windows.Forms.Button buttonRawMaterials;
+        private System.Windows.Forms.Label adminAreaLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBoxMinimize;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button productsButon;
         private System.Windows.Forms.Button warehouseManagementButton;
         private System.Windows.Forms.Button offersButton;

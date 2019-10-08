@@ -14,25 +14,24 @@ namespace ProductionUI.Forms.ManufacturingCosts
 {
     public partial class SelectMachinesForm : Form
     {
-        private readonly UserManufacturingCostControl UserManufacturing;
+        //private readonly UserManufacturingCostControl UserManufacturing;
 
         List<string> availableMachines = new List<string>();
         List<string> selectedMachines = new List<string>();
-        public SelectMachinesForm(UserManufacturingCostControl userManufacturing)
+        public SelectMachinesForm() //Params: UserManufacturingCostControl userManufacturing
         {
             InitializeComponent();
-            UserManufacturing = userManufacturing;
+            //UserManufacturing = userManufacturing;
             SeedData();
 
             WireUpLists();
 
         }
-        public int MyProperty { get; set; }
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
             UserSelectedTechnologyControl userSelectedTechnologyControl = new UserSelectedTechnologyControl();
-            UserManufacturing.AddControlsToPanel(userSelectedTechnologyControl);
+            //UserManufacturing.AddControlsToPanel(userSelectedTechnologyControl);
             this.Close();
         }
 
