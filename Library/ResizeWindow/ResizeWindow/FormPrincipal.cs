@@ -92,9 +92,7 @@ namespace ResizeWindow
         }
 
         //variables to get the postion of the form before maximize
-        private int lenghtX, lenghtY;
-        private int startX, startY;
-        private int initialSizeX, initialSizeY;
+        private int lX, lY;
 
         private void maximizeButton_Click(object sender, EventArgs e)
         {
@@ -104,11 +102,8 @@ namespace ResizeWindow
 
             //gets the initial position
             this.StartPosition = FormStartPosition.CenterScreen;
-            lenghtX = this.Location.X;
-            lenghtY = this.Location.Y;
-            initialSizeX = this.Size.Width;
-            initialSizeY = this.Size.Height;
-
+            lX = this.Location.X;
+            lY = this.Location.Y;
             //sets the window size to working area size
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
@@ -120,8 +115,8 @@ namespace ResizeWindow
         private void normalViewButton_Click(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Normal;
-            this.Size = new Size(initialSizeX, initialSizeY);
-            this.Location = new Point(lenghtX, lenghtY);
+            this.Size = new Size(1050, 600);
+            this.Location = new Point(lX, lY);
             normalViewButton.Visible = false;
             maximizeButton.Visible = true;
         }
@@ -137,11 +132,6 @@ namespace ResizeWindow
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void aboutBox_Click(object sender, EventArgs e)
-        {
-            AboutBox1 aboutBox = new AboutBox1();
-            aboutBox.ShowDialog();
-        }
         private void OpenFormInPanel(object form)
         {
             if (this.panelContent.Controls.Count > 0)
@@ -154,43 +144,12 @@ namespace ResizeWindow
             this.panelContent.Controls.Add(frm);
             this.panelContent.Tag = frm;
             frm.Show();
+
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-            LoadDashboard();
-        }
-
-        private void LoadDashboard()
-        {
-            OpenFormInPanel(new DashboardForm());
-        }
-
-        private void dashboardButton_Click(object sender, EventArgs e)
-        {
-            LoadDashboard();
-        }
-
-        
-        //open form in panel
         private void productsButton_Click(object sender, EventArgs e)
         {
             OpenFormInPanel(new Products());
-        }
-
-
-        //method for loading the dashboard form after current form is close
-        private void LoadDashboardWhenFormClosed(object sender, FormClosedEventArgs e)
-        {
-            LoadDashboard();
-        }
-
-        //event for loading sales form and open dashboard form when closed
-        private void salesButton_Click(object sender, EventArgs e)
-        {
-            SalesForm sales = new SalesForm();
-            sales.FormClosed += new FormClosedEventHandler(LoadDashboardWhenFormClosed);
-            OpenFormInPanel(sales);
         }
     }
 }

@@ -126,41 +126,17 @@
     <Compile Include="Forms\AdminArea\UpdateWarehouseForm.Designer.cs">
       <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForm.cs">
+    <Compile Include="Forms\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Forms\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DashboardForm%28old%29.cs">
+    <Compile Include="Forms\FinishOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DashboardForm%28old%29.Designer.cs">
-      <DependentUpon>DashboardForm%28old%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\AdminItemsUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\AdminItemsUserControl.Designer.cs">
-      <DependentUpon>AdminItemsUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\LogoUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\LogoUserControl.Designer.cs">
-      <DependentUpon>LogoUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\MenuItemsUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\MenuItemsUserControl.Designer.cs">
-      <DependentUpon>MenuItemsUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\TitleUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\DashboardLayout\TitleUserControl.Designer.cs">
-      <DependentUpon>TitleUserControl.cs</DependentUpon>
+    <Compile Include="Forms\FinishOrderForm.Designer.cs">
+      <DependentUpon>FinishOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -185,6 +161,12 @@
     </Compile>
     <Compile Include="Forms\ManufacturingCosts\SelectMachinesForm.Designer.cs">
       <DependentUpon>SelectMachinesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%28sketch%29PriceAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%28sketch%29PriceAppForm.Designer.cs">
+      <DependentUpon>%28sketch%29PriceAppForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -311,23 +293,11 @@
     <EmbeddedResource Include="Forms\AdminArea\UpdateWarehouseForm.resx">
       <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardForm%28old%29.resx">
-      <DependentUpon>DashboardForm%28old%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardLayout\AdminItemsUserControl.resx">
-      <DependentUpon>AdminItemsUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardLayout\LogoUserControl.resx">
-      <DependentUpon>LogoUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardLayout\MenuItemsUserControl.resx">
-      <DependentUpon>MenuItemsUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardLayout\TitleUserControl.resx">
-      <DependentUpon>TitleUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FinishOrderForm.resx">
+      <DependentUpon>FinishOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -340,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManufacturingCosts\SelectMachinesForm.resx">
       <DependentUpon>SelectMachinesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%28sketch%29PriceAppForm.resx">
+      <DependentUpon>%28sketch%29PriceAppForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

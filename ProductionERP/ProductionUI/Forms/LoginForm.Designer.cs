@@ -42,6 +42,7 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.forgotPasswordLabel = new System.Windows.Forms.Label();
             this.copyrightLabel = new System.Windows.Forms.Label();
+            this.addDbButton = new System.Windows.Forms.Button();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productionIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productionLoginIcon)).BeginInit();
@@ -198,9 +199,25 @@
             this.copyrightLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.copyrightLabel.Location = new System.Drawing.Point(12, 633);
             this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Size = new System.Drawing.Size(221, 16);
+            this.copyrightLabel.Size = new System.Drawing.Size(252, 16);
             this.copyrightLabel.TabIndex = 9;
-            this.copyrightLabel.Text = "Copyrights 2019. All rights reserved.";
+            this.copyrightLabel.Text = "Copyrights 2019. All rights reserved to Me";
+            // 
+            // addDbButton
+            // 
+            this.addDbButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addDbButton.BackColor = System.Drawing.Color.White;
+            this.addDbButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addDbButton.BackgroundImage")));
+            this.addDbButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addDbButton.FlatAppearance.BorderSize = 0;
+            this.addDbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addDbButton.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDbButton.ForeColor = System.Drawing.Color.White;
+            this.addDbButton.Location = new System.Drawing.Point(1119, 603);
+            this.addDbButton.Name = "addDbButton";
+            this.addDbButton.Size = new System.Drawing.Size(53, 46);
+            this.addDbButton.TabIndex = 10;
+            this.addDbButton.UseVisualStyleBackColor = false;
             // 
             // LoginForm
             // 
@@ -208,6 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.addDbButton);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.forgotPasswordLabel);
             this.Controls.Add(this.loginButton);
@@ -247,5 +265,6 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label forgotPasswordLabel;
         private System.Windows.Forms.Label copyrightLabel;
+        private System.Windows.Forms.Button addDbButton;
     }
 }

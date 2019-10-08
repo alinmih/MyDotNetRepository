@@ -16,10 +16,5 @@ namespace ResizeWindow
         {
             InitializeComponent();
         }
-
-        private void closeLabel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
