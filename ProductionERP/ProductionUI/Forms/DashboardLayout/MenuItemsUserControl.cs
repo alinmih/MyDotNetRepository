@@ -12,18 +12,11 @@ namespace ProductionUI.Forms.DashboardLayout
 {
     public partial class MenuItemsUserControl : UserControl
     {
-        //vars for menu minimize
-        private int panelWidth;
-        private bool isColapsed;
+
 
         public MenuItemsUserControl()
         {
             InitializeComponent();
-
-
-            //side menu variables
-            panelWidth = panelMenuItems.Width;
-            isColapsed = false;
         }
 
 
@@ -68,41 +61,5 @@ namespace ProductionUI.Forms.DashboardLayout
             MovePanelSide(manufacturingCostButton);
         }
 
-        #region Minimize menu Sidebar
-
-        private void minimizeMenuButton_Click(object sender, EventArgs e)
-        {
-            timerForMinimizeBar.Start();
-        }
-
-
-        private void TimerForMinimizeBar_Tick(object sender, EventArgs e)
-        {
-            if (isColapsed)
-            {
-                //iconPanel.Hide();
-                panelMenuItems.Width = panelMenuItems.Width + 10;
-                if (panelMenuItems.Width >= panelWidth)
-                {
-                    timerForMinimizeBar.Stop();
-                    isColapsed = false;
-                    this.Refresh();
-
-                }
-            }
-            else
-            {
-                panelMenuItems.Width = panelMenuItems.Width - 10;
-                if (panelMenuItems.Width <= 67)
-                {
-                    timerForMinimizeBar.Stop();
-                    isColapsed = true;
-                    this.Refresh(); ;
-                }
-            }
-        }
-
-
-        #endregion
     }
 }

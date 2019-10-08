@@ -126,6 +126,12 @@
     <Compile Include="Forms\AdminArea\UpdateWarehouseForm.Designer.cs">
       <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Home\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,12 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManufacturingCosts\ManufacturingCostDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManufacturingCosts\ManufacturingCostDashboard.Designer.cs">
+      <DependentUpon>ManufacturingCostDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManufacturingCosts\PartMoreDimensionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +197,36 @@
     </Compile>
     <Compile Include="Forms\ManufacturingCosts\SelectMachinesForm.Designer.cs">
       <DependentUpon>SelectMachinesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Offers\OffersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Offers\OffersForm.Designer.cs">
+      <DependentUpon>OffersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductionOrders\ProductionOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductionOrders\ProductionOrdersForm.Designer.cs">
+      <DependentUpon>ProductionOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products\ProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products\ProductsForm.Designer.cs">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalesOrders\SalesOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalesOrders\SalesOrdersForm.Designer.cs">
+      <DependentUpon>SalesOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WarehouseManagement\WarehouseManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WarehouseManagement\WarehouseManagementForm.Designer.cs">
+      <DependentUpon>WarehouseManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -311,6 +353,9 @@
     <EmbeddedResource Include="Forms\AdminArea\UpdateWarehouseForm.resx">
       <DependentUpon>UpdateWarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +377,9 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManufacturingCosts\ManufacturingCostDashboard.resx">
+      <DependentUpon>ManufacturingCostDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManufacturingCosts\PartMoreDimensionsForm.resx">
       <DependentUpon>PartMoreDimensionsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +388,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManufacturingCosts\SelectMachinesForm.resx">
       <DependentUpon>SelectMachinesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Offers\OffersForm.resx">
+      <DependentUpon>OffersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductionOrders\ProductionOrdersForm.resx">
+      <DependentUpon>ProductionOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products\ProductsForm.resx">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalesOrders\SalesOrdersForm.resx">
+      <DependentUpon>SalesOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WarehouseManagement\WarehouseManagementForm.resx">
+      <DependentUpon>WarehouseManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

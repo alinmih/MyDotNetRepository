@@ -32,23 +32,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelMenuItems = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelSide = new System.Windows.Forms.Panel();
+            this.productsButon = new System.Windows.Forms.Button();
+            this.warehouseManagementButton = new System.Windows.Forms.Button();
+            this.offersButton = new System.Windows.Forms.Button();
+            this.salesOrdersButton = new System.Windows.Forms.Button();
+            this.productionOrdersButton = new System.Windows.Forms.Button();
+            this.manufacturingCostButton = new System.Windows.Forms.Button();
+            this.homeButton = new System.Windows.Forms.Button();
+            this.panelMenuMinimize = new System.Windows.Forms.Panel();
+            this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
             this.panelAdmin = new System.Windows.Forms.Panel();
-            this.adminItemsUserControl1 = new ProductionUI.Forms.DashboardLayout.AdminItemsUserControl();
+            this.adminItemsUserControl = new ProductionUI.Forms.DashboardLayout.AdminItemsUserControl();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.titleUserControl = new ProductionUI.Forms.DashboardLayout.TitleUserControl();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopBar = new System.Windows.Forms.Panel();
-            this.companyLabel = new System.Windows.Forms.Label();
             this.maximizeButton = new System.Windows.Forms.PictureBox();
             this.minimizeButton = new System.Windows.Forms.PictureBox();
             this.normalViewButton = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.PictureBox();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.timerForMinimizeBar = new System.Windows.Forms.Timer(this.components);
-            this.menuItemsUserControl1 = new ProductionUI.Forms.DashboardLayout.MenuItemsUserControl();
             this.panelContainer.SuspendLayout();
-            this.panelMain.SuspendLayout();
+            this.panelMenuItems.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.panelMenuMinimize.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
             this.panelAdmin.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelHeader2.SuspendLayout();
@@ -64,6 +77,7 @@
             this.panelContainer.BackColor = System.Drawing.Color.White;
             this.panelContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContainer.Controls.Add(this.panelMain);
+            this.panelContainer.Controls.Add(this.panelMenuItems);
             this.panelContainer.Controls.Add(this.panelAdmin);
             this.panelContainer.Controls.Add(this.panelHeader);
             this.panelContainer.Controls.Add(this.panelTopBar);
@@ -75,31 +89,222 @@
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.menuItemsUserControl1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 107);
+            this.panelMain.Location = new System.Drawing.Point(200, 107);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1198, 591);
-            this.panelMain.TabIndex = 5;
+            this.panelMain.Size = new System.Drawing.Size(998, 591);
+            this.panelMain.TabIndex = 6;
+            // 
+            // panelMenuItems
+            // 
+            this.panelMenuItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenuItems.Controls.Add(this.panelMenu);
+            this.panelMenuItems.Controls.Add(this.panelMenuMinimize);
+            this.panelMenuItems.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenuItems.Location = new System.Drawing.Point(0, 107);
+            this.panelMenuItems.Name = "panelMenuItems";
+            this.panelMenuItems.Size = new System.Drawing.Size(200, 591);
+            this.panelMenuItems.TabIndex = 5;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.Controls.Add(this.panelSide);
+            this.panelMenu.Controls.Add(this.productsButon);
+            this.panelMenu.Controls.Add(this.warehouseManagementButton);
+            this.panelMenu.Controls.Add(this.offersButton);
+            this.panelMenu.Controls.Add(this.salesOrdersButton);
+            this.panelMenu.Controls.Add(this.productionOrdersButton);
+            this.panelMenu.Controls.Add(this.manufacturingCostButton);
+            this.panelMenu.Controls.Add(this.homeButton);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(0, 33);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(198, 556);
+            this.panelMenu.TabIndex = 1;
+            // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.DimGray;
+            this.panelSide.Location = new System.Drawing.Point(2, 3);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(6, 60);
+            this.panelSide.TabIndex = 12;
+            // 
+            // productsButon
+            // 
+            this.productsButon.BackColor = System.Drawing.Color.White;
+            this.productsButon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productsButon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.productsButon.FlatAppearance.BorderSize = 0;
+            this.productsButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productsButon.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productsButon.ForeColor = System.Drawing.Color.DimGray;
+            this.productsButon.Image = ((System.Drawing.Image)(resources.GetObject("productsButon.Image")));
+            this.productsButon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productsButon.Location = new System.Drawing.Point(10, 63);
+            this.productsButon.Name = "productsButon";
+            this.productsButon.Size = new System.Drawing.Size(185, 60);
+            this.productsButon.TabIndex = 13;
+            this.productsButon.Text = "  Products";
+            this.productsButon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.productsButon.UseVisualStyleBackColor = false;
+            this.productsButon.Click += new System.EventHandler(this.productsButon_Click);
+            // 
+            // warehouseManagementButton
+            // 
+            this.warehouseManagementButton.BackColor = System.Drawing.Color.White;
+            this.warehouseManagementButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.warehouseManagementButton.FlatAppearance.BorderSize = 0;
+            this.warehouseManagementButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warehouseManagementButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warehouseManagementButton.ForeColor = System.Drawing.Color.DimGray;
+            this.warehouseManagementButton.Image = ((System.Drawing.Image)(resources.GetObject("warehouseManagementButton.Image")));
+            this.warehouseManagementButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.warehouseManagementButton.Location = new System.Drawing.Point(10, 303);
+            this.warehouseManagementButton.Name = "warehouseManagementButton";
+            this.warehouseManagementButton.Size = new System.Drawing.Size(185, 60);
+            this.warehouseManagementButton.TabIndex = 14;
+            this.warehouseManagementButton.Text = "  Warehouse         Management";
+            this.warehouseManagementButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.warehouseManagementButton.UseVisualStyleBackColor = false;
+            this.warehouseManagementButton.Click += new System.EventHandler(this.warehouseManagementButton_Click);
+            // 
+            // offersButton
+            // 
+            this.offersButton.BackColor = System.Drawing.Color.White;
+            this.offersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.offersButton.FlatAppearance.BorderSize = 0;
+            this.offersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.offersButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.offersButton.ForeColor = System.Drawing.Color.DimGray;
+            this.offersButton.Image = ((System.Drawing.Image)(resources.GetObject("offersButton.Image")));
+            this.offersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.offersButton.Location = new System.Drawing.Point(10, 243);
+            this.offersButton.Name = "offersButton";
+            this.offersButton.Size = new System.Drawing.Size(185, 60);
+            this.offersButton.TabIndex = 15;
+            this.offersButton.Text = "  Offers";
+            this.offersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.offersButton.UseVisualStyleBackColor = false;
+            this.offersButton.Click += new System.EventHandler(this.offersButton_Click);
+            // 
+            // salesOrdersButton
+            // 
+            this.salesOrdersButton.BackColor = System.Drawing.Color.White;
+            this.salesOrdersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salesOrdersButton.FlatAppearance.BorderSize = 0;
+            this.salesOrdersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesOrdersButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesOrdersButton.ForeColor = System.Drawing.Color.DimGray;
+            this.salesOrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("salesOrdersButton.Image")));
+            this.salesOrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salesOrdersButton.Location = new System.Drawing.Point(10, 183);
+            this.salesOrdersButton.Name = "salesOrdersButton";
+            this.salesOrdersButton.Size = new System.Drawing.Size(185, 60);
+            this.salesOrdersButton.TabIndex = 16;
+            this.salesOrdersButton.Text = "  Sales Orders";
+            this.salesOrdersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.salesOrdersButton.UseVisualStyleBackColor = false;
+            this.salesOrdersButton.Click += new System.EventHandler(this.salesOrdersButton_Click);
+            // 
+            // productionOrdersButton
+            // 
+            this.productionOrdersButton.BackColor = System.Drawing.Color.White;
+            this.productionOrdersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productionOrdersButton.FlatAppearance.BorderSize = 0;
+            this.productionOrdersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productionOrdersButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productionOrdersButton.ForeColor = System.Drawing.Color.DimGray;
+            this.productionOrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("productionOrdersButton.Image")));
+            this.productionOrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productionOrdersButton.Location = new System.Drawing.Point(10, 123);
+            this.productionOrdersButton.Name = "productionOrdersButton";
+            this.productionOrdersButton.Size = new System.Drawing.Size(185, 60);
+            this.productionOrdersButton.TabIndex = 17;
+            this.productionOrdersButton.Text = "  Production Orders";
+            this.productionOrdersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.productionOrdersButton.UseVisualStyleBackColor = false;
+            this.productionOrdersButton.Click += new System.EventHandler(this.productionOrdersButton_Click);
+            // 
+            // manufacturingCostButton
+            // 
+            this.manufacturingCostButton.BackColor = System.Drawing.Color.White;
+            this.manufacturingCostButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manufacturingCostButton.FlatAppearance.BorderSize = 0;
+            this.manufacturingCostButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manufacturingCostButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manufacturingCostButton.ForeColor = System.Drawing.Color.DimGray;
+            this.manufacturingCostButton.Image = ((System.Drawing.Image)(resources.GetObject("manufacturingCostButton.Image")));
+            this.manufacturingCostButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.manufacturingCostButton.Location = new System.Drawing.Point(10, 363);
+            this.manufacturingCostButton.Name = "manufacturingCostButton";
+            this.manufacturingCostButton.Size = new System.Drawing.Size(185, 60);
+            this.manufacturingCostButton.TabIndex = 18;
+            this.manufacturingCostButton.Text = "  Manufacturing Cost";
+            this.manufacturingCostButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.manufacturingCostButton.UseVisualStyleBackColor = false;
+            this.manufacturingCostButton.Click += new System.EventHandler(this.manufacturingCostButton_Click);
+            // 
+            // homeButton
+            // 
+            this.homeButton.BackColor = System.Drawing.Color.White;
+            this.homeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeButton.FlatAppearance.BorderSize = 0;
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeButton.ForeColor = System.Drawing.Color.DimGray;
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeButton.Location = new System.Drawing.Point(10, 3);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(185, 60);
+            this.homeButton.TabIndex = 19;
+            this.homeButton.Text = "  Home";
+            this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.homeButton.UseVisualStyleBackColor = false;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
+            // panelMenuMinimize
+            // 
+            this.panelMenuMinimize.Controls.Add(this.pictureBoxMinimize);
+            this.panelMenuMinimize.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuMinimize.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuMinimize.Name = "panelMenuMinimize";
+            this.panelMenuMinimize.Size = new System.Drawing.Size(198, 33);
+            this.panelMenuMinimize.TabIndex = 0;
+            // 
+            // pictureBoxMinimize
+            // 
+            this.pictureBoxMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimize.BackgroundImage")));
+            this.pictureBoxMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxMinimize.InitialImage = null;
+            this.pictureBoxMinimize.Location = new System.Drawing.Point(149, 0);
+            this.pictureBoxMinimize.Name = "pictureBoxMinimize";
+            this.pictureBoxMinimize.Size = new System.Drawing.Size(49, 33);
+            this.pictureBoxMinimize.TabIndex = 0;
+            this.pictureBoxMinimize.TabStop = false;
+            this.pictureBoxMinimize.Click += new System.EventHandler(this.pictureBoxMinimize_Click);
             // 
             // panelAdmin
             // 
-            this.panelAdmin.Controls.Add(this.adminItemsUserControl1);
+            this.panelAdmin.Controls.Add(this.adminItemsUserControl);
             this.panelAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdmin.Location = new System.Drawing.Point(0, 49);
             this.panelAdmin.Name = "panelAdmin";
             this.panelAdmin.Size = new System.Drawing.Size(1198, 58);
             this.panelAdmin.TabIndex = 4;
             // 
-            // adminItemsUserControl1
+            // adminItemsUserControl
             // 
-            this.adminItemsUserControl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.adminItemsUserControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminItemsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminItemsUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.adminItemsUserControl1.Name = "adminItemsUserControl1";
-            this.adminItemsUserControl1.Size = new System.Drawing.Size(1198, 58);
-            this.adminItemsUserControl1.TabIndex = 0;
+            this.adminItemsUserControl.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.adminItemsUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminItemsUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminItemsUserControl.Location = new System.Drawing.Point(0, 0);
+            this.adminItemsUserControl.Name = "adminItemsUserControl";
+            this.adminItemsUserControl.Size = new System.Drawing.Size(1198, 58);
+            this.adminItemsUserControl.TabIndex = 0;
             // 
             // panelHeader
             // 
@@ -116,9 +321,9 @@
             // 
             this.panelHeader2.Controls.Add(this.titleUserControl);
             this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHeader2.Location = new System.Drawing.Point(26, 0);
+            this.panelHeader2.Location = new System.Drawing.Point(66, 0);
             this.panelHeader2.Name = "panelHeader2";
-            this.panelHeader2.Size = new System.Drawing.Size(1170, 21);
+            this.panelHeader2.Size = new System.Drawing.Size(1130, 21);
             this.panelHeader2.TabIndex = 1;
             // 
             // titleUserControl
@@ -126,7 +331,7 @@
             this.titleUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.titleUserControl.Location = new System.Drawing.Point(0, 0);
             this.titleUserControl.Name = "titleUserControl";
-            this.titleUserControl.Size = new System.Drawing.Size(1170, 21);
+            this.titleUserControl.Size = new System.Drawing.Size(1130, 21);
             this.titleUserControl.TabIndex = 0;
             // 
             // panelLogo
@@ -136,14 +341,13 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(26, 21);
+            this.panelLogo.Size = new System.Drawing.Size(66, 21);
             this.panelLogo.TabIndex = 0;
             // 
             // panelTopBar
             // 
-            this.panelTopBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelTopBar.BackColor = System.Drawing.Color.Gainsboro;
             this.panelTopBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTopBar.Controls.Add(this.companyLabel);
             this.panelTopBar.Controls.Add(this.maximizeButton);
             this.panelTopBar.Controls.Add(this.minimizeButton);
             this.panelTopBar.Controls.Add(this.normalViewButton);
@@ -154,19 +358,6 @@
             this.panelTopBar.Size = new System.Drawing.Size(1198, 26);
             this.panelTopBar.TabIndex = 0;
             this.panelTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopBar_MouseDown);
-            // 
-            // companyLabel
-            // 
-            this.companyLabel.AutoSize = true;
-            this.companyLabel.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companyLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.companyLabel.Location = new System.Drawing.Point(470, 2);
-            this.companyLabel.Name = "companyLabel";
-            this.companyLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.companyLabel.Size = new System.Drawing.Size(258, 23);
-            this.companyLabel.TabIndex = 10;
-            this.companyLabel.Text = "<Company> Management";
-            this.companyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // maximizeButton
             // 
@@ -221,13 +412,9 @@
             this.exitButton.TabStop = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // menuItemsUserControl1
+            // timerForMinimizeBar
             // 
-            this.menuItemsUserControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuItemsUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.menuItemsUserControl1.Name = "menuItemsUserControl1";
-            this.menuItemsUserControl1.Size = new System.Drawing.Size(197, 591);
-            this.menuItemsUserControl1.TabIndex = 0;
+            this.timerForMinimizeBar.Tick += new System.EventHandler(this.TimerForMinimizeBar_Tick);
             // 
             // MainForm
             // 
@@ -240,13 +427,16 @@
             this.MinimumSize = new System.Drawing.Size(910, 700);
             this.Name = "MainForm";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelContainer.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
+            this.panelMenuItems.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenuMinimize.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).EndInit();
             this.panelAdmin.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader2.ResumeLayout(false);
             this.panelTopBar.ResumeLayout(false);
-            this.panelTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.normalViewButton)).EndInit();
@@ -261,9 +451,8 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Panel panelTopBar;
         private System.Windows.Forms.Panel panelHeader2;
-        private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelAdmin;
-        private DashboardLayout.AdminItemsUserControl adminItemsUserControl1;
+        private DashboardLayout.AdminItemsUserControl adminItemsUserControl;
         private System.Windows.Forms.PictureBox maximizeButton;
         private System.Windows.Forms.PictureBox minimizeButton;
         private System.Windows.Forms.PictureBox normalViewButton;
@@ -272,7 +461,18 @@
         private System.Windows.Forms.Timer timerForMinimizeBar;
         private DashboardLayout.TitleUserControl titleUserControl;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Label companyLabel;
-        private DashboardLayout.MenuItemsUserControl menuItemsUserControl1;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelMenuItems;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panelMenuMinimize;
+        private System.Windows.Forms.PictureBox pictureBoxMinimize;
+        private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.Button productsButon;
+        private System.Windows.Forms.Button warehouseManagementButton;
+        private System.Windows.Forms.Button offersButton;
+        private System.Windows.Forms.Button salesOrdersButton;
+        private System.Windows.Forms.Button productionOrdersButton;
+        private System.Windows.Forms.Button manufacturingCostButton;
+        private System.Windows.Forms.Button homeButton;
     }
 }

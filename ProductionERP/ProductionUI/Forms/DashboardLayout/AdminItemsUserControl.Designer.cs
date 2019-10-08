@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminItemsUserControl));
             this.panelAdminItemsContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -52,7 +53,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panelTop);
             this.panel2.Controls.Add(this.buttonUsers);
             this.panel2.Controls.Add(this.buttonMachines);
@@ -66,24 +67,25 @@
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.White;
-            this.panelTop.Location = new System.Drawing.Point(152, 50);
+            this.panelTop.BackColor = System.Drawing.Color.DimGray;
+            this.panelTop.Location = new System.Drawing.Point(254, 50);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(200, 7);
             this.panelTop.TabIndex = 37;
             // 
             // buttonUsers
             // 
-            this.buttonUsers.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonUsers.BackColor = System.Drawing.Color.White;
             this.buttonUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUsers.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonUsers.FlatAppearance.BorderSize = 0;
             this.buttonUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsers.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUsers.ForeColor = System.Drawing.Color.White;
-            this.buttonUsers.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonUsers.Location = new System.Drawing.Point(552, 0);
+            this.buttonUsers.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonUsers.Image = ((System.Drawing.Image)(resources.GetObject("buttonUsers.Image")));
+            this.buttonUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUsers.Location = new System.Drawing.Point(654, 0);
             this.buttonUsers.Name = "buttonUsers";
             this.buttonUsers.Size = new System.Drawing.Size(200, 60);
             this.buttonUsers.TabIndex = 40;
@@ -94,16 +96,17 @@
             // 
             // buttonMachines
             // 
-            this.buttonMachines.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonMachines.BackColor = System.Drawing.Color.White;
             this.buttonMachines.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonMachines.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMachines.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonMachines.FlatAppearance.BorderSize = 0;
             this.buttonMachines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMachines.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMachines.ForeColor = System.Drawing.Color.White;
-            this.buttonMachines.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonMachines.Location = new System.Drawing.Point(352, 0);
+            this.buttonMachines.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonMachines.Image = ((System.Drawing.Image)(resources.GetObject("buttonMachines.Image")));
+            this.buttonMachines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMachines.Location = new System.Drawing.Point(454, 0);
             this.buttonMachines.Name = "buttonMachines";
             this.buttonMachines.Size = new System.Drawing.Size(200, 60);
             this.buttonMachines.TabIndex = 38;
@@ -114,15 +117,16 @@
             // 
             // buttonRawMaterials
             // 
-            this.buttonRawMaterials.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonRawMaterials.BackColor = System.Drawing.Color.White;
             this.buttonRawMaterials.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRawMaterials.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonRawMaterials.FlatAppearance.BorderSize = 0;
             this.buttonRawMaterials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRawMaterials.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRawMaterials.ForeColor = System.Drawing.Color.White;
-            this.buttonRawMaterials.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonRawMaterials.Location = new System.Drawing.Point(152, 0);
+            this.buttonRawMaterials.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonRawMaterials.Image = ((System.Drawing.Image)(resources.GetObject("buttonRawMaterials.Image")));
+            this.buttonRawMaterials.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRawMaterials.Location = new System.Drawing.Point(254, 0);
             this.buttonRawMaterials.Name = "buttonRawMaterials";
             this.buttonRawMaterials.Size = new System.Drawing.Size(200, 60);
             this.buttonRawMaterials.TabIndex = 39;
@@ -137,23 +141,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 60);
+            this.panel1.Size = new System.Drawing.Size(254, 60);
             this.panel1.TabIndex = 35;
             // 
             // adminAreaLabel
             // 
             this.adminAreaLabel.AutoSize = true;
-            this.adminAreaLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.adminAreaLabel.BackColor = System.Drawing.Color.White;
             this.adminAreaLabel.Dock = System.Windows.Forms.DockStyle.Left;
             this.adminAreaLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminAreaLabel.ForeColor = System.Drawing.Color.White;
+            this.adminAreaLabel.ForeColor = System.Drawing.Color.DimGray;
             this.adminAreaLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.adminAreaLabel.Location = new System.Drawing.Point(0, 0);
             this.adminAreaLabel.Margin = new System.Windows.Forms.Padding(0);
             this.adminAreaLabel.Name = "adminAreaLabel";
-            this.adminAreaLabel.Padding = new System.Windows.Forms.Padding(30, 20, 0, 0);
+            this.adminAreaLabel.Padding = new System.Windows.Forms.Padding(100, 20, 0, 0);
             this.adminAreaLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.adminAreaLabel.Size = new System.Drawing.Size(132, 39);
+            this.adminAreaLabel.Size = new System.Drawing.Size(202, 39);
             this.adminAreaLabel.TabIndex = 37;
             this.adminAreaLabel.Text = "Admin Area";
             this.adminAreaLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

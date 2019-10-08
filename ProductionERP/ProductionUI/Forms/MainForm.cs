@@ -8,12 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ProductionUI.Forms.Home;
+using ProductionUI.Forms.Products;
+using ProductionUI.Forms.ProductionOrders;
+using ProductionUI.Forms.SalesOrders;
+using ProductionUI.Forms.Offers;
+using ProductionUI.Forms.WarehouseManagement;
+using ProductionUI.Forms.ManufacturingCosts;
 
 namespace ProductionUI.Forms
 {
     public partial class MainForm : Form
     {
-
+        //vars for menu minimize
+        private int panelWidth;
+        private bool isColapsed;
 
         public MainForm()
         {
@@ -21,9 +30,49 @@ namespace ProductionUI.Forms
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
 
+            //side menu variables
+            panelWidth = panelMenuItems.Width;
+            isColapsed = false;
 
             clockTimer.Start();
         }
+
+        #region Form Behaviour
+
+        #region Minimize Menu Sidebar
+        private void pictureBoxMinimize_Click(object sender, EventArgs e)
+        {
+            timerForMinimizeBar.Start();
+        }
+
+        private void TimerForMinimizeBar_Tick(object sender, EventArgs e)
+        {
+            if (isColapsed)
+            {
+                //iconPanel.Hide();
+                panelMenuItems.Width = panelMenuItems.Width + 10;
+                if (panelMenuItems.Width >= panelWidth)
+                {
+                    timerForMinimizeBar.Stop();
+                    isColapsed = false;
+                    this.Refresh();
+
+                }
+            }
+            else
+            {
+                panelMenuItems.Width = panelMenuItems.Width - 10;
+                if (panelMenuItems.Width <= 56)
+                {
+                    timerForMinimizeBar.Stop();
+                    isColapsed = true;
+                    this.Refresh(); ;
+                }
+            }
+        }
+
+
+        #endregion
 
         #region Resize window
 
@@ -61,7 +110,7 @@ namespace ProductionUI.Forms
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)
         {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(55, 61, 69));
+            SolidBrush blueBrush = new SolidBrush(Color.Transparent);
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
@@ -137,25 +186,134 @@ namespace ProductionUI.Forms
         }
 
         #endregion
+        #endregion
 
-
-
-        
-
-
-        private void OpenFormInPanel(object form)
+        private void MovePanelSide(Control btn)
         {
-            if (this.panelMain.Controls.Count > 0)
-            {
-                this.panelMain.Controls.RemoveAt(0);
-            }
-            Form frm = form as Form;
-            frm.TopLevel = false;
-            frm.Dock = DockStyle.Fill;
-            this.panelMain.Controls.Add(frm);
-            this.panelMain.Tag = frm;
-            frm.Show();
+            panelSide.Top = btn.Top;
+            panelSide.Height = btn.Height;
         }
+
+        private void OpenFormInPanel<MyForm>() where MyForm : Form, new()
+        {
+            Form currentForm;
+            currentForm = panelMain.Controls.OfType<MyForm>().FirstOrDefault();
+
+            if (currentForm == null)
+            {
+                currentForm = new MyForm();
+                currentForm.TopLevel = false;
+                currentForm.Dock = DockStyle.Fill;
+                panelMain.Controls.Add(currentForm);
+                currentForm.Tag = currentForm;
+                currentForm.Show();
+                currentForm.BringToFront();
+                currentForm.FormClosed += new FormClosedEventHandler(CloseForms);
+            }
+
+            //if (this.panelMain.Controls.Count > 0)
+            //{
+            //    this.panelMain.Controls.RemoveAt(0);
+            //}
+            //Form frm = form as Form;
+            //frm.TopLevel = false;
+            //frm.Dock = DockStyle.Fill;
+            //this.panelMain.Controls.Add(frm);
+            //this.panelMain.Tag = frm;
+            //frm.Show();
+        }
+
+
+
+        #region Button Events
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(homeButton);
+            OpenFormInPanel<HomeForm>();
+            homeButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void productsButon_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(productsButon);
+            OpenFormInPanel<ProductsForm>();
+            productsButon.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void productionOrdersButton_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(productionOrdersButton);
+            OpenFormInPanel<ProductionOrdersForm>();
+            productionOrdersButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void salesOrdersButton_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(salesOrdersButton);
+            OpenFormInPanel<SalesOrdersForm>();
+            salesOrdersButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void offersButton_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(offersButton);
+            OpenFormInPanel<OffersForm>();
+            offersButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            OpenFormInPanel<HomeForm>();
+        }
+
+        private void warehouseManagementButton_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(warehouseManagementButton);
+            OpenFormInPanel<WarehouseManagementForm>();
+            warehouseManagementButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void manufacturingCostButton_Click(object sender, EventArgs e)
+        {
+            MovePanelSide(manufacturingCostButton);
+            OpenFormInPanel<ManufacturingCostDashboard>();
+            manufacturingCostButton.BackColor = Color.FromArgb(229, 229, 229);
+        }
+
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["HomeForm"] == null)
+            {
+                homeButton.BackColor = Color.FromArgb(255, 255, 255);
+            }
+            if (Application.OpenForms["ProductsForm"] == null)
+            {
+                productsButon.BackColor = Color.FromArgb(255, 255, 255);
+            }
+            if (Application.OpenForms["ProductionOrdersForm"] == null)
+            {
+                productionOrdersButton.BackColor = Color.FromArgb(255, 255, 255);
+            }
+            if (Application.OpenForms["SalesOrdersForm"] == null)
+            {
+                salesOrdersButton.BackColor = Color.FromArgb(255, 255, 255);
+            }
+            if (Application.OpenForms["OffersForm"] == null)
+            {
+                offersButton.BackColor = Color.FromArgb(255, 255, 255);
+            }
+            if (Application.OpenForms["WarehouseManagementForm"] == null)
+            {
+                warehouseManagementButton.BackColor = Color.FromArgb(255, 255, 255);
+            }
+            if (Application.OpenForms["ManufacturingCostDashboard"] == null)
+            {
+                manufacturingCostButton.BackColor = Color.FromArgb(255, 255, 255);
+            }
+        }
+
+        #endregion
 
     }
 }
