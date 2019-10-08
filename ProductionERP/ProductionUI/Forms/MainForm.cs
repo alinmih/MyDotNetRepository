@@ -13,9 +13,7 @@ namespace ProductionUI.Forms
 {
     public partial class MainForm : Form
     {
-        //vars for menu minimize
-        private int panelWidth;
-        private bool isColapsed;
+
 
         public MainForm()
         {
@@ -23,9 +21,7 @@ namespace ProductionUI.Forms
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
 
-            //side menu variables
-            panelWidth = panelMenu.Width;
-            isColapsed = false;
+
             clockTimer.Start();
         }
 
@@ -142,41 +138,7 @@ namespace ProductionUI.Forms
 
         #endregion
 
-        #region Minimize menu Sidebar
 
-        private void MinimizeMenuButton_Click(object sender, EventArgs e)
-        {
-            timerForMinimizeBar.Start();
-        }
-
-        private void TimerForMinimizeBar_Tick(object sender, EventArgs e)
-        {
-            if (isColapsed)
-            {
-                //iconPanel.Hide();
-                panelMenu.Width = panelMenu.Width + 10;
-                if (panelMenu.Width >= panelWidth)
-                {
-                    timerForMinimizeBar.Stop();
-                    isColapsed = false;
-                    this.Refresh();
-
-                }
-            }
-            else
-            {
-                panelMenu.Width = panelMenu.Width - 10;
-                if (panelMenu.Width <= 67)
-                {
-                    timerForMinimizeBar.Stop();
-                    isColapsed = true;
-                    this.Refresh();;
-                }
-            }
-        }
-
-
-        #endregion
 
         
 
