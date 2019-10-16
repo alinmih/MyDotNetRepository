@@ -15,6 +15,22 @@ namespace SampleConnectionSQL.DataLayer
         private SqlCommand Command = new SqlCommand();
         private SqlDataReader Reader;
 
+        private int id;
+        private int customerId;
+        private int unitID;
+        private int materialNumber;
+        private string description;
+        private double price;
+
+
+        public int Id { get => id; set => id = value; }
+        public int CustomerId { get => customerId; set => customerId = value; }
+        public int UnitID { get => unitID; set => unitID = value; }
+        public int MaterialNumber { get => materialNumber; set => materialNumber = value; }
+        public string Description { get => description; set => description = value; }
+        public double Price { get => price; set => price = value; }
+
+
         public DataTable MaterialUnitList()
         {
             DataTable Data = new DataTable();
@@ -41,7 +57,7 @@ namespace SampleConnectionSQL.DataLayer
             return Data;
         }
 
-        public void InsertMaterial(int customerId, int unitID, int materialNumber, string description, double price)
+        public void InsertMaterial()
         {
             Command.Connection = Connection.OpenConnection();
             Command.CommandText = "sp_InsertMaterial";
@@ -56,6 +72,15 @@ namespace SampleConnectionSQL.DataLayer
 
         }
 
+        public void EditMaterial()
+        {
+            Command.Connection = Connection.OpenConnection();
+            Command.CommandText = $"update Materials set CustomerId={customerId}, UnitId={unitID}, MaterialNumber={materialNumber}, Description='{description}', Price={price} where Id={id}";
+            Command.CommandType = CommandType.Text;
+            Command.ExecuteNonQuery();
+            Connection.CloseConnection();
+        }
+
         public DataTable MaterialsList()
         {
             DataTable Data = new DataTable();
@@ -67,6 +92,28 @@ namespace SampleConnectionSQL.DataLayer
             Reader.Close();
             Connection.CloseConnection();
             return Data;
+        }
+
+        public DataTable MaterialsListRaw()
+        {
+            DataTable Data = new DataTable();
+            Command.Connection = Connection.OpenConnection();
+            Command.CommandText = "Sp_MaterialsListRaw";
+            Command.CommandType = CommandType.StoredProcedure;
+            Reader = Command.ExecuteReader();
+            Data.Load(Reader);
+            Reader.Close();
+            Connection.CloseConnection();
+            return Data;
+        }
+
+        public void DeleteProduct()
+        {
+            Command.Connection = Connection.OpenConnection();
+            Command.CommandText = $"delete from Materials where Id={id}";
+            Command.CommandType = CommandType.Text;
+            Command.ExecuteNonQuery();
+            Connection.CloseConnection();
         }
 
 

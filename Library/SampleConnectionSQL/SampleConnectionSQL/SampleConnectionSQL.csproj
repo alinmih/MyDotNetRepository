@@ -54,10 +54,19 @@
     <Compile Include="PresentationLayer\MaterialsForm.Designer.cs">
       <DependentUpon>MaterialsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\MentenanceMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MentenanceMaterialForm.Designer.cs">
+      <DependentUpon>MentenanceMaterialForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\MaterialsForm.resx">
       <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MentenanceMaterialForm.resx">
+      <DependentUpon>MentenanceMaterialForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
