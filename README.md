@@ -12,8 +12,8 @@ Personal projects written in c# or vb using dot.net or asp.net
 
 4. StratificateQCFlow - ASP.NET written in VB.NET
 
-5. TournamentTracker	- Multilayered architecture app.
+5. TournamentTracker	- Multilayered architecture sample app.
 
-6. ProductionManagement - ASP.NET app for production environment used to manage the workflow from price offer to production planning.
+6. ProductionManagement - Sample ASP.NET app for manufacturing environment used to manage the workflow from price offer to production planning.
 
-7. ProductionERP - N tier architecture app for managing business processes inside a company.
+7. ProductionERP - Sample app for managing business processes inside a company using windows form UI.
