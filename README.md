@@ -1,4 +1,4 @@
-# MyDotNetRepository
+# SampleApplications Repository
 
 Personal projects written in c# or vb using dot.net or asp.net
 
@@ -12,7 +12,7 @@ Personal projects written in c# or vb using dot.net or asp.net
 
 4. StratificateQCFlow - ASP.NET written in VB.NET
 
-5. TournamentTracker	- Multilayered architecture app with object-oriented design written in C#.
+5. TournamentTracker	- Multilayered architecture app.
 
 6. ProductionManagement - ASP.NET app for production environment used to manage the workflow from price offer to production planning.
 
