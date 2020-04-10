@@ -16,4 +16,4 @@ Personal projects written in c# or vb using dot.net or asp.net
 
 6. ProductionManagement - Sample ASP.NET app for manufacturing environment used to manage the workflow from price offer to production planning.
 
-7. ProductionERP - Sample app for managing business processes inside a company using windows form UI.
+7. ProductionERP - Sample app for managing business processes inside a company using Windows Forms UI.
